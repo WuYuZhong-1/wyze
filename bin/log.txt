@@ -1,0 +1,19 @@
+2022-10-11 10:50:47	12408	UNKNOW	0	[DEBUG]	[system]	/home/wuyz/learn/wyze/tests/test.cpp:77	name: system
+level: DEBUG
+formatter: "%d{%Y-%m-%d %H:%M:%S}%T%t%T%N%T%F%T[%p]%T[%c]%T%f:%l%T%m%n"
+appenders:
+  - type: FileLogAppender
+    file: log.txt
+    formatter: "%d{%Y-%m-%d %H:%M:%S}%T%t%T%N%T%F%T[%p]%T[%c]%T%f:%l%T%m%n"
+  - type: StdoutLogAppender
+    formatter: "%d{%Y-%m-%d %H:%M:%S}%T%t%T%N%T%F%T[%p]%T[%c]%T%f:%l%T%m%n"
+
+2022-10-11 10:50:47	12408	UNKNOW	0	[INFO]	[system]	/home/wuyz/learn/wyze/wyze/log.cpp:819	- name: system
+  level: DEBUG
+  formatter: "%d{%Y-%m-%d %H:%M:%S}%T%t%T%N%T%F%T[%p]%T[%c]%T%f:%l%T%m%n"
+  appenders:
+    - type: FileLogAppender
+      file: log.txt
+      formatter: "%d{%Y-%m-%d %H:%M:%S}%T%t%T%N%T%F%T[%p]%T[%c]%T%f:%l%T%m%n"
+    - type: StdoutLogAppender
+      formatter: "%d{%Y-%m-%d %H:%M:%S}%T%t%T%N%T%F%T[%p]%T[%c]%T%f:%l%T%m%n"
