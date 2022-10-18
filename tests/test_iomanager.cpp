@@ -204,7 +204,7 @@ void test_iomanager()
 {
     WYZE_LOG_INFO(g_logger) << "EPOLLIN=" << EPOLLIN
                             << " EPOLLOUT=" << EPOLLOUT;
-    wyze::IOManager iom(2, false);
+    wyze::IOManager iom;
 
     int pfd[2] = {0};
     int rt = pipe(pfd);
@@ -238,18 +238,21 @@ void test_iomanager()
                 --count;
             }
         }
+        close(rfd);
     });
 
-    WYZE_LOG_INFO(g_logger) << "------1---------- rt = " << rt;
+
     int wfd = pfd[1];
-    int count = 1;
-    while(count <= 10) {
-        std::string buf = "pipe write count " + std::to_string(count++);
-        write(wfd, buf.c_str(), buf.size());
-        WYZE_LOG_DEBUG(g_logger) << buf;
-        sleep(1);
-    }
-    WYZE_LOG_INFO(g_logger) << "------2----------";
+    iom.schedule([wfd](){
+        int count = 1;
+        while(count <= 10) {
+            std::string buf = "pipe write count " + std::to_string(count++);
+            write(wfd, buf.c_str(), buf.size());
+            WYZE_LOG_DEBUG(g_logger) << buf;
+            wyze::Fiber::YeildToReady();
+        }
+        close(wfd);
+    });
 }
 
 int main() {
