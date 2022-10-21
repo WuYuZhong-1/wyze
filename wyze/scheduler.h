@@ -44,7 +44,7 @@ namespace wyze {
             {
                 MutexType::Lock lock(m_mutex);
                 while(begin != end) {
-                    need_tickle = schedule(&*begin, -1) || need_tickle;
+                    need_tickle = scheduleNolock(&*begin, -1) || need_tickle;
                     ++begin;
                 }
                 if(need_tickle) {

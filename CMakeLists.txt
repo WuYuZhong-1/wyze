@@ -14,6 +14,7 @@ set(LIB_SRC
     wyze/log.cpp
     wyze/scheduler.cpp
     wyze/thread.cpp
+    wyze/timer.cpp
     wyze/util.cpp
     )
 
@@ -47,7 +48,9 @@ add_executable(test_iomanager tests/test_iomanager.cpp)
 add_dependencies(test_iomanager wyze)
 target_link_libraries(test_iomanager wyze yaml-cpp pthread)
 
-
+add_executable(test_timer tests/test_timer.cpp)
+add_dependencies(test_timer wyze)
+target_link_libraries(test_timer wyze yaml-cpp pthread)
 
 SET(EXECUTABLE_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/bin)
 SET(LIBRARY_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/lib)

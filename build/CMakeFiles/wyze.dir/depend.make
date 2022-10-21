@@ -26,6 +26,7 @@ CMakeFiles/wyze.dir/wyze/iomanager.cpp.o: ../wyze/macro.h
 CMakeFiles/wyze.dir/wyze/iomanager.cpp.o: ../wyze/scheduler.h
 CMakeFiles/wyze.dir/wyze/iomanager.cpp.o: ../wyze/singleton.h
 CMakeFiles/wyze.dir/wyze/iomanager.cpp.o: ../wyze/thread.h
+CMakeFiles/wyze.dir/wyze/iomanager.cpp.o: ../wyze/timer.h
 CMakeFiles/wyze.dir/wyze/iomanager.cpp.o: ../wyze/util.h
 
 CMakeFiles/wyze.dir/wyze/log.cpp.o: ../wyze/config.h
@@ -50,6 +51,11 @@ CMakeFiles/wyze.dir/wyze/thread.cpp.o: ../wyze/singleton.h
 CMakeFiles/wyze.dir/wyze/thread.cpp.o: ../wyze/thread.cpp
 CMakeFiles/wyze.dir/wyze/thread.cpp.o: ../wyze/thread.h
 CMakeFiles/wyze.dir/wyze/thread.cpp.o: ../wyze/util.h
+
+CMakeFiles/wyze.dir/wyze/timer.cpp.o: ../wyze/thread.h
+CMakeFiles/wyze.dir/wyze/timer.cpp.o: ../wyze/timer.cpp
+CMakeFiles/wyze.dir/wyze/timer.cpp.o: ../wyze/timer.h
+CMakeFiles/wyze.dir/wyze/timer.cpp.o: ../wyze/util.h
 
 CMakeFiles/wyze.dir/wyze/util.cpp.o: ../wyze/fiber.h
 CMakeFiles/wyze.dir/wyze/util.cpp.o: ../wyze/log.h

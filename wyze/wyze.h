@@ -10,6 +10,7 @@
 #include "scheduler.h"
 #include "singleton.h"
 #include "thread.h"
+#include "timer.h"
 #include "util.h"
 
 #endif // !_WYZE_H_

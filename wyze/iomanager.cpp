@@ -276,10 +276,18 @@ namespace wyze {
         WYZE_ASSERT(rt == 1);
     }
 
+    bool IOManager::stopping(uint64_t& timeout)
+    {
+        timeout = getNextTimer();
+        return timeout == ~0ull
+                && m_pendingEvent == 0
+                && Scheduler::stopping();
+    }
+
     bool IOManager::stopping()
     {
-        return Scheduler::stopping() 
-                && m_pendingEvent == 0;
+        uint64_t timeout = 0;
+        return stopping(timeout);
     }
 
     void IOManager::idle()
@@ -291,23 +299,37 @@ namespace wyze {
         } );
 
         while(true) {
-            if(stopping())  {
-                WYZE_LOG_INFO(g_logger) << "name=" << getName() << " idle stopping exit";
+            uint64_t next_timeout = 0;
+            if(stopping(next_timeout))  {
+                // WYZE_LOG_INFO(g_logger) << "name=" << getName() << " idle stopping exit";
                 break;
             }
-        
 
             int rt = 0;
             memset(evs, 0, sizeof(epoll_event) * MAX_EVENTS);
             do {
-                static const int MAX_TIMEOUT = 5000;
-                rt = epoll_wait(m_epfd, evs, MAX_EVENTS, MAX_TIMEOUT);  //有事件触发，这里会出现惊群
+                static const int MAX_TIMEOUT = 5000;    //TODO::这里不能大于 60 × 60 × 12 在定时器中，会处理时间修改问题
+                if(next_timeout != ~0ull) {
+                    next_timeout = (int)next_timeout < MAX_TIMEOUT ? next_timeout :  MAX_TIMEOUT;
+                }
+                else {
+                    next_timeout = MAX_TIMEOUT;
+                }
+
+                rt = epoll_wait(m_epfd, evs, MAX_EVENTS, (int)next_timeout);  //有事件触发，这里会出现惊群
                 if(rt < 0 && errno == EINTR) {
                 }   //这里表示重试
                 else {
                     break;
                 }
             }while(true);
+
+            std::vector<std::function<void()>> cbs;
+            listExpiredCb(cbs);                         //这里会出现其他唤醒的线程也会卡住
+            if(!cbs.empty()) {
+                schedule(cbs.begin(), cbs.end());
+                cbs.clear();
+            }
 
             for(int i = 0; i < rt; ++i) {
                 epoll_event& ev = evs[i];
@@ -359,5 +381,11 @@ namespace wyze {
 
             Fiber::YeildToHold();   //让出该协程
         }
+    }
+
+
+    void IOManager::onTimerInsertdAtFront()
+    {
+        tickle();
     }
 }

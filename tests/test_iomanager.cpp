@@ -195,7 +195,6 @@ void test_epoll()
 }
 
 
-
 //测试IO调度
 
 static wyze::Logger::ptr g_logger = WYZE_LOG_ROOT();
@@ -204,7 +203,7 @@ void test_iomanager()
 {
     WYZE_LOG_INFO(g_logger) << "EPOLLIN=" << EPOLLIN
                             << " EPOLLOUT=" << EPOLLOUT;
-    wyze::IOManager iom;
+    wyze::IOManager iom(1,false);
 
     int pfd[2] = {0};
     int rt = pipe(pfd);
@@ -256,6 +255,14 @@ void test_iomanager()
 }
 
 int main() {
+    // bool a = true;
+    // while(a) {
+    //     WYZE_LOG_DEBUG(g_logger) << "do....";
+    //     sleep(3);
+    // }
     test_iomanager();
+    // wyze::IOManager::GetThis()->schedule([](){
+    //     WYZE_LOG_INFO(g_logger) << "这里不会出现，为了让程序 挂掉";
+    // });
     return 0;
 }

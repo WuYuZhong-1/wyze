@@ -43,7 +43,7 @@ Fiber::Fiber()
 
     m_id = s_fiber_id++;
     ++s_fiber_count;
-    WYZE_LOG_DEBUG(g_logger) << "Fiber::Fiber id = " << m_id;
+    // WYZE_LOG_DEBUG(g_logger) << "Fiber::Fiber id = " << m_id;
 }  
 
 Fiber::Fiber(std::function<void()> cb, size_t stack_size, bool use_caller)
@@ -64,7 +64,7 @@ Fiber::Fiber(std::function<void()> cb, size_t stack_size, bool use_caller)
     m_context.uc_stack.ss_sp = m_stack;
 
     makecontext(&m_context, &Fiber::MainFunc, 0);
-    WYZE_LOG_DEBUG(g_logger) << "Fiber::Fiber id = " << m_id;
+    // WYZE_LOG_DEBUG(g_logger) << "Fiber::Fiber id = " << m_id;
 }
 
 Fiber::~Fiber()
@@ -88,7 +88,7 @@ Fiber::~Fiber()
         }
     }
 
-    WYZE_LOG_DEBUG(g_logger) << "Fiber::~Fiber id=" << m_id;
+    // WYZE_LOG_DEBUG(g_logger) << "Fiber::~Fiber id=" << m_id;
 }
 
 //重置携程函数，并且重置状态为 INIT

@@ -10,6 +10,7 @@ CMakeFiles/test_util.dir/tests/test_util.cpp.o: ../wyze/macro.h
 CMakeFiles/test_util.dir/tests/test_util.cpp.o: ../wyze/scheduler.h
 CMakeFiles/test_util.dir/tests/test_util.cpp.o: ../wyze/singleton.h
 CMakeFiles/test_util.dir/tests/test_util.cpp.o: ../wyze/thread.h
+CMakeFiles/test_util.dir/tests/test_util.cpp.o: ../wyze/timer.h
 CMakeFiles/test_util.dir/tests/test_util.cpp.o: ../wyze/util.h
 CMakeFiles/test_util.dir/tests/test_util.cpp.o: ../wyze/wyze.h
 

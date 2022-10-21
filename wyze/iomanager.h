@@ -2,11 +2,12 @@
 #define _WYZE_IOMANAGER_H_
 
 #include "scheduler.h"
+#include "timer.h"
 #include <vector>
 
 namespace wyze {
 
-    class IOManager: public Scheduler {
+    class IOManager: public Scheduler, public TimerManager{
     public:
         using ptr = std::shared_ptr<IOManager>;
         using RWMutexType = RWMutex;
@@ -40,7 +41,7 @@ namespace wyze {
 
     public:
         IOManager(size_t threads = 1, 
-            bool use_caller = true, const std::string& name = "UNKONW");
+            bool use_caller = false, const std::string& name = "UNKONW");
         ~IOManager();
         
         // 0 success, -1 error      该函数只支持单事件的增加
@@ -54,7 +55,10 @@ namespace wyze {
         void tickle() override;
         bool stopping() override;
         void idle() override;
-    
+        void onTimerInsertdAtFront() override;   //添加一个定时器，如果该定时器在 set 集合中为开始，表示需要重新设置阻塞时间
+
+        bool stopping(uint64_t& timeout);
+
     private:
         int m_epfd = 0;             //epoll fd
         int m_tickleFds[2];         //唤醒 epoll 主塞的 pipe  fd

@@ -129,7 +129,7 @@ namespace wyze {
     //调度核心
     void Scheduler::run()
     {
-        WYZE_LOG_INFO(g_logger) << "run";
+        // WYZE_LOG_INFO(g_logger) << "run";
         setThis();      //每个线程都保存调度器对象
         if(GetThreadId() != m_rootThread) {     //如果不是创建 调度器的线程，则创建主协程
             t_fiber = Fiber::GetThis().get();
@@ -224,7 +224,7 @@ namespace wyze {
                 }
 
                 if(idle_fiber->getState() == Fiber::State::TERM) {
-                    WYZE_LOG_INFO(g_logger) << "idle fiber term";
+                    // WYZE_LOG_INFO(g_logger) << "idle fiber term";
                     break;
                 }
 

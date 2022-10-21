@@ -10,6 +10,7 @@ CMakeFiles/test_scheduler.dir/tests/test_scheduler.cpp.o: ../wyze/macro.h
 CMakeFiles/test_scheduler.dir/tests/test_scheduler.cpp.o: ../wyze/scheduler.h
 CMakeFiles/test_scheduler.dir/tests/test_scheduler.cpp.o: ../wyze/singleton.h
 CMakeFiles/test_scheduler.dir/tests/test_scheduler.cpp.o: ../wyze/thread.h
+CMakeFiles/test_scheduler.dir/tests/test_scheduler.cpp.o: ../wyze/timer.h
 CMakeFiles/test_scheduler.dir/tests/test_scheduler.cpp.o: ../wyze/util.h
 CMakeFiles/test_scheduler.dir/tests/test_scheduler.cpp.o: ../wyze/wyze.h
 

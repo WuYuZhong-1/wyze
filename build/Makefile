@@ -114,6 +114,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named test_timer
+
+# Build rule for target.
+test_timer: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 test_timer
+.PHONY : test_timer
+
+# fast build rule for target.
+test_timer/fast:
+	$(MAKE) -f CMakeFiles/test_timer.dir/build.make CMakeFiles/test_timer.dir/build
+.PHONY : test_timer/fast
+
+#=============================================================================
 # Target rules for targets named test_iomanager
 
 # Build rule for target.
@@ -379,6 +392,33 @@ tests/test_thread.cpp.s:
 	$(MAKE) -f CMakeFiles/test_thread.dir/build.make CMakeFiles/test_thread.dir/tests/test_thread.cpp.s
 .PHONY : tests/test_thread.cpp.s
 
+tests/test_timer.o: tests/test_timer.cpp.o
+
+.PHONY : tests/test_timer.o
+
+# target to build an object file
+tests/test_timer.cpp.o:
+	$(MAKE) -f CMakeFiles/test_timer.dir/build.make CMakeFiles/test_timer.dir/tests/test_timer.cpp.o
+.PHONY : tests/test_timer.cpp.o
+
+tests/test_timer.i: tests/test_timer.cpp.i
+
+.PHONY : tests/test_timer.i
+
+# target to preprocess a source file
+tests/test_timer.cpp.i:
+	$(MAKE) -f CMakeFiles/test_timer.dir/build.make CMakeFiles/test_timer.dir/tests/test_timer.cpp.i
+.PHONY : tests/test_timer.cpp.i
+
+tests/test_timer.s: tests/test_timer.cpp.s
+
+.PHONY : tests/test_timer.s
+
+# target to generate assembly for a file
+tests/test_timer.cpp.s:
+	$(MAKE) -f CMakeFiles/test_timer.dir/build.make CMakeFiles/test_timer.dir/tests/test_timer.cpp.s
+.PHONY : tests/test_timer.cpp.s
+
 tests/test_util.o: tests/test_util.cpp.o
 
 .PHONY : tests/test_util.o
@@ -568,6 +608,33 @@ wyze/thread.cpp.s:
 	$(MAKE) -f CMakeFiles/wyze.dir/build.make CMakeFiles/wyze.dir/wyze/thread.cpp.s
 .PHONY : wyze/thread.cpp.s
 
+wyze/timer.o: wyze/timer.cpp.o
+
+.PHONY : wyze/timer.o
+
+# target to build an object file
+wyze/timer.cpp.o:
+	$(MAKE) -f CMakeFiles/wyze.dir/build.make CMakeFiles/wyze.dir/wyze/timer.cpp.o
+.PHONY : wyze/timer.cpp.o
+
+wyze/timer.i: wyze/timer.cpp.i
+
+.PHONY : wyze/timer.i
+
+# target to preprocess a source file
+wyze/timer.cpp.i:
+	$(MAKE) -f CMakeFiles/wyze.dir/build.make CMakeFiles/wyze.dir/wyze/timer.cpp.i
+.PHONY : wyze/timer.cpp.i
+
+wyze/timer.s: wyze/timer.cpp.s
+
+.PHONY : wyze/timer.s
+
+# target to generate assembly for a file
+wyze/timer.cpp.s:
+	$(MAKE) -f CMakeFiles/wyze.dir/build.make CMakeFiles/wyze.dir/wyze/timer.cpp.s
+.PHONY : wyze/timer.cpp.s
+
 wyze/util.o: wyze/util.cpp.o
 
 .PHONY : wyze/util.o
@@ -603,6 +670,7 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
+	@echo "... test_timer"
 	@echo "... test_iomanager"
 	@echo "... test_scheduler"
 	@echo "... test"
@@ -629,6 +697,9 @@ help:
 	@echo "... tests/test_thread.o"
 	@echo "... tests/test_thread.i"
 	@echo "... tests/test_thread.s"
+	@echo "... tests/test_timer.o"
+	@echo "... tests/test_timer.i"
+	@echo "... tests/test_timer.s"
 	@echo "... tests/test_util.o"
 	@echo "... tests/test_util.i"
 	@echo "... tests/test_util.s"
@@ -650,6 +721,9 @@ help:
 	@echo "... wyze/thread.o"
 	@echo "... wyze/thread.i"
 	@echo "... wyze/thread.s"
+	@echo "... wyze/timer.o"
+	@echo "... wyze/timer.i"
+	@echo "... wyze/timer.s"
 	@echo "... wyze/util.o"
 	@echo "... wyze/util.i"
 	@echo "... wyze/util.s"

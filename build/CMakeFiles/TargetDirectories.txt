@@ -1,5 +1,6 @@
 /home/wuyz/learn/wyze/build/CMakeFiles/rebuild_cache.dir
 /home/wuyz/learn/wyze/build/CMakeFiles/edit_cache.dir
+/home/wuyz/learn/wyze/build/CMakeFiles/test_timer.dir
 /home/wuyz/learn/wyze/build/CMakeFiles/test_iomanager.dir
 /home/wuyz/learn/wyze/build/CMakeFiles/test_scheduler.dir
 /home/wuyz/learn/wyze/build/CMakeFiles/test.dir

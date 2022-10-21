@@ -1,6 +1,6 @@
 命令                    命令的缩写                      命令说明
 set args                                              设置主程序参数，set args arg1 arg2
-break                   b                             设置断点 b 20 表示在20行处设置断点，可以设置多个断点   
+break                   b                             设置断点 b 20 表示在20行处设置断点，可以设置多个断点, b func 在某个函数处设置断点
 run                     r                             开始运行程序，如果遇到断点就会停止下来。
 next                    n                             执行当前行语句，如果该语句是函数则不会进入函数内部。
 step                    s                             执行当前行语句，如果该语句是函数则会进入函数内部，执行函数内部第一条语句。如果是第三方库，则s也不会进入
@@ -9,3 +9,50 @@ countine                c                             继续运行，直到遇�
 set var name=value                                    设置变量的值
 quit                    q                             退出程序
 list                    l                             显示源代码
+backtrace               bt                            显示函数的调用栈
+info break              i b                           显示设置的断点
+delete [n]              d [n]                         删除某个断点
+disable [n]                                           关闭某个断点
+enable [n]                                            开启某个断点
+
+
+
+-------程序挂掉，系统默认不会生成core文件-----------
+
+sudo service apport stop
+
+普通用户没有权限修改系统文件权限
+vi /etc/security/limits.conf
+zrd hard core unlimited
+zrd soft core unlimited
+
+ulimit -a 查看系统参数
+ulimit -c 8192  把core文件大小设置为 8192
+
+/proc/sys/kernel/core_uses_pid可以控制core文件的文件名中是否添加pid作为扩展。文件内容为1，表示添加pid作为扩展名，生成的core文件格式为core.xxxx；为0则表示生成的core文件同一命名为core。
+echo "1" > /proc/sys/kernel/core_uses_pid
+
+echo /data/coredump/core.%e.%p> /proc/sys/kernel/core_pattern
+
+将更改core文件生成路径，自动放在这个/data/coredump文件夹里。
+%p - insert pid into filename 添加pid
+%u - insert current uid into filename 添加当前uid
+%g - insert current gid into filename 添加当前gid
+%s - insert signal that caused the coredump into the filename 添加导致产生core的信号
+%t - insert UNIX time that the coredump occurred into filename 添加core文件生成时的unix时间
+%h - insert hostname where the coredump happened into filename 添加主机名
+%e - insert coredumping executable name into filename 添加程序名
+
+gdb exec core  会跟踪到崩溃点，可以使用bt 查看栈的情况
+
+
+
+--------------调试正在运行的程序----------------------------
+
+sudo bash -c "echo 0 > /proc/sys/kernel/yama/ptrace_scope" 
+
+gdb exec -p pid     //正在运行的程序会被卡住
+
+
+
+
