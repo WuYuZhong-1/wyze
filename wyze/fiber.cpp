@@ -198,10 +198,8 @@ void Fiber::YeildToReady()
 void Fiber::YeildToHold()
 {
     Fiber::ptr cur = GetThis();
-    auto raw_ptr = cur.get();
-    cur.reset();
-    raw_ptr->m_state = State::HOLD;
-    raw_ptr->swapOut();
+    cur->m_state = State::HOLD;
+    cur->swapOut();
 }
 
 uint64_t Fiber::TotalFibers()
@@ -250,7 +248,6 @@ void Fiber::MainFunc()
     else {
         raw_ptr->back();
     }
-    raw_ptr->swapOut();
 
     WYZE_ASSERT2(false,"never reach");
 }

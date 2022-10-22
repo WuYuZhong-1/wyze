@@ -18,6 +18,17 @@ CMakeFiles/wyze.dir/wyze/fiber.cpp.o: ../wyze/singleton.h
 CMakeFiles/wyze.dir/wyze/fiber.cpp.o: ../wyze/thread.h
 CMakeFiles/wyze.dir/wyze/fiber.cpp.o: ../wyze/util.h
 
+CMakeFiles/wyze.dir/wyze/hook.cpp.o: ../wyze/fiber.h
+CMakeFiles/wyze.dir/wyze/hook.cpp.o: ../wyze/hook.cpp
+CMakeFiles/wyze.dir/wyze/hook.cpp.o: ../wyze/hook.h
+CMakeFiles/wyze.dir/wyze/hook.cpp.o: ../wyze/iomanager.h
+CMakeFiles/wyze.dir/wyze/hook.cpp.o: ../wyze/log.h
+CMakeFiles/wyze.dir/wyze/hook.cpp.o: ../wyze/scheduler.h
+CMakeFiles/wyze.dir/wyze/hook.cpp.o: ../wyze/singleton.h
+CMakeFiles/wyze.dir/wyze/hook.cpp.o: ../wyze/thread.h
+CMakeFiles/wyze.dir/wyze/hook.cpp.o: ../wyze/timer.h
+CMakeFiles/wyze.dir/wyze/hook.cpp.o: ../wyze/util.h
+
 CMakeFiles/wyze.dir/wyze/iomanager.cpp.o: ../wyze/fiber.h
 CMakeFiles/wyze.dir/wyze/iomanager.cpp.o: ../wyze/iomanager.cpp
 CMakeFiles/wyze.dir/wyze/iomanager.cpp.o: ../wyze/iomanager.h
@@ -37,6 +48,7 @@ CMakeFiles/wyze.dir/wyze/log.cpp.o: ../wyze/thread.h
 CMakeFiles/wyze.dir/wyze/log.cpp.o: ../wyze/util.h
 
 CMakeFiles/wyze.dir/wyze/scheduler.cpp.o: ../wyze/fiber.h
+CMakeFiles/wyze.dir/wyze/scheduler.cpp.o: ../wyze/hook.h
 CMakeFiles/wyze.dir/wyze/scheduler.cpp.o: ../wyze/log.h
 CMakeFiles/wyze.dir/wyze/scheduler.cpp.o: ../wyze/macro.h
 CMakeFiles/wyze.dir/wyze/scheduler.cpp.o: ../wyze/scheduler.cpp

@@ -1,6 +1,7 @@
 #include "scheduler.h"
 #include "log.h"
 #include "macro.h"
+#include "hook.h"
 #include <unistd.h>
 
 namespace wyze {
@@ -130,6 +131,7 @@ namespace wyze {
     void Scheduler::run()
     {
         // WYZE_LOG_INFO(g_logger) << "run";
+        set_hook_enable(true);
         setThis();      //每个线程都保存调度器对象
         if(GetThreadId() != m_rootThread) {     //如果不是创建 调度器的线程，则创建主协程
             t_fiber = Fiber::GetThis().get();
@@ -181,11 +183,11 @@ namespace wyze {
                 if(ft.fiber->getState() == Fiber::State::READY) {
                     schedule(ft.fiber);
                 }
-                else if(ft.fiber->getState() != Fiber::State::TERM
-                        && ft.fiber->getState() != Fiber::State::EXCEPT) {
-                    ft.fiber->m_state = Fiber::HOLD;
-                    WYZE_LOG_DEBUG(g_logger) << "fiber swapOut in Fiber::State::HOLD";
-                }
+                // else if(ft.fiber->getState() != Fiber::State::TERM
+                //         && ft.fiber->getState() != Fiber::State::EXCEPT) {
+                //     ft.fiber->m_state = Fiber::HOLD;
+                //     WYZE_LOG_DEBUG(g_logger) << "fiber swapOut in Fiber::State::HOLD";
+                // }
                 ft.rest(); 
                 // usleep(5000);
             }
@@ -207,14 +209,14 @@ namespace wyze {
                     schedule(cb_fiber);
                     // cb_fiber.reset();
                 }
-                else if( cb_fiber->getState() == Fiber::State::EXCEPT
-                        || cb_fiber->getState() == Fiber::State::TERM) {
-                    // cb_fiber->reset(nullptr);
-                }
-                else {
-                    cb_fiber->m_state = Fiber::State::HOLD;
-                    // cb_fiber.reset();
-                }
+                // else if( cb_fiber->getState() == Fiber::State::EXCEPT
+                //         || cb_fiber->getState() == Fiber::State::TERM) {
+                //     // cb_fiber->reset(nullptr);
+                // }
+                // else {
+                //     cb_fiber->m_state = Fiber::State::HOLD;
+                //     // cb_fiber.reset();
+                // }
                 // usleep(5000);
             }
             else {
@@ -231,10 +233,10 @@ namespace wyze {
                 ++m_idleThreadCount;
                 idle_fiber->swapIn();
                 --m_idleThreadCount;
-                if(idle_fiber->getState() != Fiber::State::TERM
-                    && idle_fiber->getState() != Fiber::State::EXCEPT ) {
-                    idle_fiber->m_state = Fiber::State::HOLD;   //这里便是让出了处理
-                }
+                // if(idle_fiber->getState() != Fiber::State::TERM
+                //     && idle_fiber->getState() != Fiber::State::EXCEPT ) {
+                //     idle_fiber->m_state = Fiber::State::HOLD;   //这里便是让出了处理
+                // }
                 // usleep(1000);
             }
             

@@ -31,8 +31,8 @@ public:
     void reset(std::function<void()> cb);
     //从调度协程切换到当前协程
     void swapIn();
-    //从当前协程切换到调度协程
-    void swapOut();
+    // //从当前协程切换到调度协程
+    // void swapOut();
     //从主协程切换到当前协程
     void call();
     //从当前协程返回主协程
@@ -55,6 +55,8 @@ public:
 
 private:
     Fiber();        //在没有协程时，线程获取自己的协程所使用
+    //从当前协程切换到调度协程
+    void swapOut();
 
 
 private:

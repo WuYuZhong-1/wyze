@@ -114,6 +114,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named test_hook
+
+# Build rule for target.
+test_hook: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 test_hook
+.PHONY : test_hook
+
+# fast build rule for target.
+test_hook/fast:
+	$(MAKE) -f CMakeFiles/test_hook.dir/build.make CMakeFiles/test_hook.dir/build
+.PHONY : test_hook/fast
+
+#=============================================================================
 # Target rules for targets named test_timer
 
 # Build rule for target.
@@ -311,6 +324,33 @@ tests/test_fiber.cpp.s:
 	$(MAKE) -f CMakeFiles/test_fiber.dir/build.make CMakeFiles/test_fiber.dir/tests/test_fiber.cpp.s
 .PHONY : tests/test_fiber.cpp.s
 
+tests/test_hook.o: tests/test_hook.cpp.o
+
+.PHONY : tests/test_hook.o
+
+# target to build an object file
+tests/test_hook.cpp.o:
+	$(MAKE) -f CMakeFiles/test_hook.dir/build.make CMakeFiles/test_hook.dir/tests/test_hook.cpp.o
+.PHONY : tests/test_hook.cpp.o
+
+tests/test_hook.i: tests/test_hook.cpp.i
+
+.PHONY : tests/test_hook.i
+
+# target to preprocess a source file
+tests/test_hook.cpp.i:
+	$(MAKE) -f CMakeFiles/test_hook.dir/build.make CMakeFiles/test_hook.dir/tests/test_hook.cpp.i
+.PHONY : tests/test_hook.cpp.i
+
+tests/test_hook.s: tests/test_hook.cpp.s
+
+.PHONY : tests/test_hook.s
+
+# target to generate assembly for a file
+tests/test_hook.cpp.s:
+	$(MAKE) -f CMakeFiles/test_hook.dir/build.make CMakeFiles/test_hook.dir/tests/test_hook.cpp.s
+.PHONY : tests/test_hook.cpp.s
+
 tests/test_iomanager.o: tests/test_iomanager.cpp.o
 
 .PHONY : tests/test_iomanager.o
@@ -500,6 +540,33 @@ wyze/fiber.cpp.s:
 	$(MAKE) -f CMakeFiles/wyze.dir/build.make CMakeFiles/wyze.dir/wyze/fiber.cpp.s
 .PHONY : wyze/fiber.cpp.s
 
+wyze/hook.o: wyze/hook.cpp.o
+
+.PHONY : wyze/hook.o
+
+# target to build an object file
+wyze/hook.cpp.o:
+	$(MAKE) -f CMakeFiles/wyze.dir/build.make CMakeFiles/wyze.dir/wyze/hook.cpp.o
+.PHONY : wyze/hook.cpp.o
+
+wyze/hook.i: wyze/hook.cpp.i
+
+.PHONY : wyze/hook.i
+
+# target to preprocess a source file
+wyze/hook.cpp.i:
+	$(MAKE) -f CMakeFiles/wyze.dir/build.make CMakeFiles/wyze.dir/wyze/hook.cpp.i
+.PHONY : wyze/hook.cpp.i
+
+wyze/hook.s: wyze/hook.cpp.s
+
+.PHONY : wyze/hook.s
+
+# target to generate assembly for a file
+wyze/hook.cpp.s:
+	$(MAKE) -f CMakeFiles/wyze.dir/build.make CMakeFiles/wyze.dir/wyze/hook.cpp.s
+.PHONY : wyze/hook.cpp.s
+
 wyze/iomanager.o: wyze/iomanager.cpp.o
 
 .PHONY : wyze/iomanager.o
@@ -670,6 +737,7 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
+	@echo "... test_hook"
 	@echo "... test_timer"
 	@echo "... test_iomanager"
 	@echo "... test_scheduler"
@@ -688,6 +756,9 @@ help:
 	@echo "... tests/test_fiber.o"
 	@echo "... tests/test_fiber.i"
 	@echo "... tests/test_fiber.s"
+	@echo "... tests/test_hook.o"
+	@echo "... tests/test_hook.i"
+	@echo "... tests/test_hook.s"
 	@echo "... tests/test_iomanager.o"
 	@echo "... tests/test_iomanager.i"
 	@echo "... tests/test_iomanager.s"
@@ -709,6 +780,9 @@ help:
 	@echo "... wyze/fiber.o"
 	@echo "... wyze/fiber.i"
 	@echo "... wyze/fiber.s"
+	@echo "... wyze/hook.o"
+	@echo "... wyze/hook.i"
+	@echo "... wyze/hook.s"
 	@echo "... wyze/iomanager.o"
 	@echo "... wyze/iomanager.i"
 	@echo "... wyze/iomanager.s"
