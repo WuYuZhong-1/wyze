@@ -4,9 +4,11 @@
 CMakeFiles/test_util.dir/tests/test_util.cpp.o: ../tests/test_util.cpp
 CMakeFiles/test_util.dir/tests/test_util.cpp.o: ../wyze/config.h
 CMakeFiles/test_util.dir/tests/test_util.cpp.o: ../wyze/fiber.h
+CMakeFiles/test_util.dir/tests/test_util.cpp.o: ../wyze/hook.h
 CMakeFiles/test_util.dir/tests/test_util.cpp.o: ../wyze/iomanager.h
 CMakeFiles/test_util.dir/tests/test_util.cpp.o: ../wyze/log.h
 CMakeFiles/test_util.dir/tests/test_util.cpp.o: ../wyze/macro.h
+CMakeFiles/test_util.dir/tests/test_util.cpp.o: ../wyze/noncopyable.h
 CMakeFiles/test_util.dir/tests/test_util.cpp.o: ../wyze/scheduler.h
 CMakeFiles/test_util.dir/tests/test_util.cpp.o: ../wyze/singleton.h
 CMakeFiles/test_util.dir/tests/test_util.cpp.o: ../wyze/thread.h

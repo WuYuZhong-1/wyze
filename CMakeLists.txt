@@ -9,6 +9,7 @@ link_directories(/usr/local/lib/yaml-cpp)
 
 set(LIB_SRC
     wyze/config.cpp
+    wyze/fdmanager.cpp
     wyze/fiber.cpp
     wyze/hook.cpp
     wyze/iomanager.cpp

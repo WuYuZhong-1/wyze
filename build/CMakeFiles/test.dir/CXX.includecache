@@ -78,6 +78,8 @@ singleton.h
 thread.h
 /home/wuyz/learn/wyze/wyze/thread.h
 
+/home/wuyz/learn/wyze/wyze/noncopyable.h
+
 /home/wuyz/learn/wyze/wyze/singleton.h
 mutex
 -
@@ -97,6 +99,8 @@ memory
 -
 functional
 -
+noncopyable.h
+/home/wuyz/learn/wyze/wyze/noncopyable.h
 
 /home/wuyz/learn/wyze/wyze/util.h
 pthread.h

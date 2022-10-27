@@ -4,9 +4,11 @@
 CMakeFiles/test_timer.dir/tests/test_timer.cpp.o: ../tests/test_timer.cpp
 CMakeFiles/test_timer.dir/tests/test_timer.cpp.o: ../wyze/config.h
 CMakeFiles/test_timer.dir/tests/test_timer.cpp.o: ../wyze/fiber.h
+CMakeFiles/test_timer.dir/tests/test_timer.cpp.o: ../wyze/hook.h
 CMakeFiles/test_timer.dir/tests/test_timer.cpp.o: ../wyze/iomanager.h
 CMakeFiles/test_timer.dir/tests/test_timer.cpp.o: ../wyze/log.h
 CMakeFiles/test_timer.dir/tests/test_timer.cpp.o: ../wyze/macro.h
+CMakeFiles/test_timer.dir/tests/test_timer.cpp.o: ../wyze/noncopyable.h
 CMakeFiles/test_timer.dir/tests/test_timer.cpp.o: ../wyze/scheduler.h
 CMakeFiles/test_timer.dir/tests/test_timer.cpp.o: ../wyze/singleton.h
 CMakeFiles/test_timer.dir/tests/test_timer.cpp.o: ../wyze/thread.h

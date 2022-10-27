@@ -4,6 +4,7 @@
 CMakeFiles/test.dir/tests/test.cpp.o: ../tests/test.cpp
 CMakeFiles/test.dir/tests/test.cpp.o: ../wyze/config.h
 CMakeFiles/test.dir/tests/test.cpp.o: ../wyze/log.h
+CMakeFiles/test.dir/tests/test.cpp.o: ../wyze/noncopyable.h
 CMakeFiles/test.dir/tests/test.cpp.o: ../wyze/singleton.h
 CMakeFiles/test.dir/tests/test.cpp.o: ../wyze/thread.h
 CMakeFiles/test.dir/tests/test.cpp.o: ../wyze/util.h

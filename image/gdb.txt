@@ -14,6 +14,7 @@ info break              i b                           显示设置的断点
 delete [n]              d [n]                         删除某个断点
 disable [n]                                           关闭某个断点
 enable [n]                                            开启某个断点
+finish                                                运行该函数结束
 
 
 
@@ -52,6 +53,13 @@ gdb exec core  会跟踪到崩溃点，可以使用bt 查看栈的情况
 sudo bash -c "echo 0 > /proc/sys/kernel/yama/ptrace_scope" 
 
 gdb exec -p pid     //正在运行的程序会被卡住
+
+
+
+
+------------------------------查看线程-------------------------------------
+
+top -Hp 进程id
 
 
 

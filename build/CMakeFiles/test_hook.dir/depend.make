@@ -8,6 +8,7 @@ CMakeFiles/test_hook.dir/tests/test_hook.cpp.o: ../wyze/hook.h
 CMakeFiles/test_hook.dir/tests/test_hook.cpp.o: ../wyze/iomanager.h
 CMakeFiles/test_hook.dir/tests/test_hook.cpp.o: ../wyze/log.h
 CMakeFiles/test_hook.dir/tests/test_hook.cpp.o: ../wyze/macro.h
+CMakeFiles/test_hook.dir/tests/test_hook.cpp.o: ../wyze/noncopyable.h
 CMakeFiles/test_hook.dir/tests/test_hook.cpp.o: ../wyze/scheduler.h
 CMakeFiles/test_hook.dir/tests/test_hook.cpp.o: ../wyze/singleton.h
 CMakeFiles/test_hook.dir/tests/test_hook.cpp.o: ../wyze/thread.h

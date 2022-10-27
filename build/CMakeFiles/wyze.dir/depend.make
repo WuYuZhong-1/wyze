@@ -4,25 +4,41 @@
 CMakeFiles/wyze.dir/wyze/config.cpp.o: ../wyze/config.cpp
 CMakeFiles/wyze.dir/wyze/config.cpp.o: ../wyze/config.h
 CMakeFiles/wyze.dir/wyze/config.cpp.o: ../wyze/log.h
+CMakeFiles/wyze.dir/wyze/config.cpp.o: ../wyze/noncopyable.h
 CMakeFiles/wyze.dir/wyze/config.cpp.o: ../wyze/singleton.h
 CMakeFiles/wyze.dir/wyze/config.cpp.o: ../wyze/thread.h
 CMakeFiles/wyze.dir/wyze/config.cpp.o: ../wyze/util.h
+
+CMakeFiles/wyze.dir/wyze/fdmanager.cpp.o: ../wyze/fdmanager.cpp
+CMakeFiles/wyze.dir/wyze/fdmanager.cpp.o: ../wyze/fdmanager.h
+CMakeFiles/wyze.dir/wyze/fdmanager.cpp.o: ../wyze/hook.h
+CMakeFiles/wyze.dir/wyze/fdmanager.cpp.o: ../wyze/log.h
+CMakeFiles/wyze.dir/wyze/fdmanager.cpp.o: ../wyze/macro.h
+CMakeFiles/wyze.dir/wyze/fdmanager.cpp.o: ../wyze/noncopyable.h
+CMakeFiles/wyze.dir/wyze/fdmanager.cpp.o: ../wyze/singleton.h
+CMakeFiles/wyze.dir/wyze/fdmanager.cpp.o: ../wyze/thread.h
+CMakeFiles/wyze.dir/wyze/fdmanager.cpp.o: ../wyze/util.h
 
 CMakeFiles/wyze.dir/wyze/fiber.cpp.o: ../wyze/config.h
 CMakeFiles/wyze.dir/wyze/fiber.cpp.o: ../wyze/fiber.cpp
 CMakeFiles/wyze.dir/wyze/fiber.cpp.o: ../wyze/fiber.h
 CMakeFiles/wyze.dir/wyze/fiber.cpp.o: ../wyze/log.h
 CMakeFiles/wyze.dir/wyze/fiber.cpp.o: ../wyze/macro.h
+CMakeFiles/wyze.dir/wyze/fiber.cpp.o: ../wyze/noncopyable.h
 CMakeFiles/wyze.dir/wyze/fiber.cpp.o: ../wyze/scheduler.h
 CMakeFiles/wyze.dir/wyze/fiber.cpp.o: ../wyze/singleton.h
 CMakeFiles/wyze.dir/wyze/fiber.cpp.o: ../wyze/thread.h
 CMakeFiles/wyze.dir/wyze/fiber.cpp.o: ../wyze/util.h
 
+CMakeFiles/wyze.dir/wyze/hook.cpp.o: ../wyze/config.h
+CMakeFiles/wyze.dir/wyze/hook.cpp.o: ../wyze/fdmanager.h
 CMakeFiles/wyze.dir/wyze/hook.cpp.o: ../wyze/fiber.h
 CMakeFiles/wyze.dir/wyze/hook.cpp.o: ../wyze/hook.cpp
 CMakeFiles/wyze.dir/wyze/hook.cpp.o: ../wyze/hook.h
 CMakeFiles/wyze.dir/wyze/hook.cpp.o: ../wyze/iomanager.h
 CMakeFiles/wyze.dir/wyze/hook.cpp.o: ../wyze/log.h
+CMakeFiles/wyze.dir/wyze/hook.cpp.o: ../wyze/macro.h
+CMakeFiles/wyze.dir/wyze/hook.cpp.o: ../wyze/noncopyable.h
 CMakeFiles/wyze.dir/wyze/hook.cpp.o: ../wyze/scheduler.h
 CMakeFiles/wyze.dir/wyze/hook.cpp.o: ../wyze/singleton.h
 CMakeFiles/wyze.dir/wyze/hook.cpp.o: ../wyze/thread.h
@@ -34,6 +50,7 @@ CMakeFiles/wyze.dir/wyze/iomanager.cpp.o: ../wyze/iomanager.cpp
 CMakeFiles/wyze.dir/wyze/iomanager.cpp.o: ../wyze/iomanager.h
 CMakeFiles/wyze.dir/wyze/iomanager.cpp.o: ../wyze/log.h
 CMakeFiles/wyze.dir/wyze/iomanager.cpp.o: ../wyze/macro.h
+CMakeFiles/wyze.dir/wyze/iomanager.cpp.o: ../wyze/noncopyable.h
 CMakeFiles/wyze.dir/wyze/iomanager.cpp.o: ../wyze/scheduler.h
 CMakeFiles/wyze.dir/wyze/iomanager.cpp.o: ../wyze/singleton.h
 CMakeFiles/wyze.dir/wyze/iomanager.cpp.o: ../wyze/thread.h
@@ -43,6 +60,7 @@ CMakeFiles/wyze.dir/wyze/iomanager.cpp.o: ../wyze/util.h
 CMakeFiles/wyze.dir/wyze/log.cpp.o: ../wyze/config.h
 CMakeFiles/wyze.dir/wyze/log.cpp.o: ../wyze/log.cpp
 CMakeFiles/wyze.dir/wyze/log.cpp.o: ../wyze/log.h
+CMakeFiles/wyze.dir/wyze/log.cpp.o: ../wyze/noncopyable.h
 CMakeFiles/wyze.dir/wyze/log.cpp.o: ../wyze/singleton.h
 CMakeFiles/wyze.dir/wyze/log.cpp.o: ../wyze/thread.h
 CMakeFiles/wyze.dir/wyze/log.cpp.o: ../wyze/util.h
@@ -51,6 +69,7 @@ CMakeFiles/wyze.dir/wyze/scheduler.cpp.o: ../wyze/fiber.h
 CMakeFiles/wyze.dir/wyze/scheduler.cpp.o: ../wyze/hook.h
 CMakeFiles/wyze.dir/wyze/scheduler.cpp.o: ../wyze/log.h
 CMakeFiles/wyze.dir/wyze/scheduler.cpp.o: ../wyze/macro.h
+CMakeFiles/wyze.dir/wyze/scheduler.cpp.o: ../wyze/noncopyable.h
 CMakeFiles/wyze.dir/wyze/scheduler.cpp.o: ../wyze/scheduler.cpp
 CMakeFiles/wyze.dir/wyze/scheduler.cpp.o: ../wyze/scheduler.h
 CMakeFiles/wyze.dir/wyze/scheduler.cpp.o: ../wyze/singleton.h
@@ -59,11 +78,13 @@ CMakeFiles/wyze.dir/wyze/scheduler.cpp.o: ../wyze/util.h
 
 CMakeFiles/wyze.dir/wyze/thread.cpp.o: ../wyze/log.h
 CMakeFiles/wyze.dir/wyze/thread.cpp.o: ../wyze/macro.h
+CMakeFiles/wyze.dir/wyze/thread.cpp.o: ../wyze/noncopyable.h
 CMakeFiles/wyze.dir/wyze/thread.cpp.o: ../wyze/singleton.h
 CMakeFiles/wyze.dir/wyze/thread.cpp.o: ../wyze/thread.cpp
 CMakeFiles/wyze.dir/wyze/thread.cpp.o: ../wyze/thread.h
 CMakeFiles/wyze.dir/wyze/thread.cpp.o: ../wyze/util.h
 
+CMakeFiles/wyze.dir/wyze/timer.cpp.o: ../wyze/noncopyable.h
 CMakeFiles/wyze.dir/wyze/timer.cpp.o: ../wyze/thread.h
 CMakeFiles/wyze.dir/wyze/timer.cpp.o: ../wyze/timer.cpp
 CMakeFiles/wyze.dir/wyze/timer.cpp.o: ../wyze/timer.h
@@ -71,6 +92,7 @@ CMakeFiles/wyze.dir/wyze/timer.cpp.o: ../wyze/util.h
 
 CMakeFiles/wyze.dir/wyze/util.cpp.o: ../wyze/fiber.h
 CMakeFiles/wyze.dir/wyze/util.cpp.o: ../wyze/log.h
+CMakeFiles/wyze.dir/wyze/util.cpp.o: ../wyze/noncopyable.h
 CMakeFiles/wyze.dir/wyze/util.cpp.o: ../wyze/singleton.h
 CMakeFiles/wyze.dir/wyze/util.cpp.o: ../wyze/thread.h
 CMakeFiles/wyze.dir/wyze/util.cpp.o: ../wyze/util.cpp

@@ -7,27 +7,25 @@
 #include <atomic>
 #include <memory>
 #include <functional>
+#include "noncopyable.h"
 
 namespace wyze {
 
-    class Semaphore {
+    class Semaphore : Noncopyable {
     public:
         Semaphore(uint32_t count = 0);
         ~Semaphore();
 
         void wait();
         void notify();
-    private:
-        Semaphore(const Semaphore&) = delete;
-        Semaphore(const Semaphore&&) = delete;
-        Semaphore& operator=(const Semaphore&) = delete;
+
     private:
         sem_t m_semaphore;
     };
 
 
     template<class T>
-    class ScopeLockImpl {
+    class ScopeLockImpl : Noncopyable{
     public:
         ScopeLockImpl(T& mutex) 
             : m_mutex(mutex) {
@@ -52,10 +50,6 @@ namespace wyze {
                 m_locked = false;
             }
         }
-    private:
-        ScopeLockImpl(const ScopeLockImpl&)  = delete;
-        ScopeLockImpl(const ScopeLockImpl&&) = delete;
-        ScopeLockImpl& operator=(const ScopeLockImpl&) = delete;
 
     private:
         T& m_mutex;
@@ -64,7 +58,7 @@ namespace wyze {
 
 
     template<class T>
-    class ReadScopeLockImpl {
+    class ReadScopeLockImpl : Noncopyable{
     public:
         ReadScopeLockImpl(T& mutex) 
             : m_mutex(mutex) {
@@ -89,10 +83,6 @@ namespace wyze {
                 m_locked = false;
             }
         }
-    private:
-        ReadScopeLockImpl(const ReadScopeLockImpl&)  = delete;
-        ReadScopeLockImpl(const ReadScopeLockImpl&&) = delete;
-        ReadScopeLockImpl& operator=(const ReadScopeLockImpl&) = delete;
 
     private:
         T& m_mutex;
@@ -100,7 +90,7 @@ namespace wyze {
     };
 
     template<class T>
-    class WriteScopeLockImpl {
+    class WriteScopeLockImpl : Noncopyable{
     public:
         WriteScopeLockImpl(T& mutex) 
             : m_mutex(mutex) {
@@ -125,17 +115,13 @@ namespace wyze {
                 m_locked = false;
             }
         }
-    private:
-        WriteScopeLockImpl(const WriteScopeLockImpl&)  = delete;
-        WriteScopeLockImpl(const WriteScopeLockImpl&&) = delete;
-        WriteScopeLockImpl& operator=(const WriteScopeLockImpl&) = delete;
 
     private:
         T& m_mutex;
         bool m_locked;
     };
 
-    class Mutex {
+    class Mutex : Noncopyable{
     public:
         using Lock = ScopeLockImpl<Mutex>;
 
@@ -143,17 +129,12 @@ namespace wyze {
         ~Mutex();
         void lock();
         void unlock();
-
-    private:
-        Mutex(const Mutex&)  = delete;
-        Mutex(const Mutex&&) = delete;
-        Mutex& operator=(const Mutex&) = delete;
     
     private:
         pthread_mutex_t m_mutex;
     };
 
-    class RWMutex {
+    class RWMutex : Noncopyable{
     public:
         using ReadLock = ReadScopeLockImpl<RWMutex>;
         using WriteLock = WriteScopeLockImpl<RWMutex>;
@@ -163,16 +144,12 @@ namespace wyze {
         void rdlock();
         void wrlock();
         void unlock();
-    private:
-        RWMutex(const RWMutex&)  = delete;
-        RWMutex(const RWMutex&&) = delete;
-        RWMutex& operator=(const RWMutex&) = delete;
 
     private:
         pthread_rwlock_t m_lock;
     };
 
-    class SpinLock {
+    class SpinLock : Noncopyable{
     public:
         using Lock = ScopeLockImpl<SpinLock>;
         SpinLock();
@@ -181,16 +158,11 @@ namespace wyze {
         void unlock();
 
     private:
-        SpinLock(const SpinLock&) = delete;
-        SpinLock(const SpinLock&&) = delete;
-        SpinLock& operator=(const SpinLock&) = delete;
-    
-    private:
         pthread_spinlock_t m_mutex;
     };
 
     //原子操作自选锁
-    class CASLock {
+    class CASLock : Noncopyable{
     public:
         using Lock = ScopeLockImpl<CASLock>;
 
@@ -206,16 +178,13 @@ namespace wyze {
         void unlock() {
             std::atomic_flag_test_and_set_explicit(&m_mutex, std::memory_order_release);
         }
-    private:
-        CASLock(const CASLock&) = delete;
-        CASLock(const CASLock&&) = delete;
-        CASLock& operator=(const CASLock&) = delete;
+
     private:
         volatile std::atomic_flag m_mutex;
     };
 
 
-    class Thread {
+    class Thread : Noncopyable{
     public:
         using ptr = std::shared_ptr<Thread>;
         Thread(std::function<void()> cb, const std::string name);
@@ -229,10 +198,6 @@ namespace wyze {
         static const std::string& GetName() ;
         static void SetName(const std::string& name);
     private:
-        Thread(const Thread&) = delete;
-        Thread(const Thread&&) = delete;
-        Thread& operator=(const Thread&) = delete;
-
         static void* run(void* arg);
 
     private:

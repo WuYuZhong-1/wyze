@@ -4,9 +4,11 @@
 CMakeFiles/test_iomanager.dir/tests/test_iomanager.cpp.o: ../tests/test_iomanager.cpp
 CMakeFiles/test_iomanager.dir/tests/test_iomanager.cpp.o: ../wyze/config.h
 CMakeFiles/test_iomanager.dir/tests/test_iomanager.cpp.o: ../wyze/fiber.h
+CMakeFiles/test_iomanager.dir/tests/test_iomanager.cpp.o: ../wyze/hook.h
 CMakeFiles/test_iomanager.dir/tests/test_iomanager.cpp.o: ../wyze/iomanager.h
 CMakeFiles/test_iomanager.dir/tests/test_iomanager.cpp.o: ../wyze/log.h
 CMakeFiles/test_iomanager.dir/tests/test_iomanager.cpp.o: ../wyze/macro.h
+CMakeFiles/test_iomanager.dir/tests/test_iomanager.cpp.o: ../wyze/noncopyable.h
 CMakeFiles/test_iomanager.dir/tests/test_iomanager.cpp.o: ../wyze/scheduler.h
 CMakeFiles/test_iomanager.dir/tests/test_iomanager.cpp.o: ../wyze/singleton.h
 CMakeFiles/test_iomanager.dir/tests/test_iomanager.cpp.o: ../wyze/thread.h

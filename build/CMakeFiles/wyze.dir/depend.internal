@@ -5,6 +5,17 @@ CMakeFiles/wyze.dir/wyze/config.cpp.o
  /home/wuyz/learn/wyze/wyze/config.cpp
  /home/wuyz/learn/wyze/wyze/config.h
  /home/wuyz/learn/wyze/wyze/log.h
+ /home/wuyz/learn/wyze/wyze/noncopyable.h
+ /home/wuyz/learn/wyze/wyze/singleton.h
+ /home/wuyz/learn/wyze/wyze/thread.h
+ /home/wuyz/learn/wyze/wyze/util.h
+CMakeFiles/wyze.dir/wyze/fdmanager.cpp.o
+ /home/wuyz/learn/wyze/wyze/fdmanager.cpp
+ /home/wuyz/learn/wyze/wyze/fdmanager.h
+ /home/wuyz/learn/wyze/wyze/hook.h
+ /home/wuyz/learn/wyze/wyze/log.h
+ /home/wuyz/learn/wyze/wyze/macro.h
+ /home/wuyz/learn/wyze/wyze/noncopyable.h
  /home/wuyz/learn/wyze/wyze/singleton.h
  /home/wuyz/learn/wyze/wyze/thread.h
  /home/wuyz/learn/wyze/wyze/util.h
@@ -14,16 +25,21 @@ CMakeFiles/wyze.dir/wyze/fiber.cpp.o
  /home/wuyz/learn/wyze/wyze/fiber.h
  /home/wuyz/learn/wyze/wyze/log.h
  /home/wuyz/learn/wyze/wyze/macro.h
+ /home/wuyz/learn/wyze/wyze/noncopyable.h
  /home/wuyz/learn/wyze/wyze/scheduler.h
  /home/wuyz/learn/wyze/wyze/singleton.h
  /home/wuyz/learn/wyze/wyze/thread.h
  /home/wuyz/learn/wyze/wyze/util.h
 CMakeFiles/wyze.dir/wyze/hook.cpp.o
+ /home/wuyz/learn/wyze/wyze/config.h
+ /home/wuyz/learn/wyze/wyze/fdmanager.h
  /home/wuyz/learn/wyze/wyze/fiber.h
  /home/wuyz/learn/wyze/wyze/hook.cpp
  /home/wuyz/learn/wyze/wyze/hook.h
  /home/wuyz/learn/wyze/wyze/iomanager.h
  /home/wuyz/learn/wyze/wyze/log.h
+ /home/wuyz/learn/wyze/wyze/macro.h
+ /home/wuyz/learn/wyze/wyze/noncopyable.h
  /home/wuyz/learn/wyze/wyze/scheduler.h
  /home/wuyz/learn/wyze/wyze/singleton.h
  /home/wuyz/learn/wyze/wyze/thread.h
@@ -35,6 +51,7 @@ CMakeFiles/wyze.dir/wyze/iomanager.cpp.o
  /home/wuyz/learn/wyze/wyze/iomanager.h
  /home/wuyz/learn/wyze/wyze/log.h
  /home/wuyz/learn/wyze/wyze/macro.h
+ /home/wuyz/learn/wyze/wyze/noncopyable.h
  /home/wuyz/learn/wyze/wyze/scheduler.h
  /home/wuyz/learn/wyze/wyze/singleton.h
  /home/wuyz/learn/wyze/wyze/thread.h
@@ -44,6 +61,7 @@ CMakeFiles/wyze.dir/wyze/log.cpp.o
  /home/wuyz/learn/wyze/wyze/config.h
  /home/wuyz/learn/wyze/wyze/log.cpp
  /home/wuyz/learn/wyze/wyze/log.h
+ /home/wuyz/learn/wyze/wyze/noncopyable.h
  /home/wuyz/learn/wyze/wyze/singleton.h
  /home/wuyz/learn/wyze/wyze/thread.h
  /home/wuyz/learn/wyze/wyze/util.h
@@ -52,6 +70,7 @@ CMakeFiles/wyze.dir/wyze/scheduler.cpp.o
  /home/wuyz/learn/wyze/wyze/hook.h
  /home/wuyz/learn/wyze/wyze/log.h
  /home/wuyz/learn/wyze/wyze/macro.h
+ /home/wuyz/learn/wyze/wyze/noncopyable.h
  /home/wuyz/learn/wyze/wyze/scheduler.cpp
  /home/wuyz/learn/wyze/wyze/scheduler.h
  /home/wuyz/learn/wyze/wyze/singleton.h
@@ -60,11 +79,13 @@ CMakeFiles/wyze.dir/wyze/scheduler.cpp.o
 CMakeFiles/wyze.dir/wyze/thread.cpp.o
  /home/wuyz/learn/wyze/wyze/log.h
  /home/wuyz/learn/wyze/wyze/macro.h
+ /home/wuyz/learn/wyze/wyze/noncopyable.h
  /home/wuyz/learn/wyze/wyze/singleton.h
  /home/wuyz/learn/wyze/wyze/thread.cpp
  /home/wuyz/learn/wyze/wyze/thread.h
  /home/wuyz/learn/wyze/wyze/util.h
 CMakeFiles/wyze.dir/wyze/timer.cpp.o
+ /home/wuyz/learn/wyze/wyze/noncopyable.h
  /home/wuyz/learn/wyze/wyze/thread.h
  /home/wuyz/learn/wyze/wyze/timer.cpp
  /home/wuyz/learn/wyze/wyze/timer.h
@@ -72,6 +93,7 @@ CMakeFiles/wyze.dir/wyze/timer.cpp.o
 CMakeFiles/wyze.dir/wyze/util.cpp.o
  /home/wuyz/learn/wyze/wyze/fiber.h
  /home/wuyz/learn/wyze/wyze/log.h
+ /home/wuyz/learn/wyze/wyze/noncopyable.h
  /home/wuyz/learn/wyze/wyze/singleton.h
  /home/wuyz/learn/wyze/wyze/thread.h
  /home/wuyz/learn/wyze/wyze/util.cpp

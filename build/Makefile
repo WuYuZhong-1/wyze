@@ -513,6 +513,33 @@ wyze/config.cpp.s:
 	$(MAKE) -f CMakeFiles/wyze.dir/build.make CMakeFiles/wyze.dir/wyze/config.cpp.s
 .PHONY : wyze/config.cpp.s
 
+wyze/fdmanager.o: wyze/fdmanager.cpp.o
+
+.PHONY : wyze/fdmanager.o
+
+# target to build an object file
+wyze/fdmanager.cpp.o:
+	$(MAKE) -f CMakeFiles/wyze.dir/build.make CMakeFiles/wyze.dir/wyze/fdmanager.cpp.o
+.PHONY : wyze/fdmanager.cpp.o
+
+wyze/fdmanager.i: wyze/fdmanager.cpp.i
+
+.PHONY : wyze/fdmanager.i
+
+# target to preprocess a source file
+wyze/fdmanager.cpp.i:
+	$(MAKE) -f CMakeFiles/wyze.dir/build.make CMakeFiles/wyze.dir/wyze/fdmanager.cpp.i
+.PHONY : wyze/fdmanager.cpp.i
+
+wyze/fdmanager.s: wyze/fdmanager.cpp.s
+
+.PHONY : wyze/fdmanager.s
+
+# target to generate assembly for a file
+wyze/fdmanager.cpp.s:
+	$(MAKE) -f CMakeFiles/wyze.dir/build.make CMakeFiles/wyze.dir/wyze/fdmanager.cpp.s
+.PHONY : wyze/fdmanager.cpp.s
+
 wyze/fiber.o: wyze/fiber.cpp.o
 
 .PHONY : wyze/fiber.o
@@ -777,6 +804,9 @@ help:
 	@echo "... wyze/config.o"
 	@echo "... wyze/config.i"
 	@echo "... wyze/config.s"
+	@echo "... wyze/fdmanager.o"
+	@echo "... wyze/fdmanager.i"
+	@echo "... wyze/fdmanager.s"
 	@echo "... wyze/fiber.o"
 	@echo "... wyze/fiber.i"
 	@echo "... wyze/fiber.s"

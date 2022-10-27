@@ -150,7 +150,7 @@ namespace wyze {
         if(cb) {
             ev_ctx.cb.swap(cb);
         }
-        else {      //TODO::这里不清楚为什么会这么做
+        else {      //TODO::这里是因为要挂起自己，
             ev_ctx.fiber = Fiber::GetThis();
             WYZE_ASSERT(ev_ctx.fiber->getState() == Fiber::State::EXEC);
         }
