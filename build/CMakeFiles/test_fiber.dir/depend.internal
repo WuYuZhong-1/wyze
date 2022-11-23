@@ -3,7 +3,9 @@
 
 CMakeFiles/test_fiber.dir/tests/test_fiber.cpp.o
  /home/wuyz/learn/wyze/tests/test_fiber.cpp
+ /home/wuyz/learn/wyze/wyze/address.h
  /home/wuyz/learn/wyze/wyze/config.h
+ /home/wuyz/learn/wyze/wyze/endian.h
  /home/wuyz/learn/wyze/wyze/fiber.h
  /home/wuyz/learn/wyze/wyze/hook.h
  /home/wuyz/learn/wyze/wyze/iomanager.h
@@ -12,6 +14,7 @@ CMakeFiles/test_fiber.dir/tests/test_fiber.cpp.o
  /home/wuyz/learn/wyze/wyze/noncopyable.h
  /home/wuyz/learn/wyze/wyze/scheduler.h
  /home/wuyz/learn/wyze/wyze/singleton.h
+ /home/wuyz/learn/wyze/wyze/socket.h
  /home/wuyz/learn/wyze/wyze/thread.h
  /home/wuyz/learn/wyze/wyze/timer.h
  /home/wuyz/learn/wyze/wyze/util.h

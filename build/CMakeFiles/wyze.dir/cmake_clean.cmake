@@ -1,4 +1,5 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/wyze.dir/wyze/address.cpp.o"
   "CMakeFiles/wyze.dir/wyze/config.cpp.o"
   "CMakeFiles/wyze.dir/wyze/fdmanager.cpp.o"
   "CMakeFiles/wyze.dir/wyze/fiber.cpp.o"
@@ -6,6 +7,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/wyze.dir/wyze/iomanager.cpp.o"
   "CMakeFiles/wyze.dir/wyze/log.cpp.o"
   "CMakeFiles/wyze.dir/wyze/scheduler.cpp.o"
+  "CMakeFiles/wyze.dir/wyze/socket.cpp.o"
   "CMakeFiles/wyze.dir/wyze/thread.cpp.o"
   "CMakeFiles/wyze.dir/wyze/timer.cpp.o"
   "CMakeFiles/wyze.dir/wyze/util.cpp.o"

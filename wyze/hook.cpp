@@ -225,7 +225,7 @@ extern "C" {
         return fd; 
     }
 
-    static int connect_with_tiemout(int fd, const struct sockaddr* addr, socklen_t addrlen, uint64_t timeout_ms)
+    int connect_with_tiemout(int fd, const struct sockaddr* addr, socklen_t addrlen, uint64_t timeout_ms)
     {
         if( !wyze::t_hook_enable )
             return connect_f(fd, addr, addrlen);

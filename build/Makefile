@@ -114,6 +114,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named test_address
+
+# Build rule for target.
+test_address: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 test_address
+.PHONY : test_address
+
+# fast build rule for target.
+test_address/fast:
+	$(MAKE) -f CMakeFiles/test_address.dir/build.make CMakeFiles/test_address.dir/build
+.PHONY : test_address/fast
+
+#=============================================================================
 # Target rules for targets named test_hook
 
 # Build rule for target.
@@ -231,6 +244,19 @@ test_util/fast:
 .PHONY : test_util/fast
 
 #=============================================================================
+# Target rules for targets named test_socket
+
+# Build rule for target.
+test_socket: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 test_socket
+.PHONY : test_socket
+
+# fast build rule for target.
+test_socket/fast:
+	$(MAKE) -f CMakeFiles/test_socket.dir/build.make CMakeFiles/test_socket.dir/build
+.PHONY : test_socket/fast
+
+#=============================================================================
 # Target rules for targets named test_fiber
 
 # Build rule for target.
@@ -269,6 +295,33 @@ tests/test.s: tests/test.cpp.s
 tests/test.cpp.s:
 	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/tests/test.cpp.s
 .PHONY : tests/test.cpp.s
+
+tests/test_address.o: tests/test_address.cpp.o
+
+.PHONY : tests/test_address.o
+
+# target to build an object file
+tests/test_address.cpp.o:
+	$(MAKE) -f CMakeFiles/test_address.dir/build.make CMakeFiles/test_address.dir/tests/test_address.cpp.o
+.PHONY : tests/test_address.cpp.o
+
+tests/test_address.i: tests/test_address.cpp.i
+
+.PHONY : tests/test_address.i
+
+# target to preprocess a source file
+tests/test_address.cpp.i:
+	$(MAKE) -f CMakeFiles/test_address.dir/build.make CMakeFiles/test_address.dir/tests/test_address.cpp.i
+.PHONY : tests/test_address.cpp.i
+
+tests/test_address.s: tests/test_address.cpp.s
+
+.PHONY : tests/test_address.s
+
+# target to generate assembly for a file
+tests/test_address.cpp.s:
+	$(MAKE) -f CMakeFiles/test_address.dir/build.make CMakeFiles/test_address.dir/tests/test_address.cpp.s
+.PHONY : tests/test_address.cpp.s
 
 tests/test_config.o: tests/test_config.cpp.o
 
@@ -405,6 +458,33 @@ tests/test_scheduler.cpp.s:
 	$(MAKE) -f CMakeFiles/test_scheduler.dir/build.make CMakeFiles/test_scheduler.dir/tests/test_scheduler.cpp.s
 .PHONY : tests/test_scheduler.cpp.s
 
+tests/test_socket.o: tests/test_socket.cpp.o
+
+.PHONY : tests/test_socket.o
+
+# target to build an object file
+tests/test_socket.cpp.o:
+	$(MAKE) -f CMakeFiles/test_socket.dir/build.make CMakeFiles/test_socket.dir/tests/test_socket.cpp.o
+.PHONY : tests/test_socket.cpp.o
+
+tests/test_socket.i: tests/test_socket.cpp.i
+
+.PHONY : tests/test_socket.i
+
+# target to preprocess a source file
+tests/test_socket.cpp.i:
+	$(MAKE) -f CMakeFiles/test_socket.dir/build.make CMakeFiles/test_socket.dir/tests/test_socket.cpp.i
+.PHONY : tests/test_socket.cpp.i
+
+tests/test_socket.s: tests/test_socket.cpp.s
+
+.PHONY : tests/test_socket.s
+
+# target to generate assembly for a file
+tests/test_socket.cpp.s:
+	$(MAKE) -f CMakeFiles/test_socket.dir/build.make CMakeFiles/test_socket.dir/tests/test_socket.cpp.s
+.PHONY : tests/test_socket.cpp.s
+
 tests/test_thread.o: tests/test_thread.cpp.o
 
 .PHONY : tests/test_thread.o
@@ -485,6 +565,33 @@ tests/test_util.s: tests/test_util.cpp.s
 tests/test_util.cpp.s:
 	$(MAKE) -f CMakeFiles/test_util.dir/build.make CMakeFiles/test_util.dir/tests/test_util.cpp.s
 .PHONY : tests/test_util.cpp.s
+
+wyze/address.o: wyze/address.cpp.o
+
+.PHONY : wyze/address.o
+
+# target to build an object file
+wyze/address.cpp.o:
+	$(MAKE) -f CMakeFiles/wyze.dir/build.make CMakeFiles/wyze.dir/wyze/address.cpp.o
+.PHONY : wyze/address.cpp.o
+
+wyze/address.i: wyze/address.cpp.i
+
+.PHONY : wyze/address.i
+
+# target to preprocess a source file
+wyze/address.cpp.i:
+	$(MAKE) -f CMakeFiles/wyze.dir/build.make CMakeFiles/wyze.dir/wyze/address.cpp.i
+.PHONY : wyze/address.cpp.i
+
+wyze/address.s: wyze/address.cpp.s
+
+.PHONY : wyze/address.s
+
+# target to generate assembly for a file
+wyze/address.cpp.s:
+	$(MAKE) -f CMakeFiles/wyze.dir/build.make CMakeFiles/wyze.dir/wyze/address.cpp.s
+.PHONY : wyze/address.cpp.s
 
 wyze/config.o: wyze/config.cpp.o
 
@@ -675,6 +782,33 @@ wyze/scheduler.cpp.s:
 	$(MAKE) -f CMakeFiles/wyze.dir/build.make CMakeFiles/wyze.dir/wyze/scheduler.cpp.s
 .PHONY : wyze/scheduler.cpp.s
 
+wyze/socket.o: wyze/socket.cpp.o
+
+.PHONY : wyze/socket.o
+
+# target to build an object file
+wyze/socket.cpp.o:
+	$(MAKE) -f CMakeFiles/wyze.dir/build.make CMakeFiles/wyze.dir/wyze/socket.cpp.o
+.PHONY : wyze/socket.cpp.o
+
+wyze/socket.i: wyze/socket.cpp.i
+
+.PHONY : wyze/socket.i
+
+# target to preprocess a source file
+wyze/socket.cpp.i:
+	$(MAKE) -f CMakeFiles/wyze.dir/build.make CMakeFiles/wyze.dir/wyze/socket.cpp.i
+.PHONY : wyze/socket.cpp.i
+
+wyze/socket.s: wyze/socket.cpp.s
+
+.PHONY : wyze/socket.s
+
+# target to generate assembly for a file
+wyze/socket.cpp.s:
+	$(MAKE) -f CMakeFiles/wyze.dir/build.make CMakeFiles/wyze.dir/wyze/socket.cpp.s
+.PHONY : wyze/socket.cpp.s
+
 wyze/thread.o: wyze/thread.cpp.o
 
 .PHONY : wyze/thread.o
@@ -764,6 +898,7 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
+	@echo "... test_address"
 	@echo "... test_hook"
 	@echo "... test_timer"
 	@echo "... test_iomanager"
@@ -773,10 +908,14 @@ help:
 	@echo "... wyze"
 	@echo "... test_thread"
 	@echo "... test_util"
+	@echo "... test_socket"
 	@echo "... test_fiber"
 	@echo "... tests/test.o"
 	@echo "... tests/test.i"
 	@echo "... tests/test.s"
+	@echo "... tests/test_address.o"
+	@echo "... tests/test_address.i"
+	@echo "... tests/test_address.s"
 	@echo "... tests/test_config.o"
 	@echo "... tests/test_config.i"
 	@echo "... tests/test_config.s"
@@ -792,6 +931,9 @@ help:
 	@echo "... tests/test_scheduler.o"
 	@echo "... tests/test_scheduler.i"
 	@echo "... tests/test_scheduler.s"
+	@echo "... tests/test_socket.o"
+	@echo "... tests/test_socket.i"
+	@echo "... tests/test_socket.s"
 	@echo "... tests/test_thread.o"
 	@echo "... tests/test_thread.i"
 	@echo "... tests/test_thread.s"
@@ -801,6 +943,9 @@ help:
 	@echo "... tests/test_util.o"
 	@echo "... tests/test_util.i"
 	@echo "... tests/test_util.s"
+	@echo "... wyze/address.o"
+	@echo "... wyze/address.i"
+	@echo "... wyze/address.s"
 	@echo "... wyze/config.o"
 	@echo "... wyze/config.i"
 	@echo "... wyze/config.s"
@@ -822,6 +967,9 @@ help:
 	@echo "... wyze/scheduler.o"
 	@echo "... wyze/scheduler.i"
 	@echo "... wyze/scheduler.s"
+	@echo "... wyze/socket.o"
+	@echo "... wyze/socket.i"
+	@echo "... wyze/socket.s"
 	@echo "... wyze/thread.o"
 	@echo "... wyze/thread.i"
 	@echo "... wyze/thread.s"

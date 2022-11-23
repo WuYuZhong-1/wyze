@@ -8,6 +8,7 @@ set(CMAKE_CXX_FLAGS "$ENV{CXXFLAGS} -rdynamic -O0 -ggdb -std=c++11 -Wall -Wno-de
 link_directories(/usr/local/lib/yaml-cpp)
 
 set(LIB_SRC
+    wyze/address.cpp
     wyze/config.cpp
     wyze/fdmanager.cpp
     wyze/fiber.cpp
@@ -15,6 +16,7 @@ set(LIB_SRC
     wyze/iomanager.cpp
     wyze/log.cpp
     wyze/scheduler.cpp
+    wyze/socket.cpp
     wyze/thread.cpp
     wyze/timer.cpp
     wyze/util.cpp
@@ -64,6 +66,14 @@ target_link_libraries(test_timer ${LIBS})
 add_executable(test_hook tests/test_hook.cpp)
 add_dependencies(test_hook wyze)
 target_link_libraries(test_hook ${LIBS})
+
+add_executable(test_socket tests/test_socket.cpp)
+add_dependencies(test_socket wyze)
+target_link_libraries(test_socket ${LIBS})
+
+add_executable(test_address tests/test_address.cpp)
+add_dependencies(test_address wyze)
+target_link_libraries(test_address ${LIBS})
 
 SET(EXECUTABLE_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/bin)
 SET(LIBRARY_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/lib)
