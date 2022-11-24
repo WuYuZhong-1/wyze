@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/wyze.dir/wyze/address.cpp.o"
+  "CMakeFiles/wyze.dir/wyze/bytearray.cpp.o"
   "CMakeFiles/wyze.dir/wyze/config.cpp.o"
   "CMakeFiles/wyze.dir/wyze/fdmanager.cpp.o"
   "CMakeFiles/wyze.dir/wyze/fiber.cpp.o"

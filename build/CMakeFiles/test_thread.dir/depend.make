@@ -3,6 +3,7 @@
 
 CMakeFiles/test_thread.dir/tests/test_thread.cpp.o: ../tests/test_thread.cpp
 CMakeFiles/test_thread.dir/tests/test_thread.cpp.o: ../wyze/address.h
+CMakeFiles/test_thread.dir/tests/test_thread.cpp.o: ../wyze/bytearray.h
 CMakeFiles/test_thread.dir/tests/test_thread.cpp.o: ../wyze/config.h
 CMakeFiles/test_thread.dir/tests/test_thread.cpp.o: ../wyze/endian.h
 CMakeFiles/test_thread.dir/tests/test_thread.cpp.o: ../wyze/fiber.h

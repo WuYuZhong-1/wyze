@@ -4,6 +4,7 @@
 CMakeFiles/test_thread.dir/tests/test_thread.cpp.o
  /home/wuyz/learn/wyze/tests/test_thread.cpp
  /home/wuyz/learn/wyze/wyze/address.h
+ /home/wuyz/learn/wyze/wyze/bytearray.h
  /home/wuyz/learn/wyze/wyze/config.h
  /home/wuyz/learn/wyze/wyze/endian.h
  /home/wuyz/learn/wyze/wyze/fiber.h

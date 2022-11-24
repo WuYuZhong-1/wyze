@@ -3,6 +3,7 @@
 
 CMakeFiles/test_iomanager.dir/tests/test_iomanager.cpp.o: ../tests/test_iomanager.cpp
 CMakeFiles/test_iomanager.dir/tests/test_iomanager.cpp.o: ../wyze/address.h
+CMakeFiles/test_iomanager.dir/tests/test_iomanager.cpp.o: ../wyze/bytearray.h
 CMakeFiles/test_iomanager.dir/tests/test_iomanager.cpp.o: ../wyze/config.h
 CMakeFiles/test_iomanager.dir/tests/test_iomanager.cpp.o: ../wyze/endian.h
 CMakeFiles/test_iomanager.dir/tests/test_iomanager.cpp.o: ../wyze/fiber.h

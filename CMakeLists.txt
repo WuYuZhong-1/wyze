@@ -9,6 +9,7 @@ link_directories(/usr/local/lib/yaml-cpp)
 
 set(LIB_SRC
     wyze/address.cpp
+    wyze/bytearray.cpp
     wyze/config.cpp
     wyze/fdmanager.cpp
     wyze/fiber.cpp
@@ -74,6 +75,10 @@ target_link_libraries(test_socket ${LIBS})
 add_executable(test_address tests/test_address.cpp)
 add_dependencies(test_address wyze)
 target_link_libraries(test_address ${LIBS})
+
+add_executable(test_bytearray tests/test_bytearray.cpp)
+add_dependencies(test_bytearray wyze)
+target_link_libraries(test_bytearray ${LIBS})
 
 SET(EXECUTABLE_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/bin)
 SET(LIBRARY_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/lib)

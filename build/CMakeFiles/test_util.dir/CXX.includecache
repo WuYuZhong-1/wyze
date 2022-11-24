@@ -28,6 +28,16 @@ vector
 map
 -
 
+/home/wuyz/learn/wyze/wyze/bytearray.h
+memory
+-
+stdint.h
+-
+vector
+-
+sys/uio.h
+-
+
 /home/wuyz/learn/wyze/wyze/config.h
 iostream
 -
@@ -213,6 +223,8 @@ sstream
 /home/wuyz/learn/wyze/wyze/wyze.h
 address.h
 /home/wuyz/learn/wyze/wyze/address.h
+bytearray.h
+/home/wuyz/learn/wyze/wyze/bytearray.h
 config.h
 /home/wuyz/learn/wyze/wyze/config.h
 fiber.h

@@ -3,6 +3,7 @@
 
 CMakeFiles/test_timer.dir/tests/test_timer.cpp.o: ../tests/test_timer.cpp
 CMakeFiles/test_timer.dir/tests/test_timer.cpp.o: ../wyze/address.h
+CMakeFiles/test_timer.dir/tests/test_timer.cpp.o: ../wyze/bytearray.h
 CMakeFiles/test_timer.dir/tests/test_timer.cpp.o: ../wyze/config.h
 CMakeFiles/test_timer.dir/tests/test_timer.cpp.o: ../wyze/endian.h
 CMakeFiles/test_timer.dir/tests/test_timer.cpp.o: ../wyze/fiber.h

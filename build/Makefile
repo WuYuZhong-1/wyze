@@ -218,6 +218,19 @@ wyze/fast:
 .PHONY : wyze/fast
 
 #=============================================================================
+# Target rules for targets named test_bytearray
+
+# Build rule for target.
+test_bytearray: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 test_bytearray
+.PHONY : test_bytearray
+
+# fast build rule for target.
+test_bytearray/fast:
+	$(MAKE) -f CMakeFiles/test_bytearray.dir/build.make CMakeFiles/test_bytearray.dir/build
+.PHONY : test_bytearray/fast
+
+#=============================================================================
 # Target rules for targets named test_thread
 
 # Build rule for target.
@@ -322,6 +335,33 @@ tests/test_address.s: tests/test_address.cpp.s
 tests/test_address.cpp.s:
 	$(MAKE) -f CMakeFiles/test_address.dir/build.make CMakeFiles/test_address.dir/tests/test_address.cpp.s
 .PHONY : tests/test_address.cpp.s
+
+tests/test_bytearray.o: tests/test_bytearray.cpp.o
+
+.PHONY : tests/test_bytearray.o
+
+# target to build an object file
+tests/test_bytearray.cpp.o:
+	$(MAKE) -f CMakeFiles/test_bytearray.dir/build.make CMakeFiles/test_bytearray.dir/tests/test_bytearray.cpp.o
+.PHONY : tests/test_bytearray.cpp.o
+
+tests/test_bytearray.i: tests/test_bytearray.cpp.i
+
+.PHONY : tests/test_bytearray.i
+
+# target to preprocess a source file
+tests/test_bytearray.cpp.i:
+	$(MAKE) -f CMakeFiles/test_bytearray.dir/build.make CMakeFiles/test_bytearray.dir/tests/test_bytearray.cpp.i
+.PHONY : tests/test_bytearray.cpp.i
+
+tests/test_bytearray.s: tests/test_bytearray.cpp.s
+
+.PHONY : tests/test_bytearray.s
+
+# target to generate assembly for a file
+tests/test_bytearray.cpp.s:
+	$(MAKE) -f CMakeFiles/test_bytearray.dir/build.make CMakeFiles/test_bytearray.dir/tests/test_bytearray.cpp.s
+.PHONY : tests/test_bytearray.cpp.s
 
 tests/test_config.o: tests/test_config.cpp.o
 
@@ -592,6 +632,33 @@ wyze/address.s: wyze/address.cpp.s
 wyze/address.cpp.s:
 	$(MAKE) -f CMakeFiles/wyze.dir/build.make CMakeFiles/wyze.dir/wyze/address.cpp.s
 .PHONY : wyze/address.cpp.s
+
+wyze/bytearray.o: wyze/bytearray.cpp.o
+
+.PHONY : wyze/bytearray.o
+
+# target to build an object file
+wyze/bytearray.cpp.o:
+	$(MAKE) -f CMakeFiles/wyze.dir/build.make CMakeFiles/wyze.dir/wyze/bytearray.cpp.o
+.PHONY : wyze/bytearray.cpp.o
+
+wyze/bytearray.i: wyze/bytearray.cpp.i
+
+.PHONY : wyze/bytearray.i
+
+# target to preprocess a source file
+wyze/bytearray.cpp.i:
+	$(MAKE) -f CMakeFiles/wyze.dir/build.make CMakeFiles/wyze.dir/wyze/bytearray.cpp.i
+.PHONY : wyze/bytearray.cpp.i
+
+wyze/bytearray.s: wyze/bytearray.cpp.s
+
+.PHONY : wyze/bytearray.s
+
+# target to generate assembly for a file
+wyze/bytearray.cpp.s:
+	$(MAKE) -f CMakeFiles/wyze.dir/build.make CMakeFiles/wyze.dir/wyze/bytearray.cpp.s
+.PHONY : wyze/bytearray.cpp.s
 
 wyze/config.o: wyze/config.cpp.o
 
@@ -906,6 +973,7 @@ help:
 	@echo "... test"
 	@echo "... test_config"
 	@echo "... wyze"
+	@echo "... test_bytearray"
 	@echo "... test_thread"
 	@echo "... test_util"
 	@echo "... test_socket"
@@ -916,6 +984,9 @@ help:
 	@echo "... tests/test_address.o"
 	@echo "... tests/test_address.i"
 	@echo "... tests/test_address.s"
+	@echo "... tests/test_bytearray.o"
+	@echo "... tests/test_bytearray.i"
+	@echo "... tests/test_bytearray.s"
 	@echo "... tests/test_config.o"
 	@echo "... tests/test_config.i"
 	@echo "... tests/test_config.s"
@@ -946,6 +1017,9 @@ help:
 	@echo "... wyze/address.o"
 	@echo "... wyze/address.i"
 	@echo "... wyze/address.s"
+	@echo "... wyze/bytearray.o"
+	@echo "... wyze/bytearray.i"
+	@echo "... wyze/bytearray.s"
 	@echo "... wyze/config.o"
 	@echo "... wyze/config.i"
 	@echo "... wyze/config.s"

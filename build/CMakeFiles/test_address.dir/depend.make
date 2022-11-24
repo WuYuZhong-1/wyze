@@ -3,6 +3,7 @@
 
 CMakeFiles/test_address.dir/tests/test_address.cpp.o: ../tests/test_address.cpp
 CMakeFiles/test_address.dir/tests/test_address.cpp.o: ../wyze/address.h
+CMakeFiles/test_address.dir/tests/test_address.cpp.o: ../wyze/bytearray.h
 CMakeFiles/test_address.dir/tests/test_address.cpp.o: ../wyze/config.h
 CMakeFiles/test_address.dir/tests/test_address.cpp.o: ../wyze/endian.h
 CMakeFiles/test_address.dir/tests/test_address.cpp.o: ../wyze/fiber.h

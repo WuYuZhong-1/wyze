@@ -3,6 +3,7 @@
 
 CMakeFiles/test_util.dir/tests/test_util.cpp.o: ../tests/test_util.cpp
 CMakeFiles/test_util.dir/tests/test_util.cpp.o: ../wyze/address.h
+CMakeFiles/test_util.dir/tests/test_util.cpp.o: ../wyze/bytearray.h
 CMakeFiles/test_util.dir/tests/test_util.cpp.o: ../wyze/config.h
 CMakeFiles/test_util.dir/tests/test_util.cpp.o: ../wyze/endian.h
 CMakeFiles/test_util.dir/tests/test_util.cpp.o: ../wyze/fiber.h

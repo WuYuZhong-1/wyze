@@ -3,6 +3,7 @@
 
 CMakeFiles/test_fiber.dir/tests/test_fiber.cpp.o: ../tests/test_fiber.cpp
 CMakeFiles/test_fiber.dir/tests/test_fiber.cpp.o: ../wyze/address.h
+CMakeFiles/test_fiber.dir/tests/test_fiber.cpp.o: ../wyze/bytearray.h
 CMakeFiles/test_fiber.dir/tests/test_fiber.cpp.o: ../wyze/config.h
 CMakeFiles/test_fiber.dir/tests/test_fiber.cpp.o: ../wyze/endian.h
 CMakeFiles/test_fiber.dir/tests/test_fiber.cpp.o: ../wyze/fiber.h

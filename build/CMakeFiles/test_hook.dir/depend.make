@@ -3,6 +3,7 @@
 
 CMakeFiles/test_hook.dir/tests/test_hook.cpp.o: ../tests/test_hook.cpp
 CMakeFiles/test_hook.dir/tests/test_hook.cpp.o: ../wyze/address.h
+CMakeFiles/test_hook.dir/tests/test_hook.cpp.o: ../wyze/bytearray.h
 CMakeFiles/test_hook.dir/tests/test_hook.cpp.o: ../wyze/config.h
 CMakeFiles/test_hook.dir/tests/test_hook.cpp.o: ../wyze/endian.h
 CMakeFiles/test_hook.dir/tests/test_hook.cpp.o: ../wyze/fiber.h

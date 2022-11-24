@@ -8,6 +8,7 @@
 /home/wuyz/learn/wyze/build/CMakeFiles/test.dir
 /home/wuyz/learn/wyze/build/CMakeFiles/test_config.dir
 /home/wuyz/learn/wyze/build/CMakeFiles/wyze.dir
+/home/wuyz/learn/wyze/build/CMakeFiles/test_bytearray.dir
 /home/wuyz/learn/wyze/build/CMakeFiles/test_thread.dir
 /home/wuyz/learn/wyze/build/CMakeFiles/test_util.dir
 /home/wuyz/learn/wyze/build/CMakeFiles/test_socket.dir

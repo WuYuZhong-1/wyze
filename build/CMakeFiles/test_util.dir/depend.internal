@@ -4,6 +4,7 @@
 CMakeFiles/test_util.dir/tests/test_util.cpp.o
  /home/wuyz/learn/wyze/tests/test_util.cpp
  /home/wuyz/learn/wyze/wyze/address.h
+ /home/wuyz/learn/wyze/wyze/bytearray.h
  /home/wuyz/learn/wyze/wyze/config.h
  /home/wuyz/learn/wyze/wyze/endian.h
  /home/wuyz/learn/wyze/wyze/fiber.h

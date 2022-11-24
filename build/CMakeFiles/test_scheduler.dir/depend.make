@@ -3,6 +3,7 @@
 
 CMakeFiles/test_scheduler.dir/tests/test_scheduler.cpp.o: ../tests/test_scheduler.cpp
 CMakeFiles/test_scheduler.dir/tests/test_scheduler.cpp.o: ../wyze/address.h
+CMakeFiles/test_scheduler.dir/tests/test_scheduler.cpp.o: ../wyze/bytearray.h
 CMakeFiles/test_scheduler.dir/tests/test_scheduler.cpp.o: ../wyze/config.h
 CMakeFiles/test_scheduler.dir/tests/test_scheduler.cpp.o: ../wyze/endian.h
 CMakeFiles/test_scheduler.dir/tests/test_scheduler.cpp.o: ../wyze/fiber.h

@@ -84,9 +84,33 @@ CMakeFiles/wyze.dir/wyze/address.cpp.o.provides: CMakeFiles/wyze.dir/wyze/addres
 CMakeFiles/wyze.dir/wyze/address.cpp.o.provides.build: CMakeFiles/wyze.dir/wyze/address.cpp.o
 
 
+CMakeFiles/wyze.dir/wyze/bytearray.cpp.o: CMakeFiles/wyze.dir/flags.make
+CMakeFiles/wyze.dir/wyze/bytearray.cpp.o: ../wyze/bytearray.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/wuyz/learn/wyze/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/wyze.dir/wyze/bytearray.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/wyze.dir/wyze/bytearray.cpp.o -c /home/wuyz/learn/wyze/wyze/bytearray.cpp
+
+CMakeFiles/wyze.dir/wyze/bytearray.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/wyze.dir/wyze/bytearray.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/wuyz/learn/wyze/wyze/bytearray.cpp > CMakeFiles/wyze.dir/wyze/bytearray.cpp.i
+
+CMakeFiles/wyze.dir/wyze/bytearray.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/wyze.dir/wyze/bytearray.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/wuyz/learn/wyze/wyze/bytearray.cpp -o CMakeFiles/wyze.dir/wyze/bytearray.cpp.s
+
+CMakeFiles/wyze.dir/wyze/bytearray.cpp.o.requires:
+
+.PHONY : CMakeFiles/wyze.dir/wyze/bytearray.cpp.o.requires
+
+CMakeFiles/wyze.dir/wyze/bytearray.cpp.o.provides: CMakeFiles/wyze.dir/wyze/bytearray.cpp.o.requires
+	$(MAKE) -f CMakeFiles/wyze.dir/build.make CMakeFiles/wyze.dir/wyze/bytearray.cpp.o.provides.build
+.PHONY : CMakeFiles/wyze.dir/wyze/bytearray.cpp.o.provides
+
+CMakeFiles/wyze.dir/wyze/bytearray.cpp.o.provides.build: CMakeFiles/wyze.dir/wyze/bytearray.cpp.o
+
+
 CMakeFiles/wyze.dir/wyze/config.cpp.o: CMakeFiles/wyze.dir/flags.make
 CMakeFiles/wyze.dir/wyze/config.cpp.o: ../wyze/config.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/wuyz/learn/wyze/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/wyze.dir/wyze/config.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/wuyz/learn/wyze/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/wyze.dir/wyze/config.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/wyze.dir/wyze/config.cpp.o -c /home/wuyz/learn/wyze/wyze/config.cpp
 
 CMakeFiles/wyze.dir/wyze/config.cpp.i: cmake_force
@@ -110,7 +134,7 @@ CMakeFiles/wyze.dir/wyze/config.cpp.o.provides.build: CMakeFiles/wyze.dir/wyze/c
 
 CMakeFiles/wyze.dir/wyze/fdmanager.cpp.o: CMakeFiles/wyze.dir/flags.make
 CMakeFiles/wyze.dir/wyze/fdmanager.cpp.o: ../wyze/fdmanager.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/wuyz/learn/wyze/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/wyze.dir/wyze/fdmanager.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/wuyz/learn/wyze/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/wyze.dir/wyze/fdmanager.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/wyze.dir/wyze/fdmanager.cpp.o -c /home/wuyz/learn/wyze/wyze/fdmanager.cpp
 
 CMakeFiles/wyze.dir/wyze/fdmanager.cpp.i: cmake_force
@@ -134,7 +158,7 @@ CMakeFiles/wyze.dir/wyze/fdmanager.cpp.o.provides.build: CMakeFiles/wyze.dir/wyz
 
 CMakeFiles/wyze.dir/wyze/fiber.cpp.o: CMakeFiles/wyze.dir/flags.make
 CMakeFiles/wyze.dir/wyze/fiber.cpp.o: ../wyze/fiber.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/wuyz/learn/wyze/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/wyze.dir/wyze/fiber.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/wuyz/learn/wyze/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/wyze.dir/wyze/fiber.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/wyze.dir/wyze/fiber.cpp.o -c /home/wuyz/learn/wyze/wyze/fiber.cpp
 
 CMakeFiles/wyze.dir/wyze/fiber.cpp.i: cmake_force
@@ -158,7 +182,7 @@ CMakeFiles/wyze.dir/wyze/fiber.cpp.o.provides.build: CMakeFiles/wyze.dir/wyze/fi
 
 CMakeFiles/wyze.dir/wyze/hook.cpp.o: CMakeFiles/wyze.dir/flags.make
 CMakeFiles/wyze.dir/wyze/hook.cpp.o: ../wyze/hook.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/wuyz/learn/wyze/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/wyze.dir/wyze/hook.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/wuyz/learn/wyze/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/wyze.dir/wyze/hook.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/wyze.dir/wyze/hook.cpp.o -c /home/wuyz/learn/wyze/wyze/hook.cpp
 
 CMakeFiles/wyze.dir/wyze/hook.cpp.i: cmake_force
@@ -182,7 +206,7 @@ CMakeFiles/wyze.dir/wyze/hook.cpp.o.provides.build: CMakeFiles/wyze.dir/wyze/hoo
 
 CMakeFiles/wyze.dir/wyze/iomanager.cpp.o: CMakeFiles/wyze.dir/flags.make
 CMakeFiles/wyze.dir/wyze/iomanager.cpp.o: ../wyze/iomanager.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/wuyz/learn/wyze/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/wyze.dir/wyze/iomanager.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/wuyz/learn/wyze/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/wyze.dir/wyze/iomanager.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/wyze.dir/wyze/iomanager.cpp.o -c /home/wuyz/learn/wyze/wyze/iomanager.cpp
 
 CMakeFiles/wyze.dir/wyze/iomanager.cpp.i: cmake_force
@@ -206,7 +230,7 @@ CMakeFiles/wyze.dir/wyze/iomanager.cpp.o.provides.build: CMakeFiles/wyze.dir/wyz
 
 CMakeFiles/wyze.dir/wyze/log.cpp.o: CMakeFiles/wyze.dir/flags.make
 CMakeFiles/wyze.dir/wyze/log.cpp.o: ../wyze/log.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/wuyz/learn/wyze/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/wyze.dir/wyze/log.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/wuyz/learn/wyze/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/wyze.dir/wyze/log.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/wyze.dir/wyze/log.cpp.o -c /home/wuyz/learn/wyze/wyze/log.cpp
 
 CMakeFiles/wyze.dir/wyze/log.cpp.i: cmake_force
@@ -230,7 +254,7 @@ CMakeFiles/wyze.dir/wyze/log.cpp.o.provides.build: CMakeFiles/wyze.dir/wyze/log.
 
 CMakeFiles/wyze.dir/wyze/scheduler.cpp.o: CMakeFiles/wyze.dir/flags.make
 CMakeFiles/wyze.dir/wyze/scheduler.cpp.o: ../wyze/scheduler.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/wuyz/learn/wyze/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/wyze.dir/wyze/scheduler.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/wuyz/learn/wyze/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/wyze.dir/wyze/scheduler.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/wyze.dir/wyze/scheduler.cpp.o -c /home/wuyz/learn/wyze/wyze/scheduler.cpp
 
 CMakeFiles/wyze.dir/wyze/scheduler.cpp.i: cmake_force
@@ -254,7 +278,7 @@ CMakeFiles/wyze.dir/wyze/scheduler.cpp.o.provides.build: CMakeFiles/wyze.dir/wyz
 
 CMakeFiles/wyze.dir/wyze/socket.cpp.o: CMakeFiles/wyze.dir/flags.make
 CMakeFiles/wyze.dir/wyze/socket.cpp.o: ../wyze/socket.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/wuyz/learn/wyze/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/wyze.dir/wyze/socket.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/wuyz/learn/wyze/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/wyze.dir/wyze/socket.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/wyze.dir/wyze/socket.cpp.o -c /home/wuyz/learn/wyze/wyze/socket.cpp
 
 CMakeFiles/wyze.dir/wyze/socket.cpp.i: cmake_force
@@ -278,7 +302,7 @@ CMakeFiles/wyze.dir/wyze/socket.cpp.o.provides.build: CMakeFiles/wyze.dir/wyze/s
 
 CMakeFiles/wyze.dir/wyze/thread.cpp.o: CMakeFiles/wyze.dir/flags.make
 CMakeFiles/wyze.dir/wyze/thread.cpp.o: ../wyze/thread.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/wuyz/learn/wyze/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/wyze.dir/wyze/thread.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/wuyz/learn/wyze/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/wyze.dir/wyze/thread.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/wyze.dir/wyze/thread.cpp.o -c /home/wuyz/learn/wyze/wyze/thread.cpp
 
 CMakeFiles/wyze.dir/wyze/thread.cpp.i: cmake_force
@@ -302,7 +326,7 @@ CMakeFiles/wyze.dir/wyze/thread.cpp.o.provides.build: CMakeFiles/wyze.dir/wyze/t
 
 CMakeFiles/wyze.dir/wyze/timer.cpp.o: CMakeFiles/wyze.dir/flags.make
 CMakeFiles/wyze.dir/wyze/timer.cpp.o: ../wyze/timer.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/wuyz/learn/wyze/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/wyze.dir/wyze/timer.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/wuyz/learn/wyze/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/wyze.dir/wyze/timer.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/wyze.dir/wyze/timer.cpp.o -c /home/wuyz/learn/wyze/wyze/timer.cpp
 
 CMakeFiles/wyze.dir/wyze/timer.cpp.i: cmake_force
@@ -326,7 +350,7 @@ CMakeFiles/wyze.dir/wyze/timer.cpp.o.provides.build: CMakeFiles/wyze.dir/wyze/ti
 
 CMakeFiles/wyze.dir/wyze/util.cpp.o: CMakeFiles/wyze.dir/flags.make
 CMakeFiles/wyze.dir/wyze/util.cpp.o: ../wyze/util.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/wuyz/learn/wyze/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/wyze.dir/wyze/util.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/wuyz/learn/wyze/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/wyze.dir/wyze/util.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/wyze.dir/wyze/util.cpp.o -c /home/wuyz/learn/wyze/wyze/util.cpp
 
 CMakeFiles/wyze.dir/wyze/util.cpp.i: cmake_force
@@ -351,6 +375,7 @@ CMakeFiles/wyze.dir/wyze/util.cpp.o.provides.build: CMakeFiles/wyze.dir/wyze/uti
 # Object files for target wyze
 wyze_OBJECTS = \
 "CMakeFiles/wyze.dir/wyze/address.cpp.o" \
+"CMakeFiles/wyze.dir/wyze/bytearray.cpp.o" \
 "CMakeFiles/wyze.dir/wyze/config.cpp.o" \
 "CMakeFiles/wyze.dir/wyze/fdmanager.cpp.o" \
 "CMakeFiles/wyze.dir/wyze/fiber.cpp.o" \
@@ -367,6 +392,7 @@ wyze_OBJECTS = \
 wyze_EXTERNAL_OBJECTS =
 
 ../lib/libwyze.so: CMakeFiles/wyze.dir/wyze/address.cpp.o
+../lib/libwyze.so: CMakeFiles/wyze.dir/wyze/bytearray.cpp.o
 ../lib/libwyze.so: CMakeFiles/wyze.dir/wyze/config.cpp.o
 ../lib/libwyze.so: CMakeFiles/wyze.dir/wyze/fdmanager.cpp.o
 ../lib/libwyze.so: CMakeFiles/wyze.dir/wyze/fiber.cpp.o
@@ -380,7 +406,7 @@ wyze_EXTERNAL_OBJECTS =
 ../lib/libwyze.so: CMakeFiles/wyze.dir/wyze/util.cpp.o
 ../lib/libwyze.so: CMakeFiles/wyze.dir/build.make
 ../lib/libwyze.so: CMakeFiles/wyze.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/wuyz/learn/wyze/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Linking CXX shared library ../lib/libwyze.so"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/wuyz/learn/wyze/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Linking CXX shared library ../lib/libwyze.so"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/wyze.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -389,6 +415,7 @@ CMakeFiles/wyze.dir/build: ../lib/libwyze.so
 .PHONY : CMakeFiles/wyze.dir/build
 
 CMakeFiles/wyze.dir/requires: CMakeFiles/wyze.dir/wyze/address.cpp.o.requires
+CMakeFiles/wyze.dir/requires: CMakeFiles/wyze.dir/wyze/bytearray.cpp.o.requires
 CMakeFiles/wyze.dir/requires: CMakeFiles/wyze.dir/wyze/config.cpp.o.requires
 CMakeFiles/wyze.dir/requires: CMakeFiles/wyze.dir/wyze/fdmanager.cpp.o.requires
 CMakeFiles/wyze.dir/requires: CMakeFiles/wyze.dir/wyze/fiber.cpp.o.requires

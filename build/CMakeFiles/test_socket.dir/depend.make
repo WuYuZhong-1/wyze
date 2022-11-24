@@ -3,6 +3,7 @@
 
 CMakeFiles/test_socket.dir/tests/test_socket.cpp.o: ../tests/test_socket.cpp
 CMakeFiles/test_socket.dir/tests/test_socket.cpp.o: ../wyze/address.h
+CMakeFiles/test_socket.dir/tests/test_socket.cpp.o: ../wyze/bytearray.h
 CMakeFiles/test_socket.dir/tests/test_socket.cpp.o: ../wyze/config.h
 CMakeFiles/test_socket.dir/tests/test_socket.cpp.o: ../wyze/endian.h
 CMakeFiles/test_socket.dir/tests/test_socket.cpp.o: ../wyze/fiber.h

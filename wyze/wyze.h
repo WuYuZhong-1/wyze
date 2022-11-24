@@ -2,6 +2,7 @@
 # define _WYZE_H_
 
 #include "address.h"
+#include "bytearray.h"
 #include "config.h"
 #include "fiber.h"
 #include "hook.h"

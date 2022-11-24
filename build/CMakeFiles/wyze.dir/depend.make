@@ -11,6 +11,16 @@ CMakeFiles/wyze.dir/wyze/address.cpp.o: ../wyze/singleton.h
 CMakeFiles/wyze.dir/wyze/address.cpp.o: ../wyze/thread.h
 CMakeFiles/wyze.dir/wyze/address.cpp.o: ../wyze/util.h
 
+CMakeFiles/wyze.dir/wyze/bytearray.cpp.o: ../wyze/bytearray.cpp
+CMakeFiles/wyze.dir/wyze/bytearray.cpp.o: ../wyze/bytearray.h
+CMakeFiles/wyze.dir/wyze/bytearray.cpp.o: ../wyze/endian.h
+CMakeFiles/wyze.dir/wyze/bytearray.cpp.o: ../wyze/log.h
+CMakeFiles/wyze.dir/wyze/bytearray.cpp.o: ../wyze/macro.h
+CMakeFiles/wyze.dir/wyze/bytearray.cpp.o: ../wyze/noncopyable.h
+CMakeFiles/wyze.dir/wyze/bytearray.cpp.o: ../wyze/singleton.h
+CMakeFiles/wyze.dir/wyze/bytearray.cpp.o: ../wyze/thread.h
+CMakeFiles/wyze.dir/wyze/bytearray.cpp.o: ../wyze/util.h
+
 CMakeFiles/wyze.dir/wyze/config.cpp.o: ../wyze/config.cpp
 CMakeFiles/wyze.dir/wyze/config.cpp.o: ../wyze/config.h
 CMakeFiles/wyze.dir/wyze/config.cpp.o: ../wyze/log.h
