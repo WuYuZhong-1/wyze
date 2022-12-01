@@ -110,6 +110,18 @@ sys/ioctl.h
 stdint.h
 -
 
+/home/wuyz/learn/wyze/wyze/http/http.h
+memory
+-
+boost/lexical_cast.hpp
+-
+string
+-
+map
+-
+stdint.h
+-
+
 /home/wuyz/learn/wyze/wyze/iomanager.h
 scheduler.h
 /home/wuyz/learn/wyze/wyze/scheduler.h
@@ -233,6 +245,8 @@ fiber.h
 /home/wuyz/learn/wyze/wyze/fiber.h
 hook.h
 /home/wuyz/learn/wyze/wyze/hook.h
+http/http.h
+/home/wuyz/learn/wyze/wyze/http/http.h
 iomanager.h
 /home/wuyz/learn/wyze/wyze/iomanager.h
 log.h

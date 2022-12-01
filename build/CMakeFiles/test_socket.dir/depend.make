@@ -8,6 +8,7 @@ CMakeFiles/test_socket.dir/tests/test_socket.cpp.o: ../wyze/config.h
 CMakeFiles/test_socket.dir/tests/test_socket.cpp.o: ../wyze/endian.h
 CMakeFiles/test_socket.dir/tests/test_socket.cpp.o: ../wyze/fiber.h
 CMakeFiles/test_socket.dir/tests/test_socket.cpp.o: ../wyze/hook.h
+CMakeFiles/test_socket.dir/tests/test_socket.cpp.o: ../wyze/http/http.h
 CMakeFiles/test_socket.dir/tests/test_socket.cpp.o: ../wyze/iomanager.h
 CMakeFiles/test_socket.dir/tests/test_socket.cpp.o: ../wyze/log.h
 CMakeFiles/test_socket.dir/tests/test_socket.cpp.o: ../wyze/macro.h

@@ -65,6 +65,9 @@ CMakeFiles/wyze.dir/wyze/hook.cpp.o
  /home/wuyz/learn/wyze/wyze/thread.h
  /home/wuyz/learn/wyze/wyze/timer.h
  /home/wuyz/learn/wyze/wyze/util.h
+CMakeFiles/wyze.dir/wyze/http/http.cpp.o
+ /home/wuyz/learn/wyze/wyze/http/http.cpp
+ /home/wuyz/learn/wyze/wyze/http/http.h
 CMakeFiles/wyze.dir/wyze/iomanager.cpp.o
  /home/wuyz/learn/wyze/wyze/fiber.h
  /home/wuyz/learn/wyze/wyze/iomanager.cpp

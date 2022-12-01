@@ -8,6 +8,7 @@ CMakeFiles/test_util.dir/tests/test_util.cpp.o: ../wyze/config.h
 CMakeFiles/test_util.dir/tests/test_util.cpp.o: ../wyze/endian.h
 CMakeFiles/test_util.dir/tests/test_util.cpp.o: ../wyze/fiber.h
 CMakeFiles/test_util.dir/tests/test_util.cpp.o: ../wyze/hook.h
+CMakeFiles/test_util.dir/tests/test_util.cpp.o: ../wyze/http/http.h
 CMakeFiles/test_util.dir/tests/test_util.cpp.o: ../wyze/iomanager.h
 CMakeFiles/test_util.dir/tests/test_util.cpp.o: ../wyze/log.h
 CMakeFiles/test_util.dir/tests/test_util.cpp.o: ../wyze/macro.h

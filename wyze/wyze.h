@@ -6,6 +6,7 @@
 #include "config.h"
 #include "fiber.h"
 #include "hook.h"
+#include "http/http.h"
 #include "iomanager.h"
 #include "log.h"
 #include "macro.h"

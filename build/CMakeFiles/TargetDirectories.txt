@@ -1,4 +1,5 @@
 /home/wuyz/learn/wyze/build/CMakeFiles/rebuild_cache.dir
+/home/wuyz/learn/wyze/build/CMakeFiles/test_http.dir
 /home/wuyz/learn/wyze/build/CMakeFiles/edit_cache.dir
 /home/wuyz/learn/wyze/build/CMakeFiles/test_address.dir
 /home/wuyz/learn/wyze/build/CMakeFiles/test_hook.dir

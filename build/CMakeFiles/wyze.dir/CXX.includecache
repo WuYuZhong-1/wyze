@@ -216,6 +216,26 @@ sys/ioctl.h
 stdint.h
 -
 
+/home/wuyz/learn/wyze/wyze/http/http.cpp
+http.h
+/home/wuyz/learn/wyze/wyze/http/http.h
+strings.h
+-
+iostream
+-
+
+/home/wuyz/learn/wyze/wyze/http/http.h
+memory
+-
+boost/lexical_cast.hpp
+-
+string
+-
+map
+-
+stdint.h
+-
+
 /home/wuyz/learn/wyze/wyze/iomanager.cpp
 iomanager.h
 /home/wuyz/learn/wyze/wyze/iomanager.h

@@ -63,6 +63,43 @@ CMAKE_SOURCE_DIR = /home/wuyz/learn/wyze
 CMAKE_BINARY_DIR = /home/wuyz/learn/wyze/build
 
 #=============================================================================
+# Target rules for target CMakeFiles/test_http.dir
+
+# All Build rule for target.
+CMakeFiles/test_http.dir/all: CMakeFiles/wyze.dir/all
+	$(MAKE) -f CMakeFiles/test_http.dir/build.make CMakeFiles/test_http.dir/depend
+	$(MAKE) -f CMakeFiles/test_http.dir/build.make CMakeFiles/test_http.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/wuyz/learn/wyze/build/CMakeFiles --progress-num=13,14 "Built target test_http"
+.PHONY : CMakeFiles/test_http.dir/all
+
+# Include target in all.
+all: CMakeFiles/test_http.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/test_http.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/wuyz/learn/wyze/build/CMakeFiles 17
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/test_http.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/wuyz/learn/wyze/build/CMakeFiles 0
+.PHONY : CMakeFiles/test_http.dir/rule
+
+# Convenience name for target.
+test_http: CMakeFiles/test_http.dir/rule
+
+.PHONY : test_http
+
+# clean rule for target.
+CMakeFiles/test_http.dir/clean:
+	$(MAKE) -f CMakeFiles/test_http.dir/build.make CMakeFiles/test_http.dir/clean
+.PHONY : CMakeFiles/test_http.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/test_http.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
 # Target rules for target CMakeFiles/test_address.dir
 
 # All Build rule for target.
@@ -79,7 +116,7 @@ all: CMakeFiles/test_address.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/test_address.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/wuyz/learn/wyze/build/CMakeFiles 16
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/wuyz/learn/wyze/build/CMakeFiles 17
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/test_address.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/wuyz/learn/wyze/build/CMakeFiles 0
 .PHONY : CMakeFiles/test_address.dir/rule
@@ -116,7 +153,7 @@ all: CMakeFiles/test_hook.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/test_hook.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/wuyz/learn/wyze/build/CMakeFiles 16
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/wuyz/learn/wyze/build/CMakeFiles 17
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/test_hook.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/wuyz/learn/wyze/build/CMakeFiles 0
 .PHONY : CMakeFiles/test_hook.dir/rule
@@ -143,7 +180,7 @@ clean: CMakeFiles/test_hook.dir/clean
 CMakeFiles/test_timer.dir/all: CMakeFiles/wyze.dir/all
 	$(MAKE) -f CMakeFiles/test_timer.dir/build.make CMakeFiles/test_timer.dir/depend
 	$(MAKE) -f CMakeFiles/test_timer.dir/build.make CMakeFiles/test_timer.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/wuyz/learn/wyze/build/CMakeFiles --progress-num=21,22 "Built target test_timer"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/wuyz/learn/wyze/build/CMakeFiles --progress-num=23,24 "Built target test_timer"
 .PHONY : CMakeFiles/test_timer.dir/all
 
 # Include target in all.
@@ -153,7 +190,7 @@ all: CMakeFiles/test_timer.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/test_timer.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/wuyz/learn/wyze/build/CMakeFiles 16
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/wuyz/learn/wyze/build/CMakeFiles 17
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/test_timer.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/wuyz/learn/wyze/build/CMakeFiles 0
 .PHONY : CMakeFiles/test_timer.dir/rule
@@ -180,7 +217,7 @@ clean: CMakeFiles/test_timer.dir/clean
 CMakeFiles/test_iomanager.dir/all: CMakeFiles/wyze.dir/all
 	$(MAKE) -f CMakeFiles/test_iomanager.dir/build.make CMakeFiles/test_iomanager.dir/depend
 	$(MAKE) -f CMakeFiles/test_iomanager.dir/build.make CMakeFiles/test_iomanager.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/wuyz/learn/wyze/build/CMakeFiles --progress-num=13,14 "Built target test_iomanager"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/wuyz/learn/wyze/build/CMakeFiles --progress-num=15,16 "Built target test_iomanager"
 .PHONY : CMakeFiles/test_iomanager.dir/all
 
 # Include target in all.
@@ -190,7 +227,7 @@ all: CMakeFiles/test_iomanager.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/test_iomanager.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/wuyz/learn/wyze/build/CMakeFiles 16
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/wuyz/learn/wyze/build/CMakeFiles 17
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/test_iomanager.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/wuyz/learn/wyze/build/CMakeFiles 0
 .PHONY : CMakeFiles/test_iomanager.dir/rule
@@ -217,7 +254,7 @@ clean: CMakeFiles/test_iomanager.dir/clean
 CMakeFiles/test_scheduler.dir/all: CMakeFiles/wyze.dir/all
 	$(MAKE) -f CMakeFiles/test_scheduler.dir/build.make CMakeFiles/test_scheduler.dir/depend
 	$(MAKE) -f CMakeFiles/test_scheduler.dir/build.make CMakeFiles/test_scheduler.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/wuyz/learn/wyze/build/CMakeFiles --progress-num=15,16 "Built target test_scheduler"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/wuyz/learn/wyze/build/CMakeFiles --progress-num=17,18 "Built target test_scheduler"
 .PHONY : CMakeFiles/test_scheduler.dir/all
 
 # Include target in all.
@@ -227,7 +264,7 @@ all: CMakeFiles/test_scheduler.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/test_scheduler.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/wuyz/learn/wyze/build/CMakeFiles 16
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/wuyz/learn/wyze/build/CMakeFiles 17
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/test_scheduler.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/wuyz/learn/wyze/build/CMakeFiles 0
 .PHONY : CMakeFiles/test_scheduler.dir/rule
@@ -264,7 +301,7 @@ all: CMakeFiles/test.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/test.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/wuyz/learn/wyze/build/CMakeFiles 16
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/wuyz/learn/wyze/build/CMakeFiles 17
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/test.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/wuyz/learn/wyze/build/CMakeFiles 0
 .PHONY : CMakeFiles/test.dir/rule
@@ -301,7 +338,7 @@ all: CMakeFiles/test_config.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/test_config.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/wuyz/learn/wyze/build/CMakeFiles 16
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/wuyz/learn/wyze/build/CMakeFiles 17
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/test_config.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/wuyz/learn/wyze/build/CMakeFiles 0
 .PHONY : CMakeFiles/test_config.dir/rule
@@ -328,7 +365,7 @@ clean: CMakeFiles/test_config.dir/clean
 CMakeFiles/wyze.dir/all:
 	$(MAKE) -f CMakeFiles/wyze.dir/build.make CMakeFiles/wyze.dir/depend
 	$(MAKE) -f CMakeFiles/wyze.dir/build.make CMakeFiles/wyze.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/wuyz/learn/wyze/build/CMakeFiles --progress-num=25,26,27,28,29,30,31,32,33,34,35,36,37,38 "Built target wyze"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/wuyz/learn/wyze/build/CMakeFiles --progress-num=27,28,29,30,31,32,33,34,35,36,37,38,39,40,41 "Built target wyze"
 .PHONY : CMakeFiles/wyze.dir/all
 
 # Include target in all.
@@ -338,7 +375,7 @@ all: CMakeFiles/wyze.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/wyze.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/wuyz/learn/wyze/build/CMakeFiles 14
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/wuyz/learn/wyze/build/CMakeFiles 15
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/wyze.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/wuyz/learn/wyze/build/CMakeFiles 0
 .PHONY : CMakeFiles/wyze.dir/rule
@@ -375,7 +412,7 @@ all: CMakeFiles/test_bytearray.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/test_bytearray.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/wuyz/learn/wyze/build/CMakeFiles 16
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/wuyz/learn/wyze/build/CMakeFiles 17
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/test_bytearray.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/wuyz/learn/wyze/build/CMakeFiles 0
 .PHONY : CMakeFiles/test_bytearray.dir/rule
@@ -402,7 +439,7 @@ clean: CMakeFiles/test_bytearray.dir/clean
 CMakeFiles/test_thread.dir/all: CMakeFiles/wyze.dir/all
 	$(MAKE) -f CMakeFiles/test_thread.dir/build.make CMakeFiles/test_thread.dir/depend
 	$(MAKE) -f CMakeFiles/test_thread.dir/build.make CMakeFiles/test_thread.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/wuyz/learn/wyze/build/CMakeFiles --progress-num=19,20 "Built target test_thread"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/wuyz/learn/wyze/build/CMakeFiles --progress-num=21,22 "Built target test_thread"
 .PHONY : CMakeFiles/test_thread.dir/all
 
 # Include target in all.
@@ -412,7 +449,7 @@ all: CMakeFiles/test_thread.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/test_thread.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/wuyz/learn/wyze/build/CMakeFiles 16
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/wuyz/learn/wyze/build/CMakeFiles 17
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/test_thread.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/wuyz/learn/wyze/build/CMakeFiles 0
 .PHONY : CMakeFiles/test_thread.dir/rule
@@ -439,7 +476,7 @@ clean: CMakeFiles/test_thread.dir/clean
 CMakeFiles/test_util.dir/all: CMakeFiles/wyze.dir/all
 	$(MAKE) -f CMakeFiles/test_util.dir/build.make CMakeFiles/test_util.dir/depend
 	$(MAKE) -f CMakeFiles/test_util.dir/build.make CMakeFiles/test_util.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/wuyz/learn/wyze/build/CMakeFiles --progress-num=23,24 "Built target test_util"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/wuyz/learn/wyze/build/CMakeFiles --progress-num=25,26 "Built target test_util"
 .PHONY : CMakeFiles/test_util.dir/all
 
 # Include target in all.
@@ -449,7 +486,7 @@ all: CMakeFiles/test_util.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/test_util.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/wuyz/learn/wyze/build/CMakeFiles 16
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/wuyz/learn/wyze/build/CMakeFiles 17
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/test_util.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/wuyz/learn/wyze/build/CMakeFiles 0
 .PHONY : CMakeFiles/test_util.dir/rule
@@ -476,7 +513,7 @@ clean: CMakeFiles/test_util.dir/clean
 CMakeFiles/test_socket.dir/all: CMakeFiles/wyze.dir/all
 	$(MAKE) -f CMakeFiles/test_socket.dir/build.make CMakeFiles/test_socket.dir/depend
 	$(MAKE) -f CMakeFiles/test_socket.dir/build.make CMakeFiles/test_socket.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/wuyz/learn/wyze/build/CMakeFiles --progress-num=17,18 "Built target test_socket"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/wuyz/learn/wyze/build/CMakeFiles --progress-num=19,20 "Built target test_socket"
 .PHONY : CMakeFiles/test_socket.dir/all
 
 # Include target in all.
@@ -486,7 +523,7 @@ all: CMakeFiles/test_socket.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/test_socket.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/wuyz/learn/wyze/build/CMakeFiles 16
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/wuyz/learn/wyze/build/CMakeFiles 17
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/test_socket.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/wuyz/learn/wyze/build/CMakeFiles 0
 .PHONY : CMakeFiles/test_socket.dir/rule
@@ -523,7 +560,7 @@ all: CMakeFiles/test_fiber.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/test_fiber.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/wuyz/learn/wyze/build/CMakeFiles 16
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/wuyz/learn/wyze/build/CMakeFiles 17
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/test_fiber.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/wuyz/learn/wyze/build/CMakeFiles 0
 .PHONY : CMakeFiles/test_fiber.dir/rule

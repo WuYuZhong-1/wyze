@@ -114,6 +114,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named test_http
+
+# Build rule for target.
+test_http: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 test_http
+.PHONY : test_http
+
+# fast build rule for target.
+test_http/fast:
+	$(MAKE) -f CMakeFiles/test_http.dir/build.make CMakeFiles/test_http.dir/build
+.PHONY : test_http/fast
+
+#=============================================================================
 # Target rules for targets named test_address
 
 # Build rule for target.
@@ -444,6 +457,33 @@ tests/test_hook.cpp.s:
 	$(MAKE) -f CMakeFiles/test_hook.dir/build.make CMakeFiles/test_hook.dir/tests/test_hook.cpp.s
 .PHONY : tests/test_hook.cpp.s
 
+tests/test_http.o: tests/test_http.cpp.o
+
+.PHONY : tests/test_http.o
+
+# target to build an object file
+tests/test_http.cpp.o:
+	$(MAKE) -f CMakeFiles/test_http.dir/build.make CMakeFiles/test_http.dir/tests/test_http.cpp.o
+.PHONY : tests/test_http.cpp.o
+
+tests/test_http.i: tests/test_http.cpp.i
+
+.PHONY : tests/test_http.i
+
+# target to preprocess a source file
+tests/test_http.cpp.i:
+	$(MAKE) -f CMakeFiles/test_http.dir/build.make CMakeFiles/test_http.dir/tests/test_http.cpp.i
+.PHONY : tests/test_http.cpp.i
+
+tests/test_http.s: tests/test_http.cpp.s
+
+.PHONY : tests/test_http.s
+
+# target to generate assembly for a file
+tests/test_http.cpp.s:
+	$(MAKE) -f CMakeFiles/test_http.dir/build.make CMakeFiles/test_http.dir/tests/test_http.cpp.s
+.PHONY : tests/test_http.cpp.s
+
 tests/test_iomanager.o: tests/test_iomanager.cpp.o
 
 .PHONY : tests/test_iomanager.o
@@ -768,6 +808,33 @@ wyze/hook.cpp.s:
 	$(MAKE) -f CMakeFiles/wyze.dir/build.make CMakeFiles/wyze.dir/wyze/hook.cpp.s
 .PHONY : wyze/hook.cpp.s
 
+wyze/http/http.o: wyze/http/http.cpp.o
+
+.PHONY : wyze/http/http.o
+
+# target to build an object file
+wyze/http/http.cpp.o:
+	$(MAKE) -f CMakeFiles/wyze.dir/build.make CMakeFiles/wyze.dir/wyze/http/http.cpp.o
+.PHONY : wyze/http/http.cpp.o
+
+wyze/http/http.i: wyze/http/http.cpp.i
+
+.PHONY : wyze/http/http.i
+
+# target to preprocess a source file
+wyze/http/http.cpp.i:
+	$(MAKE) -f CMakeFiles/wyze.dir/build.make CMakeFiles/wyze.dir/wyze/http/http.cpp.i
+.PHONY : wyze/http/http.cpp.i
+
+wyze/http/http.s: wyze/http/http.cpp.s
+
+.PHONY : wyze/http/http.s
+
+# target to generate assembly for a file
+wyze/http/http.cpp.s:
+	$(MAKE) -f CMakeFiles/wyze.dir/build.make CMakeFiles/wyze.dir/wyze/http/http.cpp.s
+.PHONY : wyze/http/http.cpp.s
+
 wyze/iomanager.o: wyze/iomanager.cpp.o
 
 .PHONY : wyze/iomanager.o
@@ -964,6 +1031,7 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... rebuild_cache"
+	@echo "... test_http"
 	@echo "... edit_cache"
 	@echo "... test_address"
 	@echo "... test_hook"
@@ -996,6 +1064,9 @@ help:
 	@echo "... tests/test_hook.o"
 	@echo "... tests/test_hook.i"
 	@echo "... tests/test_hook.s"
+	@echo "... tests/test_http.o"
+	@echo "... tests/test_http.i"
+	@echo "... tests/test_http.s"
 	@echo "... tests/test_iomanager.o"
 	@echo "... tests/test_iomanager.i"
 	@echo "... tests/test_iomanager.s"
@@ -1032,6 +1103,9 @@ help:
 	@echo "... wyze/hook.o"
 	@echo "... wyze/hook.i"
 	@echo "... wyze/hook.s"
+	@echo "... wyze/http/http.o"
+	@echo "... wyze/http/http.i"
+	@echo "... wyze/http/http.s"
 	@echo "... wyze/iomanager.o"
 	@echo "... wyze/iomanager.i"
 	@echo "... wyze/iomanager.s"
