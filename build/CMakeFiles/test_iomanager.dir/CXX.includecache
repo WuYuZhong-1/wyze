@@ -138,6 +138,26 @@ map
 stdint.h
 -
 
+/home/wuyz/learn/wyze/wyze/http/http11_common.h
+sys/types.h
+-
+
+/home/wuyz/learn/wyze/wyze/http/http11_parser.h
+http11_common.h
+/home/wuyz/learn/wyze/wyze/http/http11_common.h
+
+/home/wuyz/learn/wyze/wyze/http/http_parser.h
+http.h
+/home/wuyz/learn/wyze/wyze/http/http.h
+http11_parser.h
+/home/wuyz/learn/wyze/wyze/http/http11_parser.h
+httpclient_parser.h
+/home/wuyz/learn/wyze/wyze/http/httpclient_parser.h
+
+/home/wuyz/learn/wyze/wyze/http/httpclient_parser.h
+http11_common.h
+/home/wuyz/learn/wyze/wyze/http/http11_common.h
+
 /home/wuyz/learn/wyze/wyze/iomanager.h
 scheduler.h
 /home/wuyz/learn/wyze/wyze/scheduler.h
@@ -263,6 +283,8 @@ hook.h
 /home/wuyz/learn/wyze/wyze/hook.h
 http/http.h
 /home/wuyz/learn/wyze/wyze/http/http.h
+http/http_parser.h
+/home/wuyz/learn/wyze/wyze/http/http_parser.h
 iomanager.h
 /home/wuyz/learn/wyze/wyze/iomanager.h
 log.h

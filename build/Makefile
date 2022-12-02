@@ -114,160 +114,17 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named test_http
+# Target rules for targets named test_fiber
 
 # Build rule for target.
-test_http: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 test_http
-.PHONY : test_http
+test_fiber: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 test_fiber
+.PHONY : test_fiber
 
 # fast build rule for target.
-test_http/fast:
-	$(MAKE) -f CMakeFiles/test_http.dir/build.make CMakeFiles/test_http.dir/build
-.PHONY : test_http/fast
-
-#=============================================================================
-# Target rules for targets named test_address
-
-# Build rule for target.
-test_address: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 test_address
-.PHONY : test_address
-
-# fast build rule for target.
-test_address/fast:
-	$(MAKE) -f CMakeFiles/test_address.dir/build.make CMakeFiles/test_address.dir/build
-.PHONY : test_address/fast
-
-#=============================================================================
-# Target rules for targets named test_hook
-
-# Build rule for target.
-test_hook: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 test_hook
-.PHONY : test_hook
-
-# fast build rule for target.
-test_hook/fast:
-	$(MAKE) -f CMakeFiles/test_hook.dir/build.make CMakeFiles/test_hook.dir/build
-.PHONY : test_hook/fast
-
-#=============================================================================
-# Target rules for targets named test_timer
-
-# Build rule for target.
-test_timer: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 test_timer
-.PHONY : test_timer
-
-# fast build rule for target.
-test_timer/fast:
-	$(MAKE) -f CMakeFiles/test_timer.dir/build.make CMakeFiles/test_timer.dir/build
-.PHONY : test_timer/fast
-
-#=============================================================================
-# Target rules for targets named test_iomanager
-
-# Build rule for target.
-test_iomanager: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 test_iomanager
-.PHONY : test_iomanager
-
-# fast build rule for target.
-test_iomanager/fast:
-	$(MAKE) -f CMakeFiles/test_iomanager.dir/build.make CMakeFiles/test_iomanager.dir/build
-.PHONY : test_iomanager/fast
-
-#=============================================================================
-# Target rules for targets named test_scheduler
-
-# Build rule for target.
-test_scheduler: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 test_scheduler
-.PHONY : test_scheduler
-
-# fast build rule for target.
-test_scheduler/fast:
-	$(MAKE) -f CMakeFiles/test_scheduler.dir/build.make CMakeFiles/test_scheduler.dir/build
-.PHONY : test_scheduler/fast
-
-#=============================================================================
-# Target rules for targets named test
-
-# Build rule for target.
-test: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 test
-.PHONY : test
-
-# fast build rule for target.
-test/fast:
-	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/build
-.PHONY : test/fast
-
-#=============================================================================
-# Target rules for targets named test_config
-
-# Build rule for target.
-test_config: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 test_config
-.PHONY : test_config
-
-# fast build rule for target.
-test_config/fast:
-	$(MAKE) -f CMakeFiles/test_config.dir/build.make CMakeFiles/test_config.dir/build
-.PHONY : test_config/fast
-
-#=============================================================================
-# Target rules for targets named wyze
-
-# Build rule for target.
-wyze: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 wyze
-.PHONY : wyze
-
-# fast build rule for target.
-wyze/fast:
-	$(MAKE) -f CMakeFiles/wyze.dir/build.make CMakeFiles/wyze.dir/build
-.PHONY : wyze/fast
-
-#=============================================================================
-# Target rules for targets named test_bytearray
-
-# Build rule for target.
-test_bytearray: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 test_bytearray
-.PHONY : test_bytearray
-
-# fast build rule for target.
-test_bytearray/fast:
-	$(MAKE) -f CMakeFiles/test_bytearray.dir/build.make CMakeFiles/test_bytearray.dir/build
-.PHONY : test_bytearray/fast
-
-#=============================================================================
-# Target rules for targets named test_thread
-
-# Build rule for target.
-test_thread: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 test_thread
-.PHONY : test_thread
-
-# fast build rule for target.
-test_thread/fast:
-	$(MAKE) -f CMakeFiles/test_thread.dir/build.make CMakeFiles/test_thread.dir/build
-.PHONY : test_thread/fast
-
-#=============================================================================
-# Target rules for targets named test_util
-
-# Build rule for target.
-test_util: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 test_util
-.PHONY : test_util
-
-# fast build rule for target.
-test_util/fast:
-	$(MAKE) -f CMakeFiles/test_util.dir/build.make CMakeFiles/test_util.dir/build
-.PHONY : test_util/fast
+test_fiber/fast:
+	$(MAKE) -f CMakeFiles/test_fiber.dir/build.make CMakeFiles/test_fiber.dir/build
+.PHONY : test_fiber/fast
 
 #=============================================================================
 # Target rules for targets named test_socket
@@ -283,17 +140,173 @@ test_socket/fast:
 .PHONY : test_socket/fast
 
 #=============================================================================
-# Target rules for targets named test_fiber
+# Target rules for targets named test_thread
 
 # Build rule for target.
-test_fiber: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 test_fiber
-.PHONY : test_fiber
+test_thread: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 test_thread
+.PHONY : test_thread
 
 # fast build rule for target.
-test_fiber/fast:
-	$(MAKE) -f CMakeFiles/test_fiber.dir/build.make CMakeFiles/test_fiber.dir/build
-.PHONY : test_fiber/fast
+test_thread/fast:
+	$(MAKE) -f CMakeFiles/test_thread.dir/build.make CMakeFiles/test_thread.dir/build
+.PHONY : test_thread/fast
+
+#=============================================================================
+# Target rules for targets named test_bytearray
+
+# Build rule for target.
+test_bytearray: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 test_bytearray
+.PHONY : test_bytearray
+
+# fast build rule for target.
+test_bytearray/fast:
+	$(MAKE) -f CMakeFiles/test_bytearray.dir/build.make CMakeFiles/test_bytearray.dir/build
+.PHONY : test_bytearray/fast
+
+#=============================================================================
+# Target rules for targets named wyze
+
+# Build rule for target.
+wyze: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 wyze
+.PHONY : wyze
+
+# fast build rule for target.
+wyze/fast:
+	$(MAKE) -f CMakeFiles/wyze.dir/build.make CMakeFiles/wyze.dir/build
+.PHONY : wyze/fast
+
+#=============================================================================
+# Target rules for targets named test_config
+
+# Build rule for target.
+test_config: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 test_config
+.PHONY : test_config
+
+# fast build rule for target.
+test_config/fast:
+	$(MAKE) -f CMakeFiles/test_config.dir/build.make CMakeFiles/test_config.dir/build
+.PHONY : test_config/fast
+
+#=============================================================================
+# Target rules for targets named test
+
+# Build rule for target.
+test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 test
+.PHONY : test
+
+# fast build rule for target.
+test/fast:
+	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/build
+.PHONY : test/fast
+
+#=============================================================================
+# Target rules for targets named test_scheduler
+
+# Build rule for target.
+test_scheduler: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 test_scheduler
+.PHONY : test_scheduler
+
+# fast build rule for target.
+test_scheduler/fast:
+	$(MAKE) -f CMakeFiles/test_scheduler.dir/build.make CMakeFiles/test_scheduler.dir/build
+.PHONY : test_scheduler/fast
+
+#=============================================================================
+# Target rules for targets named test_iomanager
+
+# Build rule for target.
+test_iomanager: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 test_iomanager
+.PHONY : test_iomanager
+
+# fast build rule for target.
+test_iomanager/fast:
+	$(MAKE) -f CMakeFiles/test_iomanager.dir/build.make CMakeFiles/test_iomanager.dir/build
+.PHONY : test_iomanager/fast
+
+#=============================================================================
+# Target rules for targets named test_timer
+
+# Build rule for target.
+test_timer: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 test_timer
+.PHONY : test_timer
+
+# fast build rule for target.
+test_timer/fast:
+	$(MAKE) -f CMakeFiles/test_timer.dir/build.make CMakeFiles/test_timer.dir/build
+.PHONY : test_timer/fast
+
+#=============================================================================
+# Target rules for targets named test_hook
+
+# Build rule for target.
+test_hook: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 test_hook
+.PHONY : test_hook
+
+# fast build rule for target.
+test_hook/fast:
+	$(MAKE) -f CMakeFiles/test_hook.dir/build.make CMakeFiles/test_hook.dir/build
+.PHONY : test_hook/fast
+
+#=============================================================================
+# Target rules for targets named test_address
+
+# Build rule for target.
+test_address: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 test_address
+.PHONY : test_address
+
+# fast build rule for target.
+test_address/fast:
+	$(MAKE) -f CMakeFiles/test_address.dir/build.make CMakeFiles/test_address.dir/build
+.PHONY : test_address/fast
+
+#=============================================================================
+# Target rules for targets named test_util
+
+# Build rule for target.
+test_util: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 test_util
+.PHONY : test_util
+
+# fast build rule for target.
+test_util/fast:
+	$(MAKE) -f CMakeFiles/test_util.dir/build.make CMakeFiles/test_util.dir/build
+.PHONY : test_util/fast
+
+#=============================================================================
+# Target rules for targets named test_http_parser
+
+# Build rule for target.
+test_http_parser: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 test_http_parser
+.PHONY : test_http_parser
+
+# fast build rule for target.
+test_http_parser/fast:
+	$(MAKE) -f CMakeFiles/test_http_parser.dir/build.make CMakeFiles/test_http_parser.dir/build
+.PHONY : test_http_parser/fast
+
+#=============================================================================
+# Target rules for targets named test_http
+
+# Build rule for target.
+test_http: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 test_http
+.PHONY : test_http
+
+# fast build rule for target.
+test_http/fast:
+	$(MAKE) -f CMakeFiles/test_http.dir/build.make CMakeFiles/test_http.dir/build
+.PHONY : test_http/fast
 
 tests/test.o: tests/test.cpp.o
 
@@ -483,6 +496,33 @@ tests/test_http.s: tests/test_http.cpp.s
 tests/test_http.cpp.s:
 	$(MAKE) -f CMakeFiles/test_http.dir/build.make CMakeFiles/test_http.dir/tests/test_http.cpp.s
 .PHONY : tests/test_http.cpp.s
+
+tests/test_http_parser.o: tests/test_http_parser.cpp.o
+
+.PHONY : tests/test_http_parser.o
+
+# target to build an object file
+tests/test_http_parser.cpp.o:
+	$(MAKE) -f CMakeFiles/test_http_parser.dir/build.make CMakeFiles/test_http_parser.dir/tests/test_http_parser.cpp.o
+.PHONY : tests/test_http_parser.cpp.o
+
+tests/test_http_parser.i: tests/test_http_parser.cpp.i
+
+.PHONY : tests/test_http_parser.i
+
+# target to preprocess a source file
+tests/test_http_parser.cpp.i:
+	$(MAKE) -f CMakeFiles/test_http_parser.dir/build.make CMakeFiles/test_http_parser.dir/tests/test_http_parser.cpp.i
+.PHONY : tests/test_http_parser.cpp.i
+
+tests/test_http_parser.s: tests/test_http_parser.cpp.s
+
+.PHONY : tests/test_http_parser.s
+
+# target to generate assembly for a file
+tests/test_http_parser.cpp.s:
+	$(MAKE) -f CMakeFiles/test_http_parser.dir/build.make CMakeFiles/test_http_parser.dir/tests/test_http_parser.cpp.s
+.PHONY : tests/test_http_parser.cpp.s
 
 tests/test_iomanager.o: tests/test_iomanager.cpp.o
 
@@ -835,6 +875,87 @@ wyze/http/http.cpp.s:
 	$(MAKE) -f CMakeFiles/wyze.dir/build.make CMakeFiles/wyze.dir/wyze/http/http.cpp.s
 .PHONY : wyze/http/http.cpp.s
 
+wyze/http/http11_parser.o: wyze/http/http11_parser.cpp.o
+
+.PHONY : wyze/http/http11_parser.o
+
+# target to build an object file
+wyze/http/http11_parser.cpp.o:
+	$(MAKE) -f CMakeFiles/wyze.dir/build.make CMakeFiles/wyze.dir/wyze/http/http11_parser.cpp.o
+.PHONY : wyze/http/http11_parser.cpp.o
+
+wyze/http/http11_parser.i: wyze/http/http11_parser.cpp.i
+
+.PHONY : wyze/http/http11_parser.i
+
+# target to preprocess a source file
+wyze/http/http11_parser.cpp.i:
+	$(MAKE) -f CMakeFiles/wyze.dir/build.make CMakeFiles/wyze.dir/wyze/http/http11_parser.cpp.i
+.PHONY : wyze/http/http11_parser.cpp.i
+
+wyze/http/http11_parser.s: wyze/http/http11_parser.cpp.s
+
+.PHONY : wyze/http/http11_parser.s
+
+# target to generate assembly for a file
+wyze/http/http11_parser.cpp.s:
+	$(MAKE) -f CMakeFiles/wyze.dir/build.make CMakeFiles/wyze.dir/wyze/http/http11_parser.cpp.s
+.PHONY : wyze/http/http11_parser.cpp.s
+
+wyze/http/http_parser.o: wyze/http/http_parser.cpp.o
+
+.PHONY : wyze/http/http_parser.o
+
+# target to build an object file
+wyze/http/http_parser.cpp.o:
+	$(MAKE) -f CMakeFiles/wyze.dir/build.make CMakeFiles/wyze.dir/wyze/http/http_parser.cpp.o
+.PHONY : wyze/http/http_parser.cpp.o
+
+wyze/http/http_parser.i: wyze/http/http_parser.cpp.i
+
+.PHONY : wyze/http/http_parser.i
+
+# target to preprocess a source file
+wyze/http/http_parser.cpp.i:
+	$(MAKE) -f CMakeFiles/wyze.dir/build.make CMakeFiles/wyze.dir/wyze/http/http_parser.cpp.i
+.PHONY : wyze/http/http_parser.cpp.i
+
+wyze/http/http_parser.s: wyze/http/http_parser.cpp.s
+
+.PHONY : wyze/http/http_parser.s
+
+# target to generate assembly for a file
+wyze/http/http_parser.cpp.s:
+	$(MAKE) -f CMakeFiles/wyze.dir/build.make CMakeFiles/wyze.dir/wyze/http/http_parser.cpp.s
+.PHONY : wyze/http/http_parser.cpp.s
+
+wyze/http/httpclient_parser.o: wyze/http/httpclient_parser.cpp.o
+
+.PHONY : wyze/http/httpclient_parser.o
+
+# target to build an object file
+wyze/http/httpclient_parser.cpp.o:
+	$(MAKE) -f CMakeFiles/wyze.dir/build.make CMakeFiles/wyze.dir/wyze/http/httpclient_parser.cpp.o
+.PHONY : wyze/http/httpclient_parser.cpp.o
+
+wyze/http/httpclient_parser.i: wyze/http/httpclient_parser.cpp.i
+
+.PHONY : wyze/http/httpclient_parser.i
+
+# target to preprocess a source file
+wyze/http/httpclient_parser.cpp.i:
+	$(MAKE) -f CMakeFiles/wyze.dir/build.make CMakeFiles/wyze.dir/wyze/http/httpclient_parser.cpp.i
+.PHONY : wyze/http/httpclient_parser.cpp.i
+
+wyze/http/httpclient_parser.s: wyze/http/httpclient_parser.cpp.s
+
+.PHONY : wyze/http/httpclient_parser.s
+
+# target to generate assembly for a file
+wyze/http/httpclient_parser.cpp.s:
+	$(MAKE) -f CMakeFiles/wyze.dir/build.make CMakeFiles/wyze.dir/wyze/http/httpclient_parser.cpp.s
+.PHONY : wyze/http/httpclient_parser.cpp.s
+
 wyze/iomanager.o: wyze/iomanager.cpp.o
 
 .PHONY : wyze/iomanager.o
@@ -1031,21 +1152,22 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... rebuild_cache"
-	@echo "... test_http"
-	@echo "... edit_cache"
-	@echo "... test_address"
-	@echo "... test_hook"
-	@echo "... test_timer"
-	@echo "... test_iomanager"
-	@echo "... test_scheduler"
-	@echo "... test"
-	@echo "... test_config"
-	@echo "... wyze"
-	@echo "... test_bytearray"
-	@echo "... test_thread"
-	@echo "... test_util"
-	@echo "... test_socket"
 	@echo "... test_fiber"
+	@echo "... test_socket"
+	@echo "... test_thread"
+	@echo "... test_bytearray"
+	@echo "... wyze"
+	@echo "... test_config"
+	@echo "... test"
+	@echo "... test_scheduler"
+	@echo "... test_iomanager"
+	@echo "... test_timer"
+	@echo "... test_hook"
+	@echo "... test_address"
+	@echo "... test_util"
+	@echo "... edit_cache"
+	@echo "... test_http_parser"
+	@echo "... test_http"
 	@echo "... tests/test.o"
 	@echo "... tests/test.i"
 	@echo "... tests/test.s"
@@ -1067,6 +1189,9 @@ help:
 	@echo "... tests/test_http.o"
 	@echo "... tests/test_http.i"
 	@echo "... tests/test_http.s"
+	@echo "... tests/test_http_parser.o"
+	@echo "... tests/test_http_parser.i"
+	@echo "... tests/test_http_parser.s"
 	@echo "... tests/test_iomanager.o"
 	@echo "... tests/test_iomanager.i"
 	@echo "... tests/test_iomanager.s"
@@ -1106,6 +1231,15 @@ help:
 	@echo "... wyze/http/http.o"
 	@echo "... wyze/http/http.i"
 	@echo "... wyze/http/http.s"
+	@echo "... wyze/http/http11_parser.o"
+	@echo "... wyze/http/http11_parser.i"
+	@echo "... wyze/http/http11_parser.s"
+	@echo "... wyze/http/http_parser.o"
+	@echo "... wyze/http/http_parser.i"
+	@echo "... wyze/http/http_parser.s"
+	@echo "... wyze/http/httpclient_parser.o"
+	@echo "... wyze/http/httpclient_parser.i"
+	@echo "... wyze/http/httpclient_parser.s"
 	@echo "... wyze/iomanager.o"
 	@echo "... wyze/iomanager.i"
 	@echo "... wyze/iomanager.s"

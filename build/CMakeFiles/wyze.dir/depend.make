@@ -68,6 +68,26 @@ CMakeFiles/wyze.dir/wyze/hook.cpp.o: ../wyze/util.h
 CMakeFiles/wyze.dir/wyze/http/http.cpp.o: ../wyze/http/http.cpp
 CMakeFiles/wyze.dir/wyze/http/http.cpp.o: ../wyze/http/http.h
 
+CMakeFiles/wyze.dir/wyze/http/http11_parser.cpp.o: ../wyze/http/http11_common.h
+CMakeFiles/wyze.dir/wyze/http/http11_parser.cpp.o: ../wyze/http/http11_parser.cpp
+CMakeFiles/wyze.dir/wyze/http/http11_parser.cpp.o: ../wyze/http/http11_parser.h
+
+CMakeFiles/wyze.dir/wyze/http/http_parser.cpp.o: ../wyze/http/http.h
+CMakeFiles/wyze.dir/wyze/http/http_parser.cpp.o: ../wyze/http/http11_common.h
+CMakeFiles/wyze.dir/wyze/http/http_parser.cpp.o: ../wyze/http/http11_parser.h
+CMakeFiles/wyze.dir/wyze/http/http_parser.cpp.o: ../wyze/http/http_parser.cpp
+CMakeFiles/wyze.dir/wyze/http/http_parser.cpp.o: ../wyze/http/http_parser.h
+CMakeFiles/wyze.dir/wyze/http/http_parser.cpp.o: ../wyze/http/httpclient_parser.h
+CMakeFiles/wyze.dir/wyze/http/http_parser.cpp.o: ../wyze/log.h
+CMakeFiles/wyze.dir/wyze/http/http_parser.cpp.o: ../wyze/noncopyable.h
+CMakeFiles/wyze.dir/wyze/http/http_parser.cpp.o: ../wyze/singleton.h
+CMakeFiles/wyze.dir/wyze/http/http_parser.cpp.o: ../wyze/thread.h
+CMakeFiles/wyze.dir/wyze/http/http_parser.cpp.o: ../wyze/util.h
+
+CMakeFiles/wyze.dir/wyze/http/httpclient_parser.cpp.o: ../wyze/http/http11_common.h
+CMakeFiles/wyze.dir/wyze/http/httpclient_parser.cpp.o: ../wyze/http/httpclient_parser.cpp
+CMakeFiles/wyze.dir/wyze/http/httpclient_parser.cpp.o: ../wyze/http/httpclient_parser.h
+
 CMakeFiles/wyze.dir/wyze/iomanager.cpp.o: ../wyze/fiber.h
 CMakeFiles/wyze.dir/wyze/iomanager.cpp.o: ../wyze/iomanager.cpp
 CMakeFiles/wyze.dir/wyze/iomanager.cpp.o: ../wyze/iomanager.h

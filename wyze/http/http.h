@@ -204,6 +204,11 @@ public:
     void setHeader(const std::string& key, const std::string& val);
     void delHeader(const std::string& key);
 
+    template<class T>
+    T getHeaderAs(const std::string& key, const T& def = T()) {
+        return GetAs(m_headers, key, def);
+    }
+
     std::ostream& dump(std::ostream& os) const;
     std::string toString() const;
 
@@ -244,6 +249,11 @@ public:
     std::string getHeader(const std::string& key) const;
     void setHeader(const std::string& key, const std::string& val);
     void delHeader(const std::string& key);
+
+    template<class T>
+    T getHeaderAs(const std::string& key, const T& def = T()) {
+        return GetAs(m_headers, key, def);
+    }
 
     std::ostream& dump(std::ostream& os) const;
     std::string toString() const;

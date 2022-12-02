@@ -15,6 +15,9 @@ set(LIB_SRC
     wyze/fiber.cpp
     wyze/hook.cpp
     wyze/http/http.cpp
+    wyze/http/http_parser.cpp
+    wyze/http/http11_parser.cpp
+    wyze/http/httpclient_parser.cpp
     wyze/iomanager.cpp
     wyze/log.cpp
     wyze/scheduler.cpp
@@ -84,6 +87,10 @@ target_link_libraries(test_bytearray ${LIBS})
 add_executable(test_http tests/test_http.cpp)
 add_dependencies(test_http wyze)
 target_link_libraries(test_http ${LIBS})
+
+add_executable(test_http_parser tests/test_http_parser.cpp)
+add_dependencies(test_http_parser wyze)
+target_link_libraries(test_http_parser ${LIBS})
 
 SET(EXECUTABLE_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/bin)
 SET(LIBRARY_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/lib)

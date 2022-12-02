@@ -68,6 +68,26 @@ CMakeFiles/wyze.dir/wyze/hook.cpp.o
 CMakeFiles/wyze.dir/wyze/http/http.cpp.o
  /home/wuyz/learn/wyze/wyze/http/http.cpp
  /home/wuyz/learn/wyze/wyze/http/http.h
+CMakeFiles/wyze.dir/wyze/http/http11_parser.cpp.o
+ /home/wuyz/learn/wyze/wyze/http/http11_common.h
+ /home/wuyz/learn/wyze/wyze/http/http11_parser.cpp
+ /home/wuyz/learn/wyze/wyze/http/http11_parser.h
+CMakeFiles/wyze.dir/wyze/http/http_parser.cpp.o
+ /home/wuyz/learn/wyze/wyze/http/http.h
+ /home/wuyz/learn/wyze/wyze/http/http11_common.h
+ /home/wuyz/learn/wyze/wyze/http/http11_parser.h
+ /home/wuyz/learn/wyze/wyze/http/http_parser.cpp
+ /home/wuyz/learn/wyze/wyze/http/http_parser.h
+ /home/wuyz/learn/wyze/wyze/http/httpclient_parser.h
+ /home/wuyz/learn/wyze/wyze/log.h
+ /home/wuyz/learn/wyze/wyze/noncopyable.h
+ /home/wuyz/learn/wyze/wyze/singleton.h
+ /home/wuyz/learn/wyze/wyze/thread.h
+ /home/wuyz/learn/wyze/wyze/util.h
+CMakeFiles/wyze.dir/wyze/http/httpclient_parser.cpp.o
+ /home/wuyz/learn/wyze/wyze/http/http11_common.h
+ /home/wuyz/learn/wyze/wyze/http/httpclient_parser.cpp
+ /home/wuyz/learn/wyze/wyze/http/httpclient_parser.h
 CMakeFiles/wyze.dir/wyze/iomanager.cpp.o
  /home/wuyz/learn/wyze/wyze/fiber.h
  /home/wuyz/learn/wyze/wyze/iomanager.cpp

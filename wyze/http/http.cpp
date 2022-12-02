@@ -1,6 +1,7 @@
 #include "http.h"
 #include <strings.h>
 #include <iostream>
+#include <string.h>
 
 namespace wyze {
 namespace http {
@@ -20,7 +21,7 @@ HttpMethod StringToHttpMethod(const std::string& m)
 HttpMethod CharsToHttpMethod(const char* m)
 {
 #define XX(num, name, string)                   \
-    if(strcasecmp(#string, m) == 0){            \
+    if(strncasecmp(#string, m, strlen(#string)) == 0){            \
         return HttpMethod::name;                \
     }
     HTTP_METHOD_MAP(XX)

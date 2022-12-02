@@ -10,6 +10,10 @@ CMakeFiles/test_fiber.dir/tests/test_fiber.cpp.o
  /home/wuyz/learn/wyze/wyze/fiber.h
  /home/wuyz/learn/wyze/wyze/hook.h
  /home/wuyz/learn/wyze/wyze/http/http.h
+ /home/wuyz/learn/wyze/wyze/http/http11_common.h
+ /home/wuyz/learn/wyze/wyze/http/http11_parser.h
+ /home/wuyz/learn/wyze/wyze/http/http_parser.h
+ /home/wuyz/learn/wyze/wyze/http/httpclient_parser.h
  /home/wuyz/learn/wyze/wyze/iomanager.h
  /home/wuyz/learn/wyze/wyze/log.h
  /home/wuyz/learn/wyze/wyze/macro.h

@@ -9,6 +9,10 @@ CMakeFiles/test_timer.dir/tests/test_timer.cpp.o: ../wyze/endian.h
 CMakeFiles/test_timer.dir/tests/test_timer.cpp.o: ../wyze/fiber.h
 CMakeFiles/test_timer.dir/tests/test_timer.cpp.o: ../wyze/hook.h
 CMakeFiles/test_timer.dir/tests/test_timer.cpp.o: ../wyze/http/http.h
+CMakeFiles/test_timer.dir/tests/test_timer.cpp.o: ../wyze/http/http11_common.h
+CMakeFiles/test_timer.dir/tests/test_timer.cpp.o: ../wyze/http/http11_parser.h
+CMakeFiles/test_timer.dir/tests/test_timer.cpp.o: ../wyze/http/http_parser.h
+CMakeFiles/test_timer.dir/tests/test_timer.cpp.o: ../wyze/http/httpclient_parser.h
 CMakeFiles/test_timer.dir/tests/test_timer.cpp.o: ../wyze/iomanager.h
 CMakeFiles/test_timer.dir/tests/test_timer.cpp.o: ../wyze/log.h
 CMakeFiles/test_timer.dir/tests/test_timer.cpp.o: ../wyze/macro.h
