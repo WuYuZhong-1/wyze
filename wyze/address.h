@@ -36,7 +36,7 @@ namespace wyze {
         virtual ~Address() { }
 
         int getFamily() const;
-        std::string toString();
+        std::string toString() const;
 
         virtual const sockaddr* getAddr() const = 0;
         virtual sockaddr* getAddr() = 0;
@@ -146,6 +146,8 @@ namespace wyze {
     private:
         sockaddr m_addr;
     };
+
+    std::ostream& operator<<(std::ostream& os, const Address& addr);
 
 }
 

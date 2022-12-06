@@ -1,5 +1,6 @@
 #include "http_parser.h"
 #include "../log.h"
+#include "../config.h"
 #include <stdlib.h>
 
 namespace wyze {
@@ -96,11 +97,9 @@ HttpRequestParser::HttpRequestParser()
     m_parser.data = this;
 }
 
-size_t HttpRequestParser::execute(char* data, size_t len)
-{
-    size_t offset = http_parser_execute(&m_parser, data, len, 0);
-    memmove(data, data + offset, (len - offset));       //+1 的作用是吧 ‘\0’ 也移动
-    return offset;
+size_t HttpRequestParser::execute(char* data, size_t len, size_t offset)
+{    
+    return http_parser_execute(&m_parser, data, len, offset);
 }
 
 int HttpRequestParser::isFinished()
@@ -116,6 +115,17 @@ int HttpRequestParser::hasError()
 uint64_t HttpRequestParser::getContentLength()
 {
     return m_data->getHeaderAs<uint64_t>("content-length", 0);
+}
+
+bool HttpRequestParser::getIsClose()
+{
+    std::string str = m_data->getHeader("connection");
+    if(strcasecmp(str.c_str(), "close") == 0)
+        m_data->setClose(true);
+    else 
+        m_data->setClose(false);
+        
+    return m_data->isColse();
 }
 
 static void on_response_reason(void *data, const char *at, size_t length)
@@ -193,11 +203,9 @@ HttpResponseParser::HttpResponseParser()
 
 }
 
-size_t HttpResponseParser::execute(char* data, size_t len)
+size_t HttpResponseParser::execute(char* data, size_t len,  size_t offset)
 {
-    size_t offset = httpclient_parser_execute(&m_parser, data, len, 0);
-    memmove(data, data + offset, (len - offset));
-    return offset;
+    return httpclient_parser_execute(&m_parser, data, len, offset);
 }
 
 int HttpResponseParser::isFinished()

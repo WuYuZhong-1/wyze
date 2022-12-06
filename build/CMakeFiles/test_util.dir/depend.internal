@@ -10,6 +10,13 @@ CMakeFiles/test_util.dir/tests/test_util.cpp.o
  /home/wuyz/learn/wyze/wyze/fiber.h
  /home/wuyz/learn/wyze/wyze/hook.h
  /home/wuyz/learn/wyze/wyze/http/http.h
+ /home/wuyz/learn/wyze/wyze/http/http11_common.h
+ /home/wuyz/learn/wyze/wyze/http/http11_parser.h
+ /home/wuyz/learn/wyze/wyze/http/http_parser.h
+ /home/wuyz/learn/wyze/wyze/http/http_server.h
+ /home/wuyz/learn/wyze/wyze/http/http_session.h
+ /home/wuyz/learn/wyze/wyze/http/httpclient_parser.h
+ /home/wuyz/learn/wyze/wyze/http/servlet.h
  /home/wuyz/learn/wyze/wyze/iomanager.h
  /home/wuyz/learn/wyze/wyze/log.h
  /home/wuyz/learn/wyze/wyze/macro.h
@@ -17,6 +24,9 @@ CMakeFiles/test_util.dir/tests/test_util.cpp.o
  /home/wuyz/learn/wyze/wyze/scheduler.h
  /home/wuyz/learn/wyze/wyze/singleton.h
  /home/wuyz/learn/wyze/wyze/socket.h
+ /home/wuyz/learn/wyze/wyze/sockstream.h
+ /home/wuyz/learn/wyze/wyze/stream.h
+ /home/wuyz/learn/wyze/wyze/tcpserver.h
  /home/wuyz/learn/wyze/wyze/thread.h
  /home/wuyz/learn/wyze/wyze/timer.h
  /home/wuyz/learn/wyze/wyze/util.h

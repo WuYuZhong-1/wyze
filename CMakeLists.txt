@@ -18,10 +18,16 @@ set(LIB_SRC
     wyze/http/http_parser.cpp
     wyze/http/http11_parser.cpp
     wyze/http/httpclient_parser.cpp
+    wyze/http/http_session.cpp
+    wyze/http/http_server.cpp
+    wyze/http/servlet.cpp
     wyze/iomanager.cpp
     wyze/log.cpp
     wyze/scheduler.cpp
     wyze/socket.cpp
+    wyze/stream.cpp
+    wyze/sockstream.cpp
+    wyze/tcpserver.cpp
     wyze/thread.cpp
     wyze/timer.cpp
     wyze/util.cpp
@@ -91,6 +97,18 @@ target_link_libraries(test_http ${LIBS})
 add_executable(test_http_parser tests/test_http_parser.cpp)
 add_dependencies(test_http_parser wyze)
 target_link_libraries(test_http_parser ${LIBS})
+
+add_executable(test_tcpserver tests/test_tcpserver.cpp)
+add_dependencies(test_tcpserver wyze)
+target_link_libraries(test_tcpserver ${LIBS})
+
+add_executable(test_http_server tests/test_http_server.cpp)
+add_dependencies(test_http_server wyze)
+target_link_libraries(test_http_server ${LIBS})
+
+add_executable(echo_server examples/echo_server.cpp)
+add_dependencies(echo_server wyze)
+target_link_libraries(echo_server ${LIBS})
 
 SET(EXECUTABLE_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/bin)
 SET(LIBRARY_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/lib)

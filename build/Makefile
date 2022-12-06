@@ -114,6 +114,32 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named echo_server
+
+# Build rule for target.
+echo_server: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 echo_server
+.PHONY : echo_server
+
+# fast build rule for target.
+echo_server/fast:
+	$(MAKE) -f CMakeFiles/echo_server.dir/build.make CMakeFiles/echo_server.dir/build
+.PHONY : echo_server/fast
+
+#=============================================================================
+# Target rules for targets named test_http_server
+
+# Build rule for target.
+test_http_server: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 test_http_server
+.PHONY : test_http_server
+
+# fast build rule for target.
+test_http_server/fast:
+	$(MAKE) -f CMakeFiles/test_http_server.dir/build.make CMakeFiles/test_http_server.dir/build
+.PHONY : test_http_server/fast
+
+#=============================================================================
 # Target rules for targets named test_fiber
 
 # Build rule for target.
@@ -138,6 +164,19 @@ test_socket: cmake_check_build_system
 test_socket/fast:
 	$(MAKE) -f CMakeFiles/test_socket.dir/build.make CMakeFiles/test_socket.dir/build
 .PHONY : test_socket/fast
+
+#=============================================================================
+# Target rules for targets named test_util
+
+# Build rule for target.
+test_util: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 test_util
+.PHONY : test_util
+
+# fast build rule for target.
+test_util/fast:
+	$(MAKE) -f CMakeFiles/test_util.dir/build.make CMakeFiles/test_util.dir/build
+.PHONY : test_util/fast
 
 #=============================================================================
 # Target rules for targets named test_thread
@@ -177,6 +216,19 @@ wyze: cmake_check_build_system
 wyze/fast:
 	$(MAKE) -f CMakeFiles/wyze.dir/build.make CMakeFiles/wyze.dir/build
 .PHONY : wyze/fast
+
+#=============================================================================
+# Target rules for targets named test_tcpserver
+
+# Build rule for target.
+test_tcpserver: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 test_tcpserver
+.PHONY : test_tcpserver
+
+# fast build rule for target.
+test_tcpserver/fast:
+	$(MAKE) -f CMakeFiles/test_tcpserver.dir/build.make CMakeFiles/test_tcpserver.dir/build
+.PHONY : test_tcpserver/fast
 
 #=============================================================================
 # Target rules for targets named test_config
@@ -270,19 +322,6 @@ test_address/fast:
 .PHONY : test_address/fast
 
 #=============================================================================
-# Target rules for targets named test_util
-
-# Build rule for target.
-test_util: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 test_util
-.PHONY : test_util
-
-# fast build rule for target.
-test_util/fast:
-	$(MAKE) -f CMakeFiles/test_util.dir/build.make CMakeFiles/test_util.dir/build
-.PHONY : test_util/fast
-
-#=============================================================================
 # Target rules for targets named test_http_parser
 
 # Build rule for target.
@@ -307,6 +346,33 @@ test_http: cmake_check_build_system
 test_http/fast:
 	$(MAKE) -f CMakeFiles/test_http.dir/build.make CMakeFiles/test_http.dir/build
 .PHONY : test_http/fast
+
+examples/echo_server.o: examples/echo_server.cpp.o
+
+.PHONY : examples/echo_server.o
+
+# target to build an object file
+examples/echo_server.cpp.o:
+	$(MAKE) -f CMakeFiles/echo_server.dir/build.make CMakeFiles/echo_server.dir/examples/echo_server.cpp.o
+.PHONY : examples/echo_server.cpp.o
+
+examples/echo_server.i: examples/echo_server.cpp.i
+
+.PHONY : examples/echo_server.i
+
+# target to preprocess a source file
+examples/echo_server.cpp.i:
+	$(MAKE) -f CMakeFiles/echo_server.dir/build.make CMakeFiles/echo_server.dir/examples/echo_server.cpp.i
+.PHONY : examples/echo_server.cpp.i
+
+examples/echo_server.s: examples/echo_server.cpp.s
+
+.PHONY : examples/echo_server.s
+
+# target to generate assembly for a file
+examples/echo_server.cpp.s:
+	$(MAKE) -f CMakeFiles/echo_server.dir/build.make CMakeFiles/echo_server.dir/examples/echo_server.cpp.s
+.PHONY : examples/echo_server.cpp.s
 
 tests/test.o: tests/test.cpp.o
 
@@ -524,6 +590,33 @@ tests/test_http_parser.cpp.s:
 	$(MAKE) -f CMakeFiles/test_http_parser.dir/build.make CMakeFiles/test_http_parser.dir/tests/test_http_parser.cpp.s
 .PHONY : tests/test_http_parser.cpp.s
 
+tests/test_http_server.o: tests/test_http_server.cpp.o
+
+.PHONY : tests/test_http_server.o
+
+# target to build an object file
+tests/test_http_server.cpp.o:
+	$(MAKE) -f CMakeFiles/test_http_server.dir/build.make CMakeFiles/test_http_server.dir/tests/test_http_server.cpp.o
+.PHONY : tests/test_http_server.cpp.o
+
+tests/test_http_server.i: tests/test_http_server.cpp.i
+
+.PHONY : tests/test_http_server.i
+
+# target to preprocess a source file
+tests/test_http_server.cpp.i:
+	$(MAKE) -f CMakeFiles/test_http_server.dir/build.make CMakeFiles/test_http_server.dir/tests/test_http_server.cpp.i
+.PHONY : tests/test_http_server.cpp.i
+
+tests/test_http_server.s: tests/test_http_server.cpp.s
+
+.PHONY : tests/test_http_server.s
+
+# target to generate assembly for a file
+tests/test_http_server.cpp.s:
+	$(MAKE) -f CMakeFiles/test_http_server.dir/build.make CMakeFiles/test_http_server.dir/tests/test_http_server.cpp.s
+.PHONY : tests/test_http_server.cpp.s
+
 tests/test_iomanager.o: tests/test_iomanager.cpp.o
 
 .PHONY : tests/test_iomanager.o
@@ -604,6 +697,33 @@ tests/test_socket.s: tests/test_socket.cpp.s
 tests/test_socket.cpp.s:
 	$(MAKE) -f CMakeFiles/test_socket.dir/build.make CMakeFiles/test_socket.dir/tests/test_socket.cpp.s
 .PHONY : tests/test_socket.cpp.s
+
+tests/test_tcpserver.o: tests/test_tcpserver.cpp.o
+
+.PHONY : tests/test_tcpserver.o
+
+# target to build an object file
+tests/test_tcpserver.cpp.o:
+	$(MAKE) -f CMakeFiles/test_tcpserver.dir/build.make CMakeFiles/test_tcpserver.dir/tests/test_tcpserver.cpp.o
+.PHONY : tests/test_tcpserver.cpp.o
+
+tests/test_tcpserver.i: tests/test_tcpserver.cpp.i
+
+.PHONY : tests/test_tcpserver.i
+
+# target to preprocess a source file
+tests/test_tcpserver.cpp.i:
+	$(MAKE) -f CMakeFiles/test_tcpserver.dir/build.make CMakeFiles/test_tcpserver.dir/tests/test_tcpserver.cpp.i
+.PHONY : tests/test_tcpserver.cpp.i
+
+tests/test_tcpserver.s: tests/test_tcpserver.cpp.s
+
+.PHONY : tests/test_tcpserver.s
+
+# target to generate assembly for a file
+tests/test_tcpserver.cpp.s:
+	$(MAKE) -f CMakeFiles/test_tcpserver.dir/build.make CMakeFiles/test_tcpserver.dir/tests/test_tcpserver.cpp.s
+.PHONY : tests/test_tcpserver.cpp.s
 
 tests/test_thread.o: tests/test_thread.cpp.o
 
@@ -929,6 +1049,60 @@ wyze/http/http_parser.cpp.s:
 	$(MAKE) -f CMakeFiles/wyze.dir/build.make CMakeFiles/wyze.dir/wyze/http/http_parser.cpp.s
 .PHONY : wyze/http/http_parser.cpp.s
 
+wyze/http/http_server.o: wyze/http/http_server.cpp.o
+
+.PHONY : wyze/http/http_server.o
+
+# target to build an object file
+wyze/http/http_server.cpp.o:
+	$(MAKE) -f CMakeFiles/wyze.dir/build.make CMakeFiles/wyze.dir/wyze/http/http_server.cpp.o
+.PHONY : wyze/http/http_server.cpp.o
+
+wyze/http/http_server.i: wyze/http/http_server.cpp.i
+
+.PHONY : wyze/http/http_server.i
+
+# target to preprocess a source file
+wyze/http/http_server.cpp.i:
+	$(MAKE) -f CMakeFiles/wyze.dir/build.make CMakeFiles/wyze.dir/wyze/http/http_server.cpp.i
+.PHONY : wyze/http/http_server.cpp.i
+
+wyze/http/http_server.s: wyze/http/http_server.cpp.s
+
+.PHONY : wyze/http/http_server.s
+
+# target to generate assembly for a file
+wyze/http/http_server.cpp.s:
+	$(MAKE) -f CMakeFiles/wyze.dir/build.make CMakeFiles/wyze.dir/wyze/http/http_server.cpp.s
+.PHONY : wyze/http/http_server.cpp.s
+
+wyze/http/http_session.o: wyze/http/http_session.cpp.o
+
+.PHONY : wyze/http/http_session.o
+
+# target to build an object file
+wyze/http/http_session.cpp.o:
+	$(MAKE) -f CMakeFiles/wyze.dir/build.make CMakeFiles/wyze.dir/wyze/http/http_session.cpp.o
+.PHONY : wyze/http/http_session.cpp.o
+
+wyze/http/http_session.i: wyze/http/http_session.cpp.i
+
+.PHONY : wyze/http/http_session.i
+
+# target to preprocess a source file
+wyze/http/http_session.cpp.i:
+	$(MAKE) -f CMakeFiles/wyze.dir/build.make CMakeFiles/wyze.dir/wyze/http/http_session.cpp.i
+.PHONY : wyze/http/http_session.cpp.i
+
+wyze/http/http_session.s: wyze/http/http_session.cpp.s
+
+.PHONY : wyze/http/http_session.s
+
+# target to generate assembly for a file
+wyze/http/http_session.cpp.s:
+	$(MAKE) -f CMakeFiles/wyze.dir/build.make CMakeFiles/wyze.dir/wyze/http/http_session.cpp.s
+.PHONY : wyze/http/http_session.cpp.s
+
 wyze/http/httpclient_parser.o: wyze/http/httpclient_parser.cpp.o
 
 .PHONY : wyze/http/httpclient_parser.o
@@ -955,6 +1129,33 @@ wyze/http/httpclient_parser.s: wyze/http/httpclient_parser.cpp.s
 wyze/http/httpclient_parser.cpp.s:
 	$(MAKE) -f CMakeFiles/wyze.dir/build.make CMakeFiles/wyze.dir/wyze/http/httpclient_parser.cpp.s
 .PHONY : wyze/http/httpclient_parser.cpp.s
+
+wyze/http/servlet.o: wyze/http/servlet.cpp.o
+
+.PHONY : wyze/http/servlet.o
+
+# target to build an object file
+wyze/http/servlet.cpp.o:
+	$(MAKE) -f CMakeFiles/wyze.dir/build.make CMakeFiles/wyze.dir/wyze/http/servlet.cpp.o
+.PHONY : wyze/http/servlet.cpp.o
+
+wyze/http/servlet.i: wyze/http/servlet.cpp.i
+
+.PHONY : wyze/http/servlet.i
+
+# target to preprocess a source file
+wyze/http/servlet.cpp.i:
+	$(MAKE) -f CMakeFiles/wyze.dir/build.make CMakeFiles/wyze.dir/wyze/http/servlet.cpp.i
+.PHONY : wyze/http/servlet.cpp.i
+
+wyze/http/servlet.s: wyze/http/servlet.cpp.s
+
+.PHONY : wyze/http/servlet.s
+
+# target to generate assembly for a file
+wyze/http/servlet.cpp.s:
+	$(MAKE) -f CMakeFiles/wyze.dir/build.make CMakeFiles/wyze.dir/wyze/http/servlet.cpp.s
+.PHONY : wyze/http/servlet.cpp.s
 
 wyze/iomanager.o: wyze/iomanager.cpp.o
 
@@ -1064,6 +1265,87 @@ wyze/socket.cpp.s:
 	$(MAKE) -f CMakeFiles/wyze.dir/build.make CMakeFiles/wyze.dir/wyze/socket.cpp.s
 .PHONY : wyze/socket.cpp.s
 
+wyze/sockstream.o: wyze/sockstream.cpp.o
+
+.PHONY : wyze/sockstream.o
+
+# target to build an object file
+wyze/sockstream.cpp.o:
+	$(MAKE) -f CMakeFiles/wyze.dir/build.make CMakeFiles/wyze.dir/wyze/sockstream.cpp.o
+.PHONY : wyze/sockstream.cpp.o
+
+wyze/sockstream.i: wyze/sockstream.cpp.i
+
+.PHONY : wyze/sockstream.i
+
+# target to preprocess a source file
+wyze/sockstream.cpp.i:
+	$(MAKE) -f CMakeFiles/wyze.dir/build.make CMakeFiles/wyze.dir/wyze/sockstream.cpp.i
+.PHONY : wyze/sockstream.cpp.i
+
+wyze/sockstream.s: wyze/sockstream.cpp.s
+
+.PHONY : wyze/sockstream.s
+
+# target to generate assembly for a file
+wyze/sockstream.cpp.s:
+	$(MAKE) -f CMakeFiles/wyze.dir/build.make CMakeFiles/wyze.dir/wyze/sockstream.cpp.s
+.PHONY : wyze/sockstream.cpp.s
+
+wyze/stream.o: wyze/stream.cpp.o
+
+.PHONY : wyze/stream.o
+
+# target to build an object file
+wyze/stream.cpp.o:
+	$(MAKE) -f CMakeFiles/wyze.dir/build.make CMakeFiles/wyze.dir/wyze/stream.cpp.o
+.PHONY : wyze/stream.cpp.o
+
+wyze/stream.i: wyze/stream.cpp.i
+
+.PHONY : wyze/stream.i
+
+# target to preprocess a source file
+wyze/stream.cpp.i:
+	$(MAKE) -f CMakeFiles/wyze.dir/build.make CMakeFiles/wyze.dir/wyze/stream.cpp.i
+.PHONY : wyze/stream.cpp.i
+
+wyze/stream.s: wyze/stream.cpp.s
+
+.PHONY : wyze/stream.s
+
+# target to generate assembly for a file
+wyze/stream.cpp.s:
+	$(MAKE) -f CMakeFiles/wyze.dir/build.make CMakeFiles/wyze.dir/wyze/stream.cpp.s
+.PHONY : wyze/stream.cpp.s
+
+wyze/tcpserver.o: wyze/tcpserver.cpp.o
+
+.PHONY : wyze/tcpserver.o
+
+# target to build an object file
+wyze/tcpserver.cpp.o:
+	$(MAKE) -f CMakeFiles/wyze.dir/build.make CMakeFiles/wyze.dir/wyze/tcpserver.cpp.o
+.PHONY : wyze/tcpserver.cpp.o
+
+wyze/tcpserver.i: wyze/tcpserver.cpp.i
+
+.PHONY : wyze/tcpserver.i
+
+# target to preprocess a source file
+wyze/tcpserver.cpp.i:
+	$(MAKE) -f CMakeFiles/wyze.dir/build.make CMakeFiles/wyze.dir/wyze/tcpserver.cpp.i
+.PHONY : wyze/tcpserver.cpp.i
+
+wyze/tcpserver.s: wyze/tcpserver.cpp.s
+
+.PHONY : wyze/tcpserver.s
+
+# target to generate assembly for a file
+wyze/tcpserver.cpp.s:
+	$(MAKE) -f CMakeFiles/wyze.dir/build.make CMakeFiles/wyze.dir/wyze/tcpserver.cpp.s
+.PHONY : wyze/tcpserver.cpp.s
+
 wyze/thread.o: wyze/thread.cpp.o
 
 .PHONY : wyze/thread.o
@@ -1152,11 +1434,16 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... rebuild_cache"
+	@echo "... echo_server"
+	@echo "... test_http_server"
 	@echo "... test_fiber"
 	@echo "... test_socket"
+	@echo "... edit_cache"
+	@echo "... test_util"
 	@echo "... test_thread"
 	@echo "... test_bytearray"
 	@echo "... wyze"
+	@echo "... test_tcpserver"
 	@echo "... test_config"
 	@echo "... test"
 	@echo "... test_scheduler"
@@ -1164,10 +1451,11 @@ help:
 	@echo "... test_timer"
 	@echo "... test_hook"
 	@echo "... test_address"
-	@echo "... test_util"
-	@echo "... edit_cache"
 	@echo "... test_http_parser"
 	@echo "... test_http"
+	@echo "... examples/echo_server.o"
+	@echo "... examples/echo_server.i"
+	@echo "... examples/echo_server.s"
 	@echo "... tests/test.o"
 	@echo "... tests/test.i"
 	@echo "... tests/test.s"
@@ -1192,6 +1480,9 @@ help:
 	@echo "... tests/test_http_parser.o"
 	@echo "... tests/test_http_parser.i"
 	@echo "... tests/test_http_parser.s"
+	@echo "... tests/test_http_server.o"
+	@echo "... tests/test_http_server.i"
+	@echo "... tests/test_http_server.s"
 	@echo "... tests/test_iomanager.o"
 	@echo "... tests/test_iomanager.i"
 	@echo "... tests/test_iomanager.s"
@@ -1201,6 +1492,9 @@ help:
 	@echo "... tests/test_socket.o"
 	@echo "... tests/test_socket.i"
 	@echo "... tests/test_socket.s"
+	@echo "... tests/test_tcpserver.o"
+	@echo "... tests/test_tcpserver.i"
+	@echo "... tests/test_tcpserver.s"
 	@echo "... tests/test_thread.o"
 	@echo "... tests/test_thread.i"
 	@echo "... tests/test_thread.s"
@@ -1237,9 +1531,18 @@ help:
 	@echo "... wyze/http/http_parser.o"
 	@echo "... wyze/http/http_parser.i"
 	@echo "... wyze/http/http_parser.s"
+	@echo "... wyze/http/http_server.o"
+	@echo "... wyze/http/http_server.i"
+	@echo "... wyze/http/http_server.s"
+	@echo "... wyze/http/http_session.o"
+	@echo "... wyze/http/http_session.i"
+	@echo "... wyze/http/http_session.s"
 	@echo "... wyze/http/httpclient_parser.o"
 	@echo "... wyze/http/httpclient_parser.i"
 	@echo "... wyze/http/httpclient_parser.s"
+	@echo "... wyze/http/servlet.o"
+	@echo "... wyze/http/servlet.i"
+	@echo "... wyze/http/servlet.s"
 	@echo "... wyze/iomanager.o"
 	@echo "... wyze/iomanager.i"
 	@echo "... wyze/iomanager.s"
@@ -1252,6 +1555,15 @@ help:
 	@echo "... wyze/socket.o"
 	@echo "... wyze/socket.i"
 	@echo "... wyze/socket.s"
+	@echo "... wyze/sockstream.o"
+	@echo "... wyze/sockstream.i"
+	@echo "... wyze/sockstream.s"
+	@echo "... wyze/stream.o"
+	@echo "... wyze/stream.i"
+	@echo "... wyze/stream.s"
+	@echo "... wyze/tcpserver.o"
+	@echo "... wyze/tcpserver.i"
+	@echo "... wyze/tcpserver.s"
 	@echo "... wyze/thread.o"
 	@echo "... wyze/thread.i"
 	@echo "... wyze/thread.s"

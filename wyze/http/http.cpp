@@ -195,5 +195,15 @@ std::string HttpResponse::toString() const
     return ss.str();
 }
 
+
+std::ostream& operator<<(std::ostream& os, const HttpRequest& request)
+{
+    return request.dump(os);
+}
+std::ostream& operator<<(std::ostream& os, const HttpResponse& response)
+{
+    return response.dump(os);
+}
+
 }
 }

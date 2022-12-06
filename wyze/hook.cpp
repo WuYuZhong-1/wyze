@@ -142,6 +142,7 @@ namespace wyze {
                         }, wtcnd);
                     }
 
+                    // WYZE_LOG_INFO(g_logger) << hook_fun_name << "do_io";
                     Fiber::YeildToHold();       //挂起
                                                 //这里开始，表示定时器，获取添加的fd事件触发
                     if(timer)

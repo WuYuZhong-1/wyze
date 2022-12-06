@@ -44,8 +44,8 @@ void test_socket()
     sockaddr_in addr;
     memset(&addr, 0, sizeof(addr));
     addr.sin_family = AF_INET;
-    addr.sin_port= htons(8080);
-    inet_pton(AF_INET, "192.168.5.115", &addr.sin_addr.s_addr);
+    addr.sin_port= htons(80);
+    inet_pton(AF_INET, "110.242.68.66", &addr.sin_addr.s_addr);
 
     WYZE_LOG_INFO(g_logger) << "begin connect";
     int rt = connect(sock, (const sockaddr*)&addr, sizeof(addr));

@@ -4,6 +4,7 @@
 #include <memory>
 #include "address.h"
 #include "noncopyable.h"
+#include <iostream>
 
 namespace wyze {
 
@@ -108,6 +109,8 @@ private:
     Address::ptr m_localAddress;
     Address::ptr m_remoteAddress;
 };
+
+std::ostream& operator<<(std::ostream& os, const Socket& sock);
 
 }
 

@@ -6,6 +6,7 @@
 #include <string>
 #include <map>
 #include <stdint.h>
+#include <iostream>
 
 namespace wyze {
 namespace http {
@@ -267,6 +268,9 @@ private:
 
     MapType m_headers;
 };
+
+std::ostream& operator<<(std::ostream& os, const HttpRequest& request);
+std::ostream& operator<<(std::ostream& os, const HttpResponse& response);
 
 }
 }

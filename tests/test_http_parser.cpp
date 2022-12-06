@@ -4,25 +4,35 @@
 static wyze::Logger::ptr g_logger = WYZE_LOG_ROOT();
 
 const char test_request_data[] = "POST / HTTP/1.1\r\n"
-                                "Host: www.baidu.com\r\n"
-                                "Content-Length: 10\r\n\r\n"
+                                "Content-Length: 10\r\n"
+                                "Host: ";
+const char test_request_data2[] = "www.baidu.com\r\n\r\n"
                                 "1234567890";
 
 void test_request()
 {
     wyze::http::HttpRequestParser parser;
     std::string tmp = test_request_data;
-    size_t s = parser.execute(&tmp[0], tmp.size());
+    WYZE_LOG_INFO(g_logger) << "-----------------------" << tmp.size();
+    size_t s = parser.execute(&tmp[0], tmp.length());
     WYZE_LOG_INFO(g_logger) << "execute rt=" << s
         << " has_error=" << parser.hasError()
         << " is_finished=" << parser.isFinished()
         << " total=" << tmp.size()
         << " content-length=" << parser.getContentLength();
-    tmp.resize(tmp.size() -s);
+
+    tmp += test_request_data2;
+    s = parser.execute(&tmp[0], tmp.size(), s);
+    WYZE_LOG_INFO(g_logger) << "execute rt=" << s
+        << " has_error=" << parser.hasError()
+        << " is_finished=" << parser.isFinished()
+        << " total=" << tmp.size()
+        << " content-length=" << parser.getContentLength();
+
     WYZE_LOG_INFO(g_logger) << "\n"
                             << parser.getData()->toString()
                             << "-------------------\n"
-                            << tmp;
+                            << &tmp[s];
 }
 
 const char test_response_data[] = "HTTP/1.1 200 OK\r\n"
@@ -44,6 +54,7 @@ void test_response()
 {
     wyze::http::HttpResponseParser parser;
     std::string tmp = test_response_data;
+    WYZE_LOG_INFO(g_logger) << "length = " << tmp.size();
     size_t s = parser.execute(&tmp[0], tmp.size());
     WYZE_LOG_INFO(g_logger) << "execute rt=" << s
         << " has_error=" << parser.hasError()

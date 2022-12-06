@@ -179,7 +179,7 @@ void Socket::initSock()
 {
     int val = 1;
     setOption(SOL_SOCKET, SO_REUSEADDR, val);
-    if( m_type == SOCK_STREAM) {
+    if( m_type == SOCK_STREAM && m_family != AF_UNIX) {
         setOption(IPPROTO_TCP, TCP_NODELAY, val);
     }
 }
@@ -584,6 +584,11 @@ bool Socket::cancelAll()
     if(iom == nullptr)
         return false;
     return iom->canceAll(m_sock);
+}
+
+std::ostream& operator<<(std::ostream& os, const Socket& sock)
+{
+    return sock.dump(os);
 }
 
 }
