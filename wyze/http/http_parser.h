@@ -15,6 +15,7 @@ public:
     HttpRequestParser();
     //                   data 数据首地址   len 数据长度  offset 解析的数据
     size_t execute(char* data, size_t len, size_t offset = 0);
+    void reset(char* data, size_t offset, size_t len);
     int isFinished();   
     int hasError();
     void setError(int v) { m_error = v;}
@@ -22,7 +23,7 @@ public:
     HttpRequest::ptr getData() const { return m_data; }
     uint64_t getContentLength();
     bool getIsClose();
-
+    http_parser& getParser() { return m_parser; }
 private:
     http_parser m_parser;
     HttpRequest::ptr m_data;
@@ -37,6 +38,7 @@ public:
     using ptr = std::shared_ptr<HttpResponseParser>;
 
     HttpResponseParser();
+    void reset(char* data, size_t offset, size_t len);
     size_t execute(char* data, size_t len, size_t offset = 0);
     int isFinished();   
     int hasError();
@@ -44,6 +46,8 @@ public:
 
     HttpResponse::ptr getData() const { return m_data; }
     uint64_t getContentLength();
+    bool getIsClose();
+    httpclient_parser& getParser() { return m_parser; }
 private:
     httpclient_parser m_parser;
     HttpResponse::ptr m_data;

@@ -72,6 +72,26 @@ CMakeFiles/wyze.dir/wyze/http/http11_parser.cpp.o: ../wyze/http/http11_common.h
 CMakeFiles/wyze.dir/wyze/http/http11_parser.cpp.o: ../wyze/http/http11_parser.cpp
 CMakeFiles/wyze.dir/wyze/http/http11_parser.cpp.o: ../wyze/http/http11_parser.h
 
+CMakeFiles/wyze.dir/wyze/http/http_connection.cpp.o: ../wyze/address.h
+CMakeFiles/wyze.dir/wyze/http/http_connection.cpp.o: ../wyze/bytearray.h
+CMakeFiles/wyze.dir/wyze/http/http_connection.cpp.o: ../wyze/config.h
+CMakeFiles/wyze.dir/wyze/http/http_connection.cpp.o: ../wyze/endian.h
+CMakeFiles/wyze.dir/wyze/http/http_connection.cpp.o: ../wyze/http/http.h
+CMakeFiles/wyze.dir/wyze/http/http_connection.cpp.o: ../wyze/http/http11_common.h
+CMakeFiles/wyze.dir/wyze/http/http_connection.cpp.o: ../wyze/http/http11_parser.h
+CMakeFiles/wyze.dir/wyze/http/http_connection.cpp.o: ../wyze/http/http_connection.cpp
+CMakeFiles/wyze.dir/wyze/http/http_connection.cpp.o: ../wyze/http/http_connection.h
+CMakeFiles/wyze.dir/wyze/http/http_connection.cpp.o: ../wyze/http/http_parser.h
+CMakeFiles/wyze.dir/wyze/http/http_connection.cpp.o: ../wyze/http/httpclient_parser.h
+CMakeFiles/wyze.dir/wyze/http/http_connection.cpp.o: ../wyze/log.h
+CMakeFiles/wyze.dir/wyze/http/http_connection.cpp.o: ../wyze/noncopyable.h
+CMakeFiles/wyze.dir/wyze/http/http_connection.cpp.o: ../wyze/singleton.h
+CMakeFiles/wyze.dir/wyze/http/http_connection.cpp.o: ../wyze/socket.h
+CMakeFiles/wyze.dir/wyze/http/http_connection.cpp.o: ../wyze/sockstream.h
+CMakeFiles/wyze.dir/wyze/http/http_connection.cpp.o: ../wyze/stream.h
+CMakeFiles/wyze.dir/wyze/http/http_connection.cpp.o: ../wyze/thread.h
+CMakeFiles/wyze.dir/wyze/http/http_connection.cpp.o: ../wyze/util.h
+
 CMakeFiles/wyze.dir/wyze/http/http_parser.cpp.o: ../wyze/config.h
 CMakeFiles/wyze.dir/wyze/http/http_parser.cpp.o: ../wyze/http/http.h
 CMakeFiles/wyze.dir/wyze/http/http_parser.cpp.o: ../wyze/http/http11_common.h
@@ -176,6 +196,7 @@ CMakeFiles/wyze.dir/wyze/scheduler.cpp.o: ../wyze/thread.h
 CMakeFiles/wyze.dir/wyze/scheduler.cpp.o: ../wyze/util.h
 
 CMakeFiles/wyze.dir/wyze/socket.cpp.o: ../wyze/address.h
+CMakeFiles/wyze.dir/wyze/socket.cpp.o: ../wyze/config.h
 CMakeFiles/wyze.dir/wyze/socket.cpp.o: ../wyze/endian.h
 CMakeFiles/wyze.dir/wyze/socket.cpp.o: ../wyze/fdmanager.h
 CMakeFiles/wyze.dir/wyze/socket.cpp.o: ../wyze/fiber.h
@@ -202,8 +223,13 @@ CMakeFiles/wyze.dir/wyze/sockstream.cpp.o: ../wyze/sockstream.h
 CMakeFiles/wyze.dir/wyze/sockstream.cpp.o: ../wyze/stream.h
 
 CMakeFiles/wyze.dir/wyze/stream.cpp.o: ../wyze/bytearray.h
+CMakeFiles/wyze.dir/wyze/stream.cpp.o: ../wyze/log.h
+CMakeFiles/wyze.dir/wyze/stream.cpp.o: ../wyze/noncopyable.h
+CMakeFiles/wyze.dir/wyze/stream.cpp.o: ../wyze/singleton.h
 CMakeFiles/wyze.dir/wyze/stream.cpp.o: ../wyze/stream.cpp
 CMakeFiles/wyze.dir/wyze/stream.cpp.o: ../wyze/stream.h
+CMakeFiles/wyze.dir/wyze/stream.cpp.o: ../wyze/thread.h
+CMakeFiles/wyze.dir/wyze/stream.cpp.o: ../wyze/util.h
 
 CMakeFiles/wyze.dir/wyze/tcpserver.cpp.o: ../wyze/address.h
 CMakeFiles/wyze.dir/wyze/tcpserver.cpp.o: ../wyze/config.h

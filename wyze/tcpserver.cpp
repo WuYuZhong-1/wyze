@@ -31,7 +31,7 @@ bool TcpServer::bind(Address::ptr addr)
 {
     std::vector<Address::ptr> addrs;
     std::vector<Address::ptr> fails;
-    addrs.emplace_back(addr);
+    addrs.push_back(addr);
 
     return bind(addrs,fails);
 }
@@ -46,7 +46,7 @@ bool TcpServer::bind(const std::vector<Address::ptr>& addrs,
             WYZE_LOG_ERROR(g_logger) << "bind fail errno=" << errno
                 << " errstr=" << strerror(errno) 
                 << " addr=[" << *addr << "]";
-            fails.emplace_back(addr);
+            fails.push_back(addr);
             continue;
         }
 
@@ -54,10 +54,10 @@ bool TcpServer::bind(const std::vector<Address::ptr>& addrs,
             WYZE_LOG_ERROR(g_logger) << "listen fail errno=" << errno
                 << " errstr=" << strerror(errno)
                 << " addr=[" << *addr << "]";
-                fails.emplace_back(addr);
+                fails.push_back(addr);
                 continue;
         }
-        m_socks.emplace_back(sock);
+        m_socks.push_back(sock);
     }
 
     if(!fails.empty()) {

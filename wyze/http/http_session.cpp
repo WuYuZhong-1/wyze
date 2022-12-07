@@ -60,7 +60,7 @@ HttpRequest::ptr HttpSession::recvRequest()
     uint64_t buffer_size = (s_http_request_buffer_size >  (4 *1024)) ?  s_http_request_buffer_size : (4 *1024);   //避免在下面执行中 s_http_request_buffer_size 发生改变
 
     
-    std::shared_ptr<char> buffer(new char[buffer_size], [](char* ptr) {
+    std::shared_ptr<char> buffer(new char[buffer_size + 1], [](char* ptr) {
             delete[] ptr;
         });
     char* data = buffer.get();
@@ -73,37 +73,55 @@ HttpRequest::ptr HttpSession::recvRequest()
     // nparse 解析到的位置
     do {
         int len = read(data + offset, buffer_size - offset);
-        if(len <= 0) 
+        if(len <= 0) {
+            WYZE_LOG_DEBUG(g_logger) << "------len=" << len
+                << " errno=" << errno << " errstr=" << strerror(errno);
+            close();
             return nullptr;
+        }
 
         len += offset;  //读到的长度
         nparse = parser->execute(data, len, nparse);    
-        if(parser->hasError())
+        if(parser->hasError()){
+            close();
+            WYZE_LOG_WARN(g_logger) << "parser header error:" << parser->hasError();
             return nullptr;
+        }
         
         offset = len;
-        if(offset == (int)buffer_size) 
-            return nullptr;
-        
-        if(parser->isFinished()) {
+        if(parser->isFinished()) 
             break;
+        
+        if(offset == (int)buffer_size){  //这里表示读了 buffer_size 还不能解析出头部 最小 4 *1024
+            close();
+            WYZE_LOG_WARN(g_logger) << "read full buffer size=" <<  buffer_size
+                << ", but not parser data";
+            return nullptr;
         }
+
     }while(true);
 
-    int64_t length = parser->getContentLength();            
+    int64_t length = parser->getContentLength(); 
+    if(length > (int64_t)s_http_request_max_body_size)
+        return nullptr;
+    
     if(length > 0) {            //有消息体
         std::string body;
-        body.reserve(length);
+        // body.reserve(length);    //申请空间，不创建
+        body.resize(length);        //申请空间，创建对象
 
         if( (length +  nparse) > (uint64_t)offset) {   //需要读取数据
 
-            body.append(data + nparse, offset);
+            // body.append(data + nparse, offset);
+            memcpy(&body[0], data + nparse, offset);
             length = length + nparse - offset;
-            if(readFixSize(&body[body.size()], length) <= 0) 
+            // if(readFixSize(&body[body.size()], length) <= 0) 
+            if(readFixSize(&body[offset - nparse], length) <= 0) 
                 return nullptr;
         }
         else {                  //需要保存数据
-            body.append(data + nparse, length);
+            // body.append(data + nparse, length);
+            memcpy(&body[0], data + nparse, length);
             saveLeftData(data, offset, nparse + length);
         }
 

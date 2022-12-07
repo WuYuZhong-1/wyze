@@ -12,6 +12,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/wuyz/learn/wyze/wyze/hook.cpp" "/home/wuyz/learn/wyze/build/CMakeFiles/wyze.dir/wyze/hook.cpp.o"
   "/home/wuyz/learn/wyze/wyze/http/http.cpp" "/home/wuyz/learn/wyze/build/CMakeFiles/wyze.dir/wyze/http/http.cpp.o"
   "/home/wuyz/learn/wyze/wyze/http/http11_parser.cpp" "/home/wuyz/learn/wyze/build/CMakeFiles/wyze.dir/wyze/http/http11_parser.cpp.o"
+  "/home/wuyz/learn/wyze/wyze/http/http_connection.cpp" "/home/wuyz/learn/wyze/build/CMakeFiles/wyze.dir/wyze/http/http_connection.cpp.o"
   "/home/wuyz/learn/wyze/wyze/http/http_parser.cpp" "/home/wuyz/learn/wyze/build/CMakeFiles/wyze.dir/wyze/http/http_parser.cpp.o"
   "/home/wuyz/learn/wyze/wyze/http/http_server.cpp" "/home/wuyz/learn/wyze/build/CMakeFiles/wyze.dir/wyze/http/http_server.cpp.o"
   "/home/wuyz/learn/wyze/wyze/http/http_session.cpp" "/home/wuyz/learn/wyze/build/CMakeFiles/wyze.dir/wyze/http/http_session.cpp.o"

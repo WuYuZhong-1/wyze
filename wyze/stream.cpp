@@ -1,7 +1,9 @@
 #include "stream.h"
+#include "log.h"
 
 namespace wyze {
 
+static Logger::ptr g_logger = WYZE_LOG_NAME("system");
 
 int Stream::readFixSize(void* buffer, size_t length)
 {
@@ -40,6 +42,7 @@ int Stream::writeFixSize(const void* buffer, size_t length)
         offset += len;
         left -= len;
     }
+    // WYZE_LOG_DEBUG(g_logger) << length;
     return length;
 }
 

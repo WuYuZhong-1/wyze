@@ -4,6 +4,7 @@
 #include "hook.h"
 #include "iomanager.h"
 #include "fdmanager.h"
+#include "config.h"
 
 #include <sys/types.h>
 #include <sys/socket.h>
@@ -13,6 +14,9 @@
 
 
 namespace wyze {
+
+static ConfigVar<uint64_t>::ptr g_socket_recv_timeout = 
+        Config::Lookup("socket.recv_timeout", (uint64_t)0, "socket recv timeout");
 
 static Logger::ptr  g_logger = WYZE_LOG_NAME("system");
 
@@ -182,6 +186,10 @@ void Socket::initSock()
     if( m_type == SOCK_STREAM && m_family != AF_UNIX) {
         setOption(IPPROTO_TCP, TCP_NODELAY, val);
     }
+    //TODO::需要设置一个超时
+    struct timeval tv{ 0, 0};
+    setOption(SOL_SOCKET, SO_RCVTIMEO, tv);
+    setOption(SOL_SOCKET, SO_SNDTIMEO, tv);
 }
 
 void Socket::newSock()
@@ -222,7 +230,7 @@ bool Socket::bind(Address::ptr addr)
     return true;
 }
 
-bool Socket::connect(const Address::ptr addr, int64_t timeout_ms)
+bool Socket::connect(const Address::ptr addr, uint64_t timeout_ms)
 {
     if(!isVaild()) {
         newSock();
@@ -237,7 +245,7 @@ bool Socket::connect(const Address::ptr addr, int64_t timeout_ms)
         return false;
     }
 
-    if(timeout_ms == (int64_t)-1) {
+    if(timeout_ms == (uint64_t)-1) {
         if(::connect(m_sock, addr->getAddr(), addr->getAddrLen())) {
             WYZE_LOG_ERROR(g_logger) << "sock=" << m_sock << "connect(" << addr->toString()
                 << ") error errno=" << errno << "errstr=" << strerror(errno);

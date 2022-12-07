@@ -69,10 +69,73 @@ void test_response()
 }
 
 
+static char chunk_first[] = "HTTP/1.1 200 OK\r\n"
+                            "Content-Type: text/plain\r\n"
+                            "Transfer-Encoding: chunked\r\n\r\n"
+                            "25\r\n"
+                            "This is the data in the first chunk\r\n\r\n";
+static char chunk_second[] = "1C\r\n"
+                            "and this is the second one\r\n\r\n"
+                            "3\r\n"
+                            "con"
+                            "8\r\n"
+                            "sequence"
+                            "0\r\n\r\n";
+                            
+
+void test_chunked()
+{
+    (void)chunk_second;
+    wyze::http::HttpResponseParser parser;
+    std::string tmp = chunk_first;
+    int s = parser.execute(&tmp[0], tmp.size(), 0);
+    WYZE_LOG_INFO(g_logger) << "execute rt=" << s
+        << " has_error=" << parser.hasError()
+        << " is_finished=" << parser.isFinished()
+        << " total=" << tmp.size();
+    WYZE_LOG_INFO(g_logger) << &tmp[s];
+    auto& p = parser.getParser();
+    WYZE_LOG_INFO(g_logger) << "chunked=" << p.chunked
+                            << "  chunks_done=" << p.chunks_done
+                            << "  chunk_size=" << p.content_len;
+
+    parser.reset(&tmp[0], s, tmp.size() - s);
+    tmp.resize(tmp.size() - s);
+    WYZE_LOG_INFO(g_logger) << "size = " << tmp.size() << " data=" << tmp;
+
+    s = parser.execute(&tmp[0], tmp.size(), 0);
+    WYZE_LOG_INFO(g_logger) << "execute rt=" << s
+        << " has_error=" << parser.hasError()
+        << " is_finished=" << parser.isFinished()
+        << " total=" << tmp.size();
+    WYZE_LOG_INFO(g_logger) << &tmp[s];
+    WYZE_LOG_INFO(g_logger) << "chunked=" << p.chunked
+                            << "  chunks_done=" << p.chunks_done
+                            << "  chunk_size=" << p.content_len;
+
+
+
+    //这个解析可以解析到chunked数据
+    // wyze::http::HttpResponseParser parser1;                    
+    // int s1 = parser1.execute(&tmp[s], tmp.size() -s, 0);
+    // WYZE_LOG_INFO(g_logger) << "execute rt=" << s1
+    //     << " has_error=" << parser1.hasError()
+    //     << " is_finished=" << parser1.isFinished()
+    //     << " total=" << tmp.size();
+    // WYZE_LOG_INFO(g_logger) << &tmp[s + s1];
+    // auto p1 = parser1.getParser();
+    // WYZE_LOG_INFO(g_logger) << "chunked=" << p1.chunked
+    //                         << "  chunks_done=" << p1.chunks_done
+    //                         << "  chunk_size=" << p1.content_len;
+
+}
+
+
 int main(int argc, char** argv) 
 {
-    test_request();
-    WYZE_LOG_INFO(g_logger) << "------------------------------------";
-    test_response();
+    // test_request();
+    // WYZE_LOG_INFO(g_logger) << "------------------------------------";
+    // test_response();
+    test_chunked();
     return 0;
 }

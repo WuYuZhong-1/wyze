@@ -8,8 +8,8 @@ void run()
     // wyze::UnixAddress::ptr addr2(new wyze::UnixAddress("/tmp/wyze_unix_addr"));
     std::vector<wyze::Address::ptr> addrs;
     std::vector<wyze::Address::ptr> fails;
-    addrs.emplace_back(addr);
-    // addrs.emplace_back(addr2);
+    addrs.push_back(addr);
+    // addrs.push_back(addr2);
 
     wyze::TcpServer::ptr tcp_server(new wyze::TcpServer);
     while(!tcp_server->bind(addrs, fails)) 

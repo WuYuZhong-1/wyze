@@ -12,6 +12,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/wyze.dir/wyze/http/http_session.cpp.o"
   "CMakeFiles/wyze.dir/wyze/http/http_server.cpp.o"
   "CMakeFiles/wyze.dir/wyze/http/servlet.cpp.o"
+  "CMakeFiles/wyze.dir/wyze/http/http_connection.cpp.o"
   "CMakeFiles/wyze.dir/wyze/iomanager.cpp.o"
   "CMakeFiles/wyze.dir/wyze/log.cpp.o"
   "CMakeFiles/wyze.dir/wyze/scheduler.cpp.o"

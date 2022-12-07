@@ -103,7 +103,7 @@ namespace wyze {
         }
 
         for(next = results; next != nullptr; next = next->ai_next) {
-            result.emplace_back(Create(next->ai_addr, (socklen_t)next->ai_addrlen));
+            result.push_back(Create(next->ai_addr, (socklen_t)next->ai_addrlen));
         }
 
         freeaddrinfo(results);
@@ -204,11 +204,11 @@ namespace wyze {
         if( iface.empty() || iface == "*") {
             //AF_UNSPEC  为指明
             if(family == AF_INET || family == AF_UNSPEC) {
-                result.emplace_back(std::make_pair(Address::ptr( new IPv4Address()), 0u));
+                result.emplace_back(Address::ptr( new IPv4Address()), 0u);
             }
 
             if(family == AF_INET6 || family == AF_UNSPEC) {
-                result.emplace_back(std::make_pair(Address::ptr(new IPv6Address()), 0u));
+                result.emplace_back(Address::ptr(new IPv6Address()), 0u);
             }
             return true;
         }
@@ -222,7 +222,7 @@ namespace wyze {
 
         auto its = results.equal_range(iface);
         for(; its.first != its.second; ++its.first) {
-            result.emplace_back(its.first->second);
+            result.push_back(its.first->second);
         }
 
         return true;

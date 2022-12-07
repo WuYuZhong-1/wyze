@@ -11,6 +11,7 @@ CMakeFiles/test_fiber.dir/tests/test_fiber.cpp.o: ../wyze/hook.h
 CMakeFiles/test_fiber.dir/tests/test_fiber.cpp.o: ../wyze/http/http.h
 CMakeFiles/test_fiber.dir/tests/test_fiber.cpp.o: ../wyze/http/http11_common.h
 CMakeFiles/test_fiber.dir/tests/test_fiber.cpp.o: ../wyze/http/http11_parser.h
+CMakeFiles/test_fiber.dir/tests/test_fiber.cpp.o: ../wyze/http/http_connection.h
 CMakeFiles/test_fiber.dir/tests/test_fiber.cpp.o: ../wyze/http/http_parser.h
 CMakeFiles/test_fiber.dir/tests/test_fiber.cpp.o: ../wyze/http/http_server.h
 CMakeFiles/test_fiber.dir/tests/test_fiber.cpp.o: ../wyze/http/http_session.h

@@ -11,6 +11,7 @@ CMakeFiles/echo_server.dir/examples/echo_server.cpp.o: ../wyze/hook.h
 CMakeFiles/echo_server.dir/examples/echo_server.cpp.o: ../wyze/http/http.h
 CMakeFiles/echo_server.dir/examples/echo_server.cpp.o: ../wyze/http/http11_common.h
 CMakeFiles/echo_server.dir/examples/echo_server.cpp.o: ../wyze/http/http11_parser.h
+CMakeFiles/echo_server.dir/examples/echo_server.cpp.o: ../wyze/http/http_connection.h
 CMakeFiles/echo_server.dir/examples/echo_server.cpp.o: ../wyze/http/http_parser.h
 CMakeFiles/echo_server.dir/examples/echo_server.cpp.o: ../wyze/http/http_server.h
 CMakeFiles/echo_server.dir/examples/echo_server.cpp.o: ../wyze/http/http_session.h

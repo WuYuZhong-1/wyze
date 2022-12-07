@@ -21,6 +21,7 @@ set(LIB_SRC
     wyze/http/http_session.cpp
     wyze/http/http_server.cpp
     wyze/http/servlet.cpp
+    wyze/http/http_connection.cpp
     wyze/iomanager.cpp
     wyze/log.cpp
     wyze/scheduler.cpp
@@ -105,6 +106,10 @@ target_link_libraries(test_tcpserver ${LIBS})
 add_executable(test_http_server tests/test_http_server.cpp)
 add_dependencies(test_http_server wyze)
 target_link_libraries(test_http_server ${LIBS})
+
+add_executable(test_http_connection tests/test_http_connection.cpp)
+add_dependencies(test_http_connection wyze)
+target_link_libraries(test_http_connection ${LIBS})
 
 add_executable(echo_server examples/echo_server.cpp)
 add_dependencies(echo_server wyze)

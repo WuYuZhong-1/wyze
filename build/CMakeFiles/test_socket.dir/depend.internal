@@ -12,6 +12,7 @@ CMakeFiles/test_socket.dir/tests/test_socket.cpp.o
  /home/wuyz/learn/wyze/wyze/http/http.h
  /home/wuyz/learn/wyze/wyze/http/http11_common.h
  /home/wuyz/learn/wyze/wyze/http/http11_parser.h
+ /home/wuyz/learn/wyze/wyze/http/http_connection.h
  /home/wuyz/learn/wyze/wyze/http/http_parser.h
  /home/wuyz/learn/wyze/wyze/http/http_server.h
  /home/wuyz/learn/wyze/wyze/http/http_session.h

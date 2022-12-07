@@ -262,6 +262,22 @@ string.h
 http11_common.h
 /home/wuyz/learn/wyze/wyze/http/http11_common.h
 
+/home/wuyz/learn/wyze/wyze/http/http_connection.cpp
+http_connection.h
+/home/wuyz/learn/wyze/wyze/http/http_connection.h
+http_parser.h
+/home/wuyz/learn/wyze/wyze/http/http_parser.h
+../config.h
+/home/wuyz/learn/wyze/wyze/config.h
+../log.h
+/home/wuyz/learn/wyze/wyze/log.h
+
+/home/wuyz/learn/wyze/wyze/http/http_connection.h
+http.h
+/home/wuyz/learn/wyze/wyze/http/http.h
+../sockstream.h
+/home/wuyz/learn/wyze/wyze/sockstream.h
+
 /home/wuyz/learn/wyze/wyze/http/http_parser.cpp
 http_parser.h
 /home/wuyz/learn/wyze/wyze/http/http_parser.h
@@ -479,6 +495,8 @@ iomanager.h
 /home/wuyz/learn/wyze/wyze/iomanager.h
 fdmanager.h
 /home/wuyz/learn/wyze/wyze/fdmanager.h
+config.h
+/home/wuyz/learn/wyze/wyze/config.h
 sys/types.h
 -
 sys/socket.h
@@ -513,6 +531,8 @@ socket.h
 /home/wuyz/learn/wyze/wyze/stream.cpp
 stream.h
 /home/wuyz/learn/wyze/wyze/stream.h
+log.h
+/home/wuyz/learn/wyze/wyze/log.h
 
 /home/wuyz/learn/wyze/wyze/stream.h
 memory

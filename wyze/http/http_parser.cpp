@@ -97,6 +97,12 @@ HttpRequestParser::HttpRequestParser()
     m_parser.data = this;
 }
 
+void HttpRequestParser::reset(char* data, size_t offset, size_t len)
+{
+    memmove(data, data + offset, len);
+    http_parser_init(&m_parser);
+}
+
 size_t HttpRequestParser::execute(char* data, size_t len, size_t offset)
 {    
     return http_parser_execute(&m_parser, data, len, offset);
@@ -203,6 +209,12 @@ HttpResponseParser::HttpResponseParser()
 
 }
 
+void HttpResponseParser::reset(char* data, size_t offset, size_t len)
+{
+    memmove(data, data + offset, len);
+    httpclient_parser_init(&m_parser);
+}
+
 size_t HttpResponseParser::execute(char* data, size_t len,  size_t offset)
 {
     return httpclient_parser_execute(&m_parser, data, len, offset);
@@ -221,6 +233,17 @@ int HttpResponseParser::hasError()
 uint64_t HttpResponseParser::getContentLength()
 {
     return m_data->getHeaderAs<uint64_t>("content-length", 0);
+}
+
+bool HttpResponseParser::getIsClose()
+{
+    std::string str = m_data->getHeader("connection");
+    if(strcasecmp(str.c_str(), "close") == 0)
+        m_data->setClose(true);
+    else 
+        m_data->setClose(false);
+        
+    return m_data->isColse();
 }
 
 }

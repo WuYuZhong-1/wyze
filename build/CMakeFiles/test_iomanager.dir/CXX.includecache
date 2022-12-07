@@ -148,6 +148,12 @@ sys/types.h
 http11_common.h
 /home/wuyz/learn/wyze/wyze/http/http11_common.h
 
+/home/wuyz/learn/wyze/wyze/http/http_connection.h
+http.h
+/home/wuyz/learn/wyze/wyze/http/http.h
+../sockstream.h
+/home/wuyz/learn/wyze/wyze/sockstream.h
+
 /home/wuyz/learn/wyze/wyze/http/http_parser.h
 http.h
 /home/wuyz/learn/wyze/wyze/http/http.h
@@ -353,6 +359,8 @@ http/http_server.h
 /home/wuyz/learn/wyze/wyze/http/http_server.h
 http/servlet.h
 /home/wuyz/learn/wyze/wyze/http/servlet.h
+http/http_connection.h
+/home/wuyz/learn/wyze/wyze/http/http_connection.h
 iomanager.h
 /home/wuyz/learn/wyze/wyze/iomanager.h
 log.h

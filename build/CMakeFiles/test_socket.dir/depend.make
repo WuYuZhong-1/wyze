@@ -11,6 +11,7 @@ CMakeFiles/test_socket.dir/tests/test_socket.cpp.o: ../wyze/hook.h
 CMakeFiles/test_socket.dir/tests/test_socket.cpp.o: ../wyze/http/http.h
 CMakeFiles/test_socket.dir/tests/test_socket.cpp.o: ../wyze/http/http11_common.h
 CMakeFiles/test_socket.dir/tests/test_socket.cpp.o: ../wyze/http/http11_parser.h
+CMakeFiles/test_socket.dir/tests/test_socket.cpp.o: ../wyze/http/http_connection.h
 CMakeFiles/test_socket.dir/tests/test_socket.cpp.o: ../wyze/http/http_parser.h
 CMakeFiles/test_socket.dir/tests/test_socket.cpp.o: ../wyze/http/http_server.h
 CMakeFiles/test_socket.dir/tests/test_socket.cpp.o: ../wyze/http/http_session.h

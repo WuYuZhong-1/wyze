@@ -50,7 +50,7 @@ void run(int type)
 {
     WYZE_LOG_INFO(g_logger) << " server type=" << type;
     EchoServer::ptr es(new EchoServer(type));
-    auto addr = wyze::IPAddress::LookAnyIPAddress("0.0.0.0:8080");
+    auto addr = wyze::IPAddress::LookAnyIPAddress("0.0.0.0:8020");
     while(!es->bind(addr))
         sleep(2);
     es->start();
@@ -65,7 +65,7 @@ int main(int argc, char** argv)
         return 0;
     }
 
-    if(strcmp(argv[1], "-b"))
+    if(strcmp(argv[1], "-b") == 0)
         type = 2;
 
     wyze::IOManager iom(2);

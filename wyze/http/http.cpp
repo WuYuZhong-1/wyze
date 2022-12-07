@@ -100,7 +100,7 @@ std::ostream& HttpRequest::dump(std::ostream& os) const
         << m_path
         << (m_query.empty() ? "" : "?")
         << m_query
-        << (m_fragment.empty() ? "" : "?")
+        << (m_fragment.empty() ? "" : "#")
         << m_fragment
         << " HTTP/"
         << ((uint32_t)(m_version >> 4))

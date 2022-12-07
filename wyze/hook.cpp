@@ -111,8 +111,9 @@ namespace wyze {
 
         ssize_t n;
         uint64_t ms = ctx->getTimeout(timeout_so);
+        // WYZE_LOG_INFO(g_logger) << hook_fun_name << "  do_io ms=" << ms;
         do {
-            std::shared_ptr<TimerCond> tcnd(new TimerCond);
+            errno = 0;
             n = fun(fd, std::forward<Args>(args)...);
             while( n == -1 && errno == EINTR)
                 n = fun(fd, std::forward<Args>(args)...);
@@ -132,7 +133,8 @@ namespace wyze {
                     std::weak_ptr<TimerCond> wtcnd(tcnd);
                     Timer::ptr timer;
 
-                    if(ms != (uint64_t)-1) {    //在挂起之前检测有没有定时
+                    if(ms != (uint64_t)0 ) {    //在挂起之前检测有没有定时
+
                         timer = iom->addConditionTimer(ms, [wtcnd, fd, iom, event]() {
                             auto t = wtcnd.lock();
                             if( !t || t->cancelled) //当指针不存在，获取指针里面设置为取消，直接返回
@@ -142,7 +144,6 @@ namespace wyze {
                         }, wtcnd);
                     }
 
-                    // WYZE_LOG_INFO(g_logger) << hook_fun_name << "do_io";
                     Fiber::YeildToHold();       //挂起
                                                 //这里开始，表示定时器，获取添加的fd事件触发
                     if(timer)
@@ -160,11 +161,10 @@ namespace wyze {
             
         } while(true);
 
+        // WYZE_LOG_INFO(g_logger) << hook_fun_name << " end  do_io "
+        //         << "  n=" << n  << "  errno=" << errno;
         return n;
     }
-
-
-
 }
 
 extern "C" {
@@ -533,9 +533,11 @@ extern "C" {
                     
                     wyze::FdCtx::ptr ctx = wyze::FdMgr::GetInstance()->get(sockfd);
                     if(ctx) {
+                        
                         const timeval* v = (const timeval*)optval;
                         ctx->setTimeout(optname, v->tv_sec * 1000 + v->tv_usec / 1000);
                     }
+                return 0;
             }
         }
 

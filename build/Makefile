@@ -127,6 +127,19 @@ echo_server/fast:
 .PHONY : echo_server/fast
 
 #=============================================================================
+# Target rules for targets named test_http_connection
+
+# Build rule for target.
+test_http_connection: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 test_http_connection
+.PHONY : test_http_connection
+
+# fast build rule for target.
+test_http_connection/fast:
+	$(MAKE) -f CMakeFiles/test_http_connection.dir/build.make CMakeFiles/test_http_connection.dir/build
+.PHONY : test_http_connection/fast
+
+#=============================================================================
 # Target rules for targets named test_http_server
 
 # Build rule for target.
@@ -562,6 +575,33 @@ tests/test_http.s: tests/test_http.cpp.s
 tests/test_http.cpp.s:
 	$(MAKE) -f CMakeFiles/test_http.dir/build.make CMakeFiles/test_http.dir/tests/test_http.cpp.s
 .PHONY : tests/test_http.cpp.s
+
+tests/test_http_connection.o: tests/test_http_connection.cpp.o
+
+.PHONY : tests/test_http_connection.o
+
+# target to build an object file
+tests/test_http_connection.cpp.o:
+	$(MAKE) -f CMakeFiles/test_http_connection.dir/build.make CMakeFiles/test_http_connection.dir/tests/test_http_connection.cpp.o
+.PHONY : tests/test_http_connection.cpp.o
+
+tests/test_http_connection.i: tests/test_http_connection.cpp.i
+
+.PHONY : tests/test_http_connection.i
+
+# target to preprocess a source file
+tests/test_http_connection.cpp.i:
+	$(MAKE) -f CMakeFiles/test_http_connection.dir/build.make CMakeFiles/test_http_connection.dir/tests/test_http_connection.cpp.i
+.PHONY : tests/test_http_connection.cpp.i
+
+tests/test_http_connection.s: tests/test_http_connection.cpp.s
+
+.PHONY : tests/test_http_connection.s
+
+# target to generate assembly for a file
+tests/test_http_connection.cpp.s:
+	$(MAKE) -f CMakeFiles/test_http_connection.dir/build.make CMakeFiles/test_http_connection.dir/tests/test_http_connection.cpp.s
+.PHONY : tests/test_http_connection.cpp.s
 
 tests/test_http_parser.o: tests/test_http_parser.cpp.o
 
@@ -1022,6 +1062,33 @@ wyze/http/http11_parser.cpp.s:
 	$(MAKE) -f CMakeFiles/wyze.dir/build.make CMakeFiles/wyze.dir/wyze/http/http11_parser.cpp.s
 .PHONY : wyze/http/http11_parser.cpp.s
 
+wyze/http/http_connection.o: wyze/http/http_connection.cpp.o
+
+.PHONY : wyze/http/http_connection.o
+
+# target to build an object file
+wyze/http/http_connection.cpp.o:
+	$(MAKE) -f CMakeFiles/wyze.dir/build.make CMakeFiles/wyze.dir/wyze/http/http_connection.cpp.o
+.PHONY : wyze/http/http_connection.cpp.o
+
+wyze/http/http_connection.i: wyze/http/http_connection.cpp.i
+
+.PHONY : wyze/http/http_connection.i
+
+# target to preprocess a source file
+wyze/http/http_connection.cpp.i:
+	$(MAKE) -f CMakeFiles/wyze.dir/build.make CMakeFiles/wyze.dir/wyze/http/http_connection.cpp.i
+.PHONY : wyze/http/http_connection.cpp.i
+
+wyze/http/http_connection.s: wyze/http/http_connection.cpp.s
+
+.PHONY : wyze/http/http_connection.s
+
+# target to generate assembly for a file
+wyze/http/http_connection.cpp.s:
+	$(MAKE) -f CMakeFiles/wyze.dir/build.make CMakeFiles/wyze.dir/wyze/http/http_connection.cpp.s
+.PHONY : wyze/http/http_connection.cpp.s
+
 wyze/http/http_parser.o: wyze/http/http_parser.cpp.o
 
 .PHONY : wyze/http/http_parser.o
@@ -1435,6 +1502,7 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... echo_server"
+	@echo "... test_http_connection"
 	@echo "... test_http_server"
 	@echo "... test_fiber"
 	@echo "... test_socket"
@@ -1477,6 +1545,9 @@ help:
 	@echo "... tests/test_http.o"
 	@echo "... tests/test_http.i"
 	@echo "... tests/test_http.s"
+	@echo "... tests/test_http_connection.o"
+	@echo "... tests/test_http_connection.i"
+	@echo "... tests/test_http_connection.s"
 	@echo "... tests/test_http_parser.o"
 	@echo "... tests/test_http_parser.i"
 	@echo "... tests/test_http_parser.s"
@@ -1528,6 +1599,9 @@ help:
 	@echo "... wyze/http/http11_parser.o"
 	@echo "... wyze/http/http11_parser.i"
 	@echo "... wyze/http/http11_parser.s"
+	@echo "... wyze/http/http_connection.o"
+	@echo "... wyze/http/http_connection.i"
+	@echo "... wyze/http/http_connection.s"
 	@echo "... wyze/http/http_parser.o"
 	@echo "... wyze/http/http_parser.i"
 	@echo "... wyze/http/http_parser.s"

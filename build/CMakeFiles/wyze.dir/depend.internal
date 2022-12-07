@@ -72,6 +72,26 @@ CMakeFiles/wyze.dir/wyze/http/http11_parser.cpp.o
  /home/wuyz/learn/wyze/wyze/http/http11_common.h
  /home/wuyz/learn/wyze/wyze/http/http11_parser.cpp
  /home/wuyz/learn/wyze/wyze/http/http11_parser.h
+CMakeFiles/wyze.dir/wyze/http/http_connection.cpp.o
+ /home/wuyz/learn/wyze/wyze/address.h
+ /home/wuyz/learn/wyze/wyze/bytearray.h
+ /home/wuyz/learn/wyze/wyze/config.h
+ /home/wuyz/learn/wyze/wyze/endian.h
+ /home/wuyz/learn/wyze/wyze/http/http.h
+ /home/wuyz/learn/wyze/wyze/http/http11_common.h
+ /home/wuyz/learn/wyze/wyze/http/http11_parser.h
+ /home/wuyz/learn/wyze/wyze/http/http_connection.cpp
+ /home/wuyz/learn/wyze/wyze/http/http_connection.h
+ /home/wuyz/learn/wyze/wyze/http/http_parser.h
+ /home/wuyz/learn/wyze/wyze/http/httpclient_parser.h
+ /home/wuyz/learn/wyze/wyze/log.h
+ /home/wuyz/learn/wyze/wyze/noncopyable.h
+ /home/wuyz/learn/wyze/wyze/singleton.h
+ /home/wuyz/learn/wyze/wyze/socket.h
+ /home/wuyz/learn/wyze/wyze/sockstream.h
+ /home/wuyz/learn/wyze/wyze/stream.h
+ /home/wuyz/learn/wyze/wyze/thread.h
+ /home/wuyz/learn/wyze/wyze/util.h
 CMakeFiles/wyze.dir/wyze/http/http_parser.cpp.o
  /home/wuyz/learn/wyze/wyze/config.h
  /home/wuyz/learn/wyze/wyze/http/http.h
@@ -177,6 +197,7 @@ CMakeFiles/wyze.dir/wyze/scheduler.cpp.o
  /home/wuyz/learn/wyze/wyze/util.h
 CMakeFiles/wyze.dir/wyze/socket.cpp.o
  /home/wuyz/learn/wyze/wyze/address.h
+ /home/wuyz/learn/wyze/wyze/config.h
  /home/wuyz/learn/wyze/wyze/endian.h
  /home/wuyz/learn/wyze/wyze/fdmanager.h
  /home/wuyz/learn/wyze/wyze/fiber.h
@@ -203,8 +224,13 @@ CMakeFiles/wyze.dir/wyze/sockstream.cpp.o
  /home/wuyz/learn/wyze/wyze/stream.h
 CMakeFiles/wyze.dir/wyze/stream.cpp.o
  /home/wuyz/learn/wyze/wyze/bytearray.h
+ /home/wuyz/learn/wyze/wyze/log.h
+ /home/wuyz/learn/wyze/wyze/noncopyable.h
+ /home/wuyz/learn/wyze/wyze/singleton.h
  /home/wuyz/learn/wyze/wyze/stream.cpp
  /home/wuyz/learn/wyze/wyze/stream.h
+ /home/wuyz/learn/wyze/wyze/thread.h
+ /home/wuyz/learn/wyze/wyze/util.h
 CMakeFiles/wyze.dir/wyze/tcpserver.cpp.o
  /home/wuyz/learn/wyze/wyze/address.h
  /home/wuyz/learn/wyze/wyze/config.h

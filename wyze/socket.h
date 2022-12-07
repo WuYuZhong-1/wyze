@@ -61,7 +61,7 @@ public:
     Socket::ptr accept();
 
     bool bind(Address::ptr addr);
-    bool connect(const Address::ptr addr, int64_t timeout_ms = -1);
+    bool connect(const Address::ptr addr, uint64_t timeout_ms = -1);
     bool listen(int backlog = SOMAXCONN);   //SOCKET MAX CONNECT
     bool close();
 
