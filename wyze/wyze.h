@@ -24,5 +24,6 @@
 #include "thread.h"
 #include "timer.h"
 #include "util.h"
+#include "uri.h"
 
 #endif // !_WYZE_H_

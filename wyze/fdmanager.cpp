@@ -85,6 +85,9 @@ namespace wyze {
 
     FdCtx::ptr FdManager::get(int fd, bool auto_create)
     {
+        if(fd == -1)
+            return nullptr;
+            
         if(auto_create) {
             RWMutexType::WriteLock wlock(m_mutex);
             if( ((int) m_datas.size() <= fd)

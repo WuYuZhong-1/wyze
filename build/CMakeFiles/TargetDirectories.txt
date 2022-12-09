@@ -1,5 +1,6 @@
 /home/wuyz/learn/wyze/build/CMakeFiles/rebuild_cache.dir
 /home/wuyz/learn/wyze/build/CMakeFiles/echo_server.dir
+/home/wuyz/learn/wyze/build/CMakeFiles/test_uri.dir
 /home/wuyz/learn/wyze/build/CMakeFiles/test_http_connection.dir
 /home/wuyz/learn/wyze/build/CMakeFiles/test_http_server.dir
 /home/wuyz/learn/wyze/build/CMakeFiles/test_fiber.dir

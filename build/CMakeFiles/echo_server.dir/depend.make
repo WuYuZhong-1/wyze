@@ -29,6 +29,7 @@ CMakeFiles/echo_server.dir/examples/echo_server.cpp.o: ../wyze/stream.h
 CMakeFiles/echo_server.dir/examples/echo_server.cpp.o: ../wyze/tcpserver.h
 CMakeFiles/echo_server.dir/examples/echo_server.cpp.o: ../wyze/thread.h
 CMakeFiles/echo_server.dir/examples/echo_server.cpp.o: ../wyze/timer.h
+CMakeFiles/echo_server.dir/examples/echo_server.cpp.o: ../wyze/uri.h
 CMakeFiles/echo_server.dir/examples/echo_server.cpp.o: ../wyze/util.h
 CMakeFiles/echo_server.dir/examples/echo_server.cpp.o: ../wyze/wyze.h
 

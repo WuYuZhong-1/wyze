@@ -29,6 +29,7 @@ CMakeFiles/test_fiber.dir/tests/test_fiber.cpp.o: ../wyze/stream.h
 CMakeFiles/test_fiber.dir/tests/test_fiber.cpp.o: ../wyze/tcpserver.h
 CMakeFiles/test_fiber.dir/tests/test_fiber.cpp.o: ../wyze/thread.h
 CMakeFiles/test_fiber.dir/tests/test_fiber.cpp.o: ../wyze/timer.h
+CMakeFiles/test_fiber.dir/tests/test_fiber.cpp.o: ../wyze/uri.h
 CMakeFiles/test_fiber.dir/tests/test_fiber.cpp.o: ../wyze/util.h
 CMakeFiles/test_fiber.dir/tests/test_fiber.cpp.o: ../wyze/wyze.h
 

@@ -69,7 +69,8 @@ void test_lookup()
 {
     std::vector<wyze::Address::ptr> results;
     // bool rt = wyze::Address::Lookup(results, "baidu.com:http");                      //http 是字节流格式的 socket
-    bool rt = wyze::Address::Lookup(results, "baidu.com:tftp", AF_INET, SOCK_DGRAM);    //tftp 是报文格式的 socket
+    // bool rt = wyze::Address::Lookup(results, "baidu.com:tftp", AF_INET, SOCK_DGRAM);    //tftp 是报文格式的 socket
+    bool rt = wyze::Address::Lookup(results, "baidu.com", AF_INET);    //tftp 是报文格式的 socket
     if(rt == false) {
         WYZE_LOG_ERROR(g_logger) << "wyze::Address::Lookup() error";
         return;

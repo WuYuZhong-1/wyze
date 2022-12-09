@@ -50,7 +50,7 @@ void run(int type)
 {
     WYZE_LOG_INFO(g_logger) << " server type=" << type;
     EchoServer::ptr es(new EchoServer(type));
-    auto addr = wyze::IPAddress::LookAnyIPAddress("0.0.0.0:8020");
+    auto addr = wyze::IPAddress::LookupAnyIPAddress("0.0.0.0:8020");
     while(!es->bind(addr))
         sleep(2);
     es->start();

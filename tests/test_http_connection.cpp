@@ -2,6 +2,17 @@
 
 static wyze::Logger::ptr g_logger = WYZE_LOG_ROOT();
 
+void test_pool()
+{
+    wyze::http::HttpConnectionPool::ptr pool(new wyze::http::HttpConnectionPool(
+                    "www.sylar.top", 80, 10,  1000 * 20, 5));
+    
+    wyze::IOManager::GetThis()->addTimer(1000, [pool]() {
+        auto r = pool->doGet("/", 500);
+        WYZE_LOG_INFO(g_logger) << *r;
+    }, true);
+}
+
 void run()
 {
     wyze::Address::ptr addr = wyze::IPAddress::Create("39.100.72.123", 80);;
@@ -31,13 +42,17 @@ void run()
 
     if(!rsp) {
         WYZE_LOG_INFO(g_logger) << "recv response error";
-        return ;
     }
-
-    WYZE_LOG_INFO(g_logger) << "rsp: " << std::endl
-        << *rsp;
-
-    
+    else {
+        WYZE_LOG_INFO(g_logger) << "rsp: " << std::endl
+            << *rsp;
+    }
+    WYZE_LOG_INFO(g_logger) << "========================================";
+    auto get = wyze::http::HttpConnection::DoGet("http://www.baidu.com");
+    WYZE_LOG_INFO(g_logger) << *get;
+ 
+    WYZE_LOG_INFO(g_logger) << "========================================";
+    test_pool();
 }
 
 int main(int argc, char** argv) 

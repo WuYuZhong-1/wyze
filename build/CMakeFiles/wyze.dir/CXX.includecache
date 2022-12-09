@@ -271,12 +271,30 @@ http_parser.h
 /home/wuyz/learn/wyze/wyze/config.h
 ../log.h
 /home/wuyz/learn/wyze/wyze/log.h
+sstream
+-
+strings.h
+-
 
 /home/wuyz/learn/wyze/wyze/http/http_connection.h
 http.h
 /home/wuyz/learn/wyze/wyze/http/http.h
 ../sockstream.h
 /home/wuyz/learn/wyze/wyze/sockstream.h
+../uri.h
+/home/wuyz/learn/wyze/wyze/uri.h
+../thread.h
+/home/wuyz/learn/wyze/wyze/thread.h
+iostream
+-
+string
+-
+map
+-
+memory
+-
+list
+-
 
 /home/wuyz/learn/wyze/wyze/http/http_parser.cpp
 http_parser.h
@@ -609,6 +627,22 @@ set
 -
 thread.h
 /home/wuyz/learn/wyze/wyze/thread.h
+
+/home/wuyz/learn/wyze/wyze/uri.cpp
+uri.h
+/home/wuyz/learn/wyze/wyze/uri.h
+sstream
+-
+
+/home/wuyz/learn/wyze/wyze/uri.h
+memory
+-
+string
+-
+stdint.h
+-
+address.h
+/home/wuyz/learn/wyze/wyze/address.h
 
 /home/wuyz/learn/wyze/wyze/util.cpp
 util.h

@@ -27,6 +27,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/wuyz/learn/wyze/wyze/tcpserver.cpp" "/home/wuyz/learn/wyze/build/CMakeFiles/wyze.dir/wyze/tcpserver.cpp.o"
   "/home/wuyz/learn/wyze/wyze/thread.cpp" "/home/wuyz/learn/wyze/build/CMakeFiles/wyze.dir/wyze/thread.cpp.o"
   "/home/wuyz/learn/wyze/wyze/timer.cpp" "/home/wuyz/learn/wyze/build/CMakeFiles/wyze.dir/wyze/timer.cpp.o"
+  "/home/wuyz/learn/wyze/wyze/uri.cpp" "/home/wuyz/learn/wyze/build/CMakeFiles/wyze.dir/wyze/uri.cpp.o"
   "/home/wuyz/learn/wyze/wyze/util.cpp" "/home/wuyz/learn/wyze/build/CMakeFiles/wyze.dir/wyze/util.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")

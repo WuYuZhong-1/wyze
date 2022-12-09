@@ -121,7 +121,7 @@ namespace wyze {
         return nullptr;
     }
 
-    std::shared_ptr<IPAddress> Address::LookAnyIPAddress(const std::string& host,
+    std::shared_ptr<IPAddress> Address::LookupAnyIPAddress(const std::string& host,
                         int family, int type, int protocol)
     {
         std::vector<Address::ptr> result;

@@ -22,6 +22,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/wyze.dir/wyze/tcpserver.cpp.o"
   "CMakeFiles/wyze.dir/wyze/thread.cpp.o"
   "CMakeFiles/wyze.dir/wyze/timer.cpp.o"
+  "CMakeFiles/wyze.dir/wyze/uri.cpp.o"
   "CMakeFiles/wyze.dir/wyze/util.cpp.o"
   "../lib/libwyze.pdb"
   "../lib/libwyze.so"

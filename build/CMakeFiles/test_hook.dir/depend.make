@@ -29,6 +29,7 @@ CMakeFiles/test_hook.dir/tests/test_hook.cpp.o: ../wyze/stream.h
 CMakeFiles/test_hook.dir/tests/test_hook.cpp.o: ../wyze/tcpserver.h
 CMakeFiles/test_hook.dir/tests/test_hook.cpp.o: ../wyze/thread.h
 CMakeFiles/test_hook.dir/tests/test_hook.cpp.o: ../wyze/timer.h
+CMakeFiles/test_hook.dir/tests/test_hook.cpp.o: ../wyze/uri.h
 CMakeFiles/test_hook.dir/tests/test_hook.cpp.o: ../wyze/util.h
 CMakeFiles/test_hook.dir/tests/test_hook.cpp.o: ../wyze/wyze.h
 

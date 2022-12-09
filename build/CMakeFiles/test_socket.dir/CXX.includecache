@@ -135,6 +135,20 @@ http.h
 /home/wuyz/learn/wyze/wyze/http/http.h
 ../sockstream.h
 /home/wuyz/learn/wyze/wyze/sockstream.h
+../uri.h
+/home/wuyz/learn/wyze/wyze/uri.h
+../thread.h
+/home/wuyz/learn/wyze/wyze/thread.h
+iostream
+-
+string
+-
+map
+-
+memory
+-
+list
+-
 
 /home/wuyz/learn/wyze/wyze/http/http_parser.h
 http.h
@@ -310,6 +324,16 @@ set
 thread.h
 /home/wuyz/learn/wyze/wyze/thread.h
 
+/home/wuyz/learn/wyze/wyze/uri.h
+memory
+-
+string
+-
+stdint.h
+-
+address.h
+/home/wuyz/learn/wyze/wyze/address.h
+
 /home/wuyz/learn/wyze/wyze/util.h
 pthread.h
 -
@@ -367,4 +391,6 @@ timer.h
 /home/wuyz/learn/wyze/wyze/timer.h
 util.h
 /home/wuyz/learn/wyze/wyze/util.h
+uri.h
+/home/wuyz/learn/wyze/wyze/uri.h
 

@@ -29,6 +29,7 @@ CMakeFiles/test_http_server.dir/tests/test_http_server.cpp.o: ../wyze/stream.h
 CMakeFiles/test_http_server.dir/tests/test_http_server.cpp.o: ../wyze/tcpserver.h
 CMakeFiles/test_http_server.dir/tests/test_http_server.cpp.o: ../wyze/thread.h
 CMakeFiles/test_http_server.dir/tests/test_http_server.cpp.o: ../wyze/timer.h
+CMakeFiles/test_http_server.dir/tests/test_http_server.cpp.o: ../wyze/uri.h
 CMakeFiles/test_http_server.dir/tests/test_http_server.cpp.o: ../wyze/util.h
 CMakeFiles/test_http_server.dir/tests/test_http_server.cpp.o: ../wyze/wyze.h
 

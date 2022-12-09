@@ -29,6 +29,7 @@ CMakeFiles/test_bytearray.dir/tests/test_bytearray.cpp.o: ../wyze/stream.h
 CMakeFiles/test_bytearray.dir/tests/test_bytearray.cpp.o: ../wyze/tcpserver.h
 CMakeFiles/test_bytearray.dir/tests/test_bytearray.cpp.o: ../wyze/thread.h
 CMakeFiles/test_bytearray.dir/tests/test_bytearray.cpp.o: ../wyze/timer.h
+CMakeFiles/test_bytearray.dir/tests/test_bytearray.cpp.o: ../wyze/uri.h
 CMakeFiles/test_bytearray.dir/tests/test_bytearray.cpp.o: ../wyze/util.h
 CMakeFiles/test_bytearray.dir/tests/test_bytearray.cpp.o: ../wyze/wyze.h
 

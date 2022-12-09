@@ -29,6 +29,7 @@ CMakeFiles/test_iomanager.dir/tests/test_iomanager.cpp.o: ../wyze/stream.h
 CMakeFiles/test_iomanager.dir/tests/test_iomanager.cpp.o: ../wyze/tcpserver.h
 CMakeFiles/test_iomanager.dir/tests/test_iomanager.cpp.o: ../wyze/thread.h
 CMakeFiles/test_iomanager.dir/tests/test_iomanager.cpp.o: ../wyze/timer.h
+CMakeFiles/test_iomanager.dir/tests/test_iomanager.cpp.o: ../wyze/uri.h
 CMakeFiles/test_iomanager.dir/tests/test_iomanager.cpp.o: ../wyze/util.h
 CMakeFiles/test_iomanager.dir/tests/test_iomanager.cpp.o: ../wyze/wyze.h
 

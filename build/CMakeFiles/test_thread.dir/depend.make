@@ -29,6 +29,7 @@ CMakeFiles/test_thread.dir/tests/test_thread.cpp.o: ../wyze/stream.h
 CMakeFiles/test_thread.dir/tests/test_thread.cpp.o: ../wyze/tcpserver.h
 CMakeFiles/test_thread.dir/tests/test_thread.cpp.o: ../wyze/thread.h
 CMakeFiles/test_thread.dir/tests/test_thread.cpp.o: ../wyze/timer.h
+CMakeFiles/test_thread.dir/tests/test_thread.cpp.o: ../wyze/uri.h
 CMakeFiles/test_thread.dir/tests/test_thread.cpp.o: ../wyze/util.h
 CMakeFiles/test_thread.dir/tests/test_thread.cpp.o: ../wyze/wyze.h
 

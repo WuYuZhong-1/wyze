@@ -29,6 +29,7 @@ CMakeFiles/test_scheduler.dir/tests/test_scheduler.cpp.o: ../wyze/stream.h
 CMakeFiles/test_scheduler.dir/tests/test_scheduler.cpp.o: ../wyze/tcpserver.h
 CMakeFiles/test_scheduler.dir/tests/test_scheduler.cpp.o: ../wyze/thread.h
 CMakeFiles/test_scheduler.dir/tests/test_scheduler.cpp.o: ../wyze/timer.h
+CMakeFiles/test_scheduler.dir/tests/test_scheduler.cpp.o: ../wyze/uri.h
 CMakeFiles/test_scheduler.dir/tests/test_scheduler.cpp.o: ../wyze/util.h
 CMakeFiles/test_scheduler.dir/tests/test_scheduler.cpp.o: ../wyze/wyze.h
 

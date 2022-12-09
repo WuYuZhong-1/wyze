@@ -14,7 +14,7 @@ void test_shared_ptr()
 
 void test_socket()
 {
-    wyze::IPAddress::ptr addr = wyze::Address::LookAnyIPAddress("www.baidu.com", AF_INET, SOCK_STREAM);
+    wyze::IPAddress::ptr addr = wyze::Address::LookupAnyIPAddress("www.baidu.com", AF_INET, SOCK_STREAM);
     if(addr) {
         addr->setPort(80);
         WYZE_LOG_INFO(g_logger) << "get address: " << addr->toString();

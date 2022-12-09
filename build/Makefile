@@ -127,6 +127,19 @@ echo_server/fast:
 .PHONY : echo_server/fast
 
 #=============================================================================
+# Target rules for targets named test_uri
+
+# Build rule for target.
+test_uri: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 test_uri
+.PHONY : test_uri
+
+# fast build rule for target.
+test_uri/fast:
+	$(MAKE) -f CMakeFiles/test_uri.dir/build.make CMakeFiles/test_uri.dir/build
+.PHONY : test_uri/fast
+
+#=============================================================================
 # Target rules for targets named test_http_connection
 
 # Build rule for target.
@@ -819,6 +832,33 @@ tests/test_timer.cpp.s:
 	$(MAKE) -f CMakeFiles/test_timer.dir/build.make CMakeFiles/test_timer.dir/tests/test_timer.cpp.s
 .PHONY : tests/test_timer.cpp.s
 
+tests/test_uri.o: tests/test_uri.cpp.o
+
+.PHONY : tests/test_uri.o
+
+# target to build an object file
+tests/test_uri.cpp.o:
+	$(MAKE) -f CMakeFiles/test_uri.dir/build.make CMakeFiles/test_uri.dir/tests/test_uri.cpp.o
+.PHONY : tests/test_uri.cpp.o
+
+tests/test_uri.i: tests/test_uri.cpp.i
+
+.PHONY : tests/test_uri.i
+
+# target to preprocess a source file
+tests/test_uri.cpp.i:
+	$(MAKE) -f CMakeFiles/test_uri.dir/build.make CMakeFiles/test_uri.dir/tests/test_uri.cpp.i
+.PHONY : tests/test_uri.cpp.i
+
+tests/test_uri.s: tests/test_uri.cpp.s
+
+.PHONY : tests/test_uri.s
+
+# target to generate assembly for a file
+tests/test_uri.cpp.s:
+	$(MAKE) -f CMakeFiles/test_uri.dir/build.make CMakeFiles/test_uri.dir/tests/test_uri.cpp.s
+.PHONY : tests/test_uri.cpp.s
+
 tests/test_util.o: tests/test_util.cpp.o
 
 .PHONY : tests/test_util.o
@@ -1467,6 +1507,33 @@ wyze/timer.cpp.s:
 	$(MAKE) -f CMakeFiles/wyze.dir/build.make CMakeFiles/wyze.dir/wyze/timer.cpp.s
 .PHONY : wyze/timer.cpp.s
 
+wyze/uri.o: wyze/uri.cpp.o
+
+.PHONY : wyze/uri.o
+
+# target to build an object file
+wyze/uri.cpp.o:
+	$(MAKE) -f CMakeFiles/wyze.dir/build.make CMakeFiles/wyze.dir/wyze/uri.cpp.o
+.PHONY : wyze/uri.cpp.o
+
+wyze/uri.i: wyze/uri.cpp.i
+
+.PHONY : wyze/uri.i
+
+# target to preprocess a source file
+wyze/uri.cpp.i:
+	$(MAKE) -f CMakeFiles/wyze.dir/build.make CMakeFiles/wyze.dir/wyze/uri.cpp.i
+.PHONY : wyze/uri.cpp.i
+
+wyze/uri.s: wyze/uri.cpp.s
+
+.PHONY : wyze/uri.s
+
+# target to generate assembly for a file
+wyze/uri.cpp.s:
+	$(MAKE) -f CMakeFiles/wyze.dir/build.make CMakeFiles/wyze.dir/wyze/uri.cpp.s
+.PHONY : wyze/uri.cpp.s
+
 wyze/util.o: wyze/util.cpp.o
 
 .PHONY : wyze/util.o
@@ -1502,6 +1569,7 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... echo_server"
+	@echo "... test_uri"
 	@echo "... test_http_connection"
 	@echo "... test_http_server"
 	@echo "... test_fiber"
@@ -1572,6 +1640,9 @@ help:
 	@echo "... tests/test_timer.o"
 	@echo "... tests/test_timer.i"
 	@echo "... tests/test_timer.s"
+	@echo "... tests/test_uri.o"
+	@echo "... tests/test_uri.i"
+	@echo "... tests/test_uri.s"
 	@echo "... tests/test_util.o"
 	@echo "... tests/test_util.i"
 	@echo "... tests/test_util.s"
@@ -1644,6 +1715,9 @@ help:
 	@echo "... wyze/timer.o"
 	@echo "... wyze/timer.i"
 	@echo "... wyze/timer.s"
+	@echo "... wyze/uri.o"
+	@echo "... wyze/uri.i"
+	@echo "... wyze/uri.s"
 	@echo "... wyze/util.o"
 	@echo "... wyze/util.i"
 	@echo "... wyze/util.s"

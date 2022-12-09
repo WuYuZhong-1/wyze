@@ -7,6 +7,8 @@ set(CMAKE_CXX_FLAGS "$ENV{CXXFLAGS} -rdynamic -O0 -ggdb -std=c++11 -Wall -Wno-de
 
 link_directories(/usr/local/lib/yaml-cpp)
 
+#ragel -G2 -C uri.rl -o uri.cpp
+
 set(LIB_SRC
     wyze/address.cpp
     wyze/bytearray.cpp
@@ -31,6 +33,7 @@ set(LIB_SRC
     wyze/tcpserver.cpp
     wyze/thread.cpp
     wyze/timer.cpp
+    wyze/uri.cpp
     wyze/util.cpp
     )
 
@@ -110,6 +113,10 @@ target_link_libraries(test_http_server ${LIBS})
 add_executable(test_http_connection tests/test_http_connection.cpp)
 add_dependencies(test_http_connection wyze)
 target_link_libraries(test_http_connection ${LIBS})
+
+add_executable(test_uri tests/test_uri.cpp)
+add_dependencies(test_uri wyze)
+target_link_libraries(test_uri ${LIBS})
 
 add_executable(echo_server examples/echo_server.cpp)
 add_dependencies(echo_server wyze)

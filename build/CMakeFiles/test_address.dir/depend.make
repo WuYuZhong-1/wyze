@@ -29,6 +29,7 @@ CMakeFiles/test_address.dir/tests/test_address.cpp.o: ../wyze/stream.h
 CMakeFiles/test_address.dir/tests/test_address.cpp.o: ../wyze/tcpserver.h
 CMakeFiles/test_address.dir/tests/test_address.cpp.o: ../wyze/thread.h
 CMakeFiles/test_address.dir/tests/test_address.cpp.o: ../wyze/timer.h
+CMakeFiles/test_address.dir/tests/test_address.cpp.o: ../wyze/uri.h
 CMakeFiles/test_address.dir/tests/test_address.cpp.o: ../wyze/util.h
 CMakeFiles/test_address.dir/tests/test_address.cpp.o: ../wyze/wyze.h
 

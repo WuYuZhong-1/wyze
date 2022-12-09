@@ -29,6 +29,7 @@ CMakeFiles/test_http_parser.dir/tests/test_http_parser.cpp.o: ../wyze/stream.h
 CMakeFiles/test_http_parser.dir/tests/test_http_parser.cpp.o: ../wyze/tcpserver.h
 CMakeFiles/test_http_parser.dir/tests/test_http_parser.cpp.o: ../wyze/thread.h
 CMakeFiles/test_http_parser.dir/tests/test_http_parser.cpp.o: ../wyze/timer.h
+CMakeFiles/test_http_parser.dir/tests/test_http_parser.cpp.o: ../wyze/uri.h
 CMakeFiles/test_http_parser.dir/tests/test_http_parser.cpp.o: ../wyze/util.h
 CMakeFiles/test_http_parser.dir/tests/test_http_parser.cpp.o: ../wyze/wyze.h
 
