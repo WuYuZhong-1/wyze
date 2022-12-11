@@ -1,1 +1,0 @@
-/usr/bin/c++   -rdynamic -O0 -ggdb -std=c++11 -Wall -Wno-deprecated -Werror -Wno-unused-function -Wno-builtin-macro-redefined  -rdynamic CMakeFiles/echo_server.dir/examples/echo_server.cpp.o  -o ../bin/echo_server  -L/usr/local/lib/yaml-cpp -Wl,-rpath,/usr/local/lib/yaml-cpp:/home/wuyz/learn/wyze/lib ../lib/libwyze.so -lyaml-cpp -lpthread -ldl 

@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 2.8)
 project(wyze)
 
 set(CMAKE_VERBOSE_MAKEFILE ON)
-#set(CMAKE_CXX_FLAGES "$ENV(CXXFLAGS) -rdynamic -O0 -std=c++11 -Wall -Wno-deprecated -Werror -Wno-unused-function")
+#set(CMAKE_CXX_FLAGES "$ENV(CXXFLAGS) -rdynamic -O3 -std=c++11 -Wall -Wno-deprecated -Werror -Wno-unused-function")
 set(CMAKE_CXX_FLAGS "$ENV{CXXFLAGS} -rdynamic -O0 -ggdb -std=c++11 -Wall -Wno-deprecated -Werror -Wno-unused-function -Wno-builtin-macro-redefined")
 
 link_directories(/usr/local/lib/yaml-cpp)
