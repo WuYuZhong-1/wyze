@@ -447,7 +447,7 @@ extern "C" {
             case F_SETLEASE:
             case F_NOTIFY:
             case F_SETPIPE_SZ:
-            case F_ADD_SEALS:
+            // case F_ADD_SEALS:
                 {
                     int arg = va_arg(var,int);
                     va_end(var);
@@ -458,7 +458,7 @@ extern "C" {
             case F_GETOWN:
             case F_GETLEASE:
             case F_GETPIPE_SZ:
-            case F_GET_SEALS:
+            // case F_GET_SEALS:
                 {
                     va_end(var);
                     return fcntl_f(fd,cmd);
@@ -482,14 +482,14 @@ extern "C" {
                     return fcntl_f(fd, cmd, arg);
                 }
                 break;
-            case F_GET_RW_HINT:
-            case F_SET_RW_HINT:
-            case F_GET_FILE_RW_HINT:
-            case F_SET_FILE_RW_HINT:
-                {
-                    uint64_t* arg = va_arg(var, uint64_t*);
-                    return fcntl_f(fd, cmd, arg);
-                }
+            // case F_GET_RW_HINT:
+            // case F_SET_RW_HINT:
+            // case F_GET_FILE_RW_HINT:
+            // case F_SET_FILE_RW_HINT:
+            //     {
+            //         uint64_t* arg = va_arg(var, uint64_t*);
+            //         return fcntl_f(fd, cmd, arg);
+            //     }
         default:
             WYZE_ASSERT2(false,"cmd=" + std::to_string(cmd));
         }
