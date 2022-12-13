@@ -74,8 +74,9 @@ HttpRequest::ptr HttpSession::recvRequest()
     do {
         int len = read(data + offset, buffer_size - offset);
         if(len <= 0) {
-            WYZE_LOG_DEBUG(g_logger) << "------len=" << len
-                << " errno=" << errno << " errstr=" << strerror(errno);
+            if(errno != 0)
+                WYZE_LOG_DEBUG(g_logger) << "------len=" << len
+                    << " errno=" << errno << " errstr=" << strerror(errno);
             close();
             return nullptr;
         }

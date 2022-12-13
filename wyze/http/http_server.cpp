@@ -20,9 +20,9 @@ void HttpServer::handleClient(Socket::ptr client)
     do {
         auto req = session->recvRequest();
         if(!req) {
-            WYZE_LOG_WARN(g_logger) << "recv http request fail, errno="
-                << errno << " errstr=" << strerror(errno)
-                << " client:" << *client;
+            // WYZE_LOG_WARN(g_logger) << "recv http request fail, errno="
+            //     << errno << " errstr=" << strerror(errno)
+            //     << " client:" << *client;
             break;
         }
     
