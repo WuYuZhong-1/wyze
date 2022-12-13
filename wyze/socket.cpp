@@ -46,6 +46,7 @@ Socket::ptr Socket::CreateTCP(Address::ptr address)
 Socket::ptr Socket::CreateUDP(Address::ptr address)
 {
     Socket::ptr sock(new Socket(address->getFamily(), Type::UDP, 0));
+    sock->newSock();
     return sock;
 }
 
@@ -58,6 +59,7 @@ Socket::ptr Socket::CreateTCPSocket()
 Socket::ptr Socket::CreateUDPSocket()
 {
     Socket::ptr sock(new Socket(Family::IPv4, Type::UDP, 0));
+    sock->newSock();
     return sock;
 }
 
@@ -70,6 +72,7 @@ Socket::ptr Socket::CreateTCPSocket6()
 Socket::ptr Socket::CreateUDPSocket6()
 {
     Socket::ptr sock(new Socket(Family::IPv6, Type::UDP, 0));
+    sock->newSock();
     return sock;
 }
 
@@ -321,13 +324,6 @@ int Socket::send(const iovec* buffers, size_t length, int flags)
 
 int Socket::sendTo(const void* buffer, size_t length, const Address::ptr to, int flags)
 {
-    //这里在第一次会预判错误
-    if(WYZE_UNLICKLY(!isVaild())) {
-        newSock();
-        if(WYZE_UNLICKLY(!isVaild())) 
-            return -1;
-    } 
-
     if(!to) {
        WYZE_LOG_ERROR(g_logger) << "sendTo error, arg --> to is nullptr";
         return -1; 
@@ -344,13 +340,6 @@ int Socket::sendTo(const void* buffer, size_t length, const Address::ptr to, int
 
 int Socket::sendTo(const iovec* buffers, size_t length, const Address::ptr to, int flags)
 {
-    //这里在第一次会预判错误
-    if(WYZE_UNLICKLY(!isVaild())) {
-        newSock();
-        if(WYZE_UNLICKLY(!isVaild())) 
-            return -1;
-    } 
-
     if(!to) {
        WYZE_LOG_ERROR(g_logger) << "sendTo error, arg --> to is nullptr";
         return -1; 
@@ -391,13 +380,6 @@ int Socket::recv(iovec* buffers, size_t length, int flags)
 }
 int Socket::recvFrom(void* buffer, size_t length, Address::ptr& from, int flags)
 {
-    //这里在第一次会预判错误
-    if(WYZE_UNLICKLY(!isVaild())) {
-        newSock();
-        if(WYZE_UNLICKLY(!isVaild())) 
-            return -1;
-    } 
-
     //TODO::这里要考虑，返回的 Address 的初始化
     switch(m_family) {
         case AF_INET:
@@ -425,14 +407,6 @@ int Socket::recvFrom(void* buffer, size_t length, Address::ptr& from, int flags)
 
 int Socket::recvFrom(iovec* buffers, size_t length, Address::ptr& from, int flags)
 {
-    //这里在第一次会预判错误
-    if(WYZE_UNLICKLY(!isVaild())) {
-        newSock();
-        if(WYZE_UNLICKLY(!isVaild())) 
-            return -1;
-    } 
-
-
     //TODO::这里要考虑，返回的 Address 的初始化
     switch(m_family) {
         case AF_INET:

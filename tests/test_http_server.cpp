@@ -5,7 +5,7 @@ static wyze::Logger::ptr g_logger = WYZE_LOG_ROOT();
 void run()
 {
     wyze::Address::ptr addr = wyze::Address::LookupAny("0.0.0.0:8020");
-    wyze::http::HttpServer::ptr server(new wyze::http::HttpServer);
+    wyze::http::HttpServer::ptr server(new wyze::http::HttpServer(true));
     while(!server->bind(addr))
         sleep(2);
 

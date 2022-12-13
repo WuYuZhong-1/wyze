@@ -246,7 +246,8 @@ void test_iomanager()
         int count = 1;
         while(count <= 10) {
             std::string buf = "pipe write count " + std::to_string(count++);
-            write(wfd, buf.c_str(), buf.size());
+            ssize_t l = write(wfd, buf.c_str(), buf.size());
+            (void)l;
             WYZE_LOG_DEBUG(g_logger) << buf;
             wyze::Fiber::YeildToReady();
         }

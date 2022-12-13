@@ -121,6 +121,23 @@ namespace wyze {
             if( n == -1 && errno == EAGAIN ) {  //如果是 -1 且 errno 提示重试，则进入阻塞
 
                 IOManager* iom = IOManager::GetThis();
+
+
+                std::shared_ptr<TimerCond> tcnd(new TimerCond);
+                std::weak_ptr<TimerCond> wtcnd(tcnd);
+                Timer::ptr timer;
+
+                if(ms != (uint64_t)0 ) {    //在挂起之前检测有没有定时
+
+                    timer = iom->addConditionTimer(ms, [wtcnd, fd, iom, event]() {
+                        auto t = wtcnd.lock();
+                        if( !t || t->cancelled) //当指针不存在，获取指针里面设置为取消，直接返回
+                            return ;
+                        t->cancelled = ETIMEDOUT;
+                        iom->canceEvent(fd, (IOManager::Event)(event)); //唤醒协程
+                    }, wtcnd);
+                }
+
                 int rt = iom->addEvent(fd, (IOManager::Event)(event));
                 if(rt) {
                     WYZE_LOG_ERROR(g_logger) << hook_fun_name << " addEvent("
@@ -128,21 +145,6 @@ namespace wyze {
                     return -1;
                 }
                 else {
-
-                    std::shared_ptr<TimerCond> tcnd(new TimerCond);
-                    std::weak_ptr<TimerCond> wtcnd(tcnd);
-                    Timer::ptr timer;
-
-                    if(ms != (uint64_t)0 ) {    //在挂起之前检测有没有定时
-
-                        timer = iom->addConditionTimer(ms, [wtcnd, fd, iom, event]() {
-                            auto t = wtcnd.lock();
-                            if( !t || t->cancelled) //当指针不存在，获取指针里面设置为取消，直接返回
-                                return ;
-                            t->cancelled = ETIMEDOUT;
-                            iom->canceEvent(fd, (IOManager::Event)(event)); //唤醒协程
-                        }, wtcnd);
-                    }
 
                     Fiber::YeildToHold();       //挂起
                                                 //这里开始，表示定时器，获取添加的fd事件触发
