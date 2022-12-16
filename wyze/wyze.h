@@ -4,6 +4,8 @@
 #include "address.h"
 #include "bytearray.h"
 #include "config.h"
+#include "daemon.h"
+#include "env.h"
 #include "fiber.h"
 #include "hook.h"
 #include "http/http.h"

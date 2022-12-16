@@ -1,8 +1,6 @@
-
-#include "../wyze/log.h"
-#include "../wyze/config.h"
 #include <yaml-cpp/yaml.h>
 #include <iostream>
+#include "../wyze/wyze.h"
 
 #if 1
 wyze::ConfigVar<int>::ptr g_int_value_config =
@@ -219,9 +217,14 @@ void test_log() {
     WYZE_LOG_INFO(system_log) << "hello system" << std::endl;
 }
 
+void test_loadconf()
+{
+    wyze::Config::LoadFromConfDir("conf");
+}
+
 int main(int argc, char** argv) {
     // test_yaml();
-    test_config();
+    // test_config();
     // test_class();
     // test_log();
 
@@ -231,6 +234,10 @@ int main(int argc, char** argv) {
     //                 << " typename=" << var->getTypeName()
     //                 << " value=" << var->toString();
     // });
+
+    wyze::EnvMgr::GetInstance()->init(argc, argv);
+    test_loadconf();
+    
 
     return 0;
 }

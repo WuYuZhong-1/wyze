@@ -13,6 +13,8 @@ set(LIB_SRC
     wyze/address.cpp
     wyze/bytearray.cpp
     wyze/config.cpp
+    wyze/daemon.cpp
+    wyze/env.cpp
     wyze/fdmanager.cpp
     wyze/fiber.cpp
     wyze/hook.cpp
@@ -118,9 +120,25 @@ add_executable(test_uri tests/test_uri.cpp)
 add_dependencies(test_uri wyze)
 target_link_libraries(test_uri ${LIBS})
 
+add_executable(test_daemon tests/test_daemon.cpp)
+add_dependencies(test_daemon wyze)
+target_link_libraries(test_daemon ${LIBS})
+
+add_executable(test_env tests/test_env.cpp)
+add_dependencies(test_env wyze)
+target_link_libraries(test_env ${LIBS})
+
 add_executable(echo_server examples/echo_server.cpp)
 add_dependencies(echo_server wyze)
 target_link_libraries(echo_server ${LIBS})
+
+add_executable(echo_udp_client examples/echo_udp_client.cpp)
+add_dependencies(echo_udp_client wyze)
+target_link_libraries(echo_udp_client ${LIBS})
+
+add_executable(echo_udp_server examples/echo_udp_server.cpp)
+add_dependencies(echo_udp_server wyze)
+target_link_libraries(echo_udp_server ${LIBS})
 
 SET(EXECUTABLE_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/bin)
 SET(LIBRARY_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/lib)

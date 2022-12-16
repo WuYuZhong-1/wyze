@@ -1,8 +1,15 @@
 #include "config.h"
+#include "util.h"
+#include "env.h"
 #include <list>
 #include <sstream>
+#include <sys/types.h>
+#include <sys/stat.h>
+#include <unistd.h>
 
 namespace wyze {
+
+static Logger::ptr g_logger = WYZE_LOG_NAME("system");
 
 ConfigVarBase::ptr Config::LookupBase(const std::string& name) 
 {
@@ -15,7 +22,7 @@ static void ListAllMember(const std::string& prefix, const YAML::Node& node,
                             std::list<std::pair<std::string, const YAML::Node>>& output)
 {
     if(prefix.find_first_not_of("abcdefghijklmnopqrstuvwxyz._0123456789") != std::string::npos) {
-        WYZE_LOG_ERROR(WYZE_LOG_ROOT()) << "Config invalid name : " << prefix << " : " << node;
+        WYZE_LOG_ERROR(g_logger) << "Config invalid name : " << prefix << " : " << node;
         return;
     }
 
@@ -61,6 +68,42 @@ void Config::LoadFromYaml(const YAML::Node& root)
                 ss << ite.second;
                 var->fromString(ss.str());
             }
+        }
+    }
+}
+
+static std::map<std::string, uint64_t> s_file2modifytime;
+static Mutex s_mutex;
+
+void Config::LoadFromConfDir(const std::string& path, bool force)
+{
+    std::string absolute_path = EnvMgr::GetInstance()->getAbsolutePath(path);
+    std::vector<std::string> files;
+    FSUtil::ListAllFile(files, absolute_path, ".yml");
+
+    for(auto& i : files) {
+        {
+            //TODO::这里只是时间判断，如果有md5会更好
+            struct stat st;
+            if(lstat(absolute_path.c_str(), &st) < 0)
+                continue;
+
+            Mutex::Lock lock(s_mutex);
+            if(s_file2modifytime[i] == (uint64_t)st.st_mtime) 
+                continue;
+
+            s_file2modifytime[i] = st.st_mtime;
+        }
+
+        try {
+            YAML::Node root = YAML::LoadFile(i);
+            LoadFromYaml(root);
+            WYZE_LOG_INFO(g_logger) << "LoadConfFile file="
+                << i << " ok";
+        }
+        catch(...) {
+            WYZE_LOG_ERROR(g_logger) << "LoadConfFile file="
+                << i << " fail";
         }
     }
 }
