@@ -8,6 +8,8 @@
 
 namespace wyze {
 
+static Logger::ptr g_logger = WYZE_LOG_NAME("system");
+
 LogEvent::LogEvent(Logger::ptr logger, LogLevel::Level level, const char* file, int32_t line,
                 uint32_t elapse, uint32_t thread_id, uint64_t fiber_id, uint64_t time, const std::string& thread_name)
     :m_file(file)
@@ -256,7 +258,7 @@ FileAppender::FileAppender(const std::string &filename)
     :m_filename(filename)
 {
     if(!reopen()) {
-        WYZE_LOG_ERROR(WYZE_LOG_ROOT()) << "not open file: " << filename;
+        std::cout << "not open file: " << filename << std::endl;
     }
 }
 
@@ -289,6 +291,13 @@ std::string FileAppender::toYamlString() {
 void FileAppender::log(LogEvent::ptr event)
 {
     if(event->getLevel() >= m_level) {
+        uint64_t now = event->getTime();
+        if(now >= (m_lastTime + 3)) {
+            if(!reopen()) {
+                std::cout << "not open file: " << m_filename << std::endl;
+            }
+            m_lastTime = now;
+        }
         MutexType::Lock lock(m_mutex);
         m_filestream << m_formatter->format(event);
     }
@@ -636,7 +645,7 @@ public:
                 auto node = root["appenders"][i];
                 LogAppenderDefine a;
                 if(!node["type"].IsDefined()) {
-                   WYZE_LOG_ERROR(WYZE_LOG_ROOT()) << "log config error: appender type is null, " << node;
+                   WYZE_LOG_ERROR(g_logger) << "log config error: appender type is null, " << node;
                         continue; 
                 }
                 
@@ -644,7 +653,7 @@ public:
                 if(type == "FileLogAppender") {
                     a.type = 1;
                     if(!node["file"].IsDefined()) {
-                        WYZE_LOG_ERROR(WYZE_LOG_ROOT()) << "log config error: fileappender file is null, " << node;
+                        WYZE_LOG_ERROR(g_logger) << "log config error: fileappender file is null, " << node;
                         continue;
                     }
                     a.file = node["file"].as<std::string>();
@@ -652,7 +661,7 @@ public:
                 } else if(type == "StdoutLogAppender") {
                     a.type = 2;
                 } else {
-                    WYZE_LOG_ERROR(WYZE_LOG_ROOT()) << "log config error: appender type is invalid, " << node;
+                    WYZE_LOG_ERROR(g_logger) << "log config error: appender type is invalid, " << node;
                     continue;
                 }
 
@@ -820,18 +829,17 @@ wyze::ConfigVar<std::set<LogDefine> >::ptr g_log_defines =
 void PrintLogs::operator()(Logger::ptr log)
 {
     auto it = Config::Lookup<std::set<LogDefine>>("logs");
-    WYZE_LOG_INFO(log) << it->toString(); 
+    WYZE_LOG_INFO(g_logger) << it->toString(); 
 }
 
 struct LogIniter {
     LogIniter() {
         g_log_defines->addListener([](const std::set<LogDefine>& old_value,
                     const std::set<LogDefine>& new_value){
-            WYZE_LOG_INFO(WYZE_LOG_ROOT()) << "on_logger_conf_changed";
+            WYZE_LOG_INFO(g_logger) << "on_logger_conf_changed";
             for(auto& i : new_value) {
-
-                if(i.name == "root")
-                    continue;               //TODO:这个root有问题
+                // if(i.name == "root")
+                //     continue;               //TODO:这个root有问题
 
                 auto it = old_value.find(i);
                 wyze::Logger::ptr logger;
