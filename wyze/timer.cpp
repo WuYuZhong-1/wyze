@@ -1,7 +1,10 @@
 #include "timer.h"
 #include "util.h"
+#include "log.h"
 
 namespace wyze {
+
+    static Logger::ptr g_logger = WYZE_LOG_NAME("system");
 
     //set 集合会排序，会根据 < 操作符 进行排序，
     bool Timer::Comparator::operator()(const Timer::ptr& lhs, const Timer::ptr& rhs) const
@@ -133,6 +136,8 @@ namespace wyze {
     //唤醒后获取那些超时的任务
     void TimerManager::listExpiredCb(std::vector<std::function<void()>>& cbs)
     {
+        uint64_t now_ms = GetCurrentMS();
+        std::vector<Timer::ptr> expired;
         {
             RWMutexType::ReadLock rlock(m_mutex);
             if(m_timers.empty())
@@ -140,9 +145,9 @@ namespace wyze {
         }
 
         RWMutexType::WriteLock wlock(m_mutex);
-        uint64_t now_ms = GetCurrentMS();
-        std::vector<Timer::ptr> expired;
-
+        if(m_timers.empty())
+            return;
+        
         bool rollover = detectClockRollover(now_ms);    //检测当前时间 和上一次的时间
         if(!rollover && ((*m_timers.begin())->m_next > now_ms)) // 没有发生时间修改，且没有定时任务处理
             return;
@@ -194,7 +199,7 @@ namespace wyze {
     {
         bool rollover = false;
         if(now_ms < m_previousTime &&
-            now_ms < (m_previousTime - 60 * 60 * 12)) {      //TODO::这里存在问题，如果时间差为 12 小时，表示时间发生改动
+            now_ms < (m_previousTime - 1000 * 60 * 60 * 12)) {      //TODO::这里存在问题，如果时间差为 12 小时，表示时间发生改动
             rollover = true;                                    //在做 阻塞时时间不能大于 12 小时
         }
         m_previousTime = now_ms;

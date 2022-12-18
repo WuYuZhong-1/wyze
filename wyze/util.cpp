@@ -354,7 +354,11 @@ bool FSUtil::OpenForWrite(std::ofstream& ofs, const std::string& filename
     ofs.open(filename.c_str(), mode);
     if(!ofs.is_open()) {
         std::string dir = Dirname(filename);
-        Mkdir(dir);
+        if(!Mkdir(dir)) {
+            WYZE_LOG_ERROR(g_logger) << "mkdir " << dir << " error, errno=" << errno 
+                    << " errstr=" << strerror(errno);
+            return false; 
+        }
         ofs.open(filename.c_str(), mode);
     }
     return ofs.is_open();

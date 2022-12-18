@@ -255,7 +255,9 @@ std::string StdoutAppender::toYamlString() {
 FileAppender::FileAppender(const std::string &filename)
     :m_filename(filename)
 {
-    reopen();
+    if(!reopen()) {
+        WYZE_LOG_ERROR(WYZE_LOG_ROOT()) << "not open file: " << filename;
+    }
 }
 
 bool FileAppender::reopen()
@@ -264,8 +266,8 @@ bool FileAppender::reopen()
     if(m_filestream.is_open()) {
         m_filestream.close();
     }
-    m_filestream.open(m_filename);
-    return !!m_filestream;
+    
+    return FSUtil::OpenForWrite(m_filestream, m_filename,std::ios::app);
 }
 
 std::string FileAppender::toYamlString() {
@@ -625,12 +627,13 @@ public:
         LogDefine ret;
         ret.name = root["name"].as<std::string>();
         ret.level = LogLevel::FromString(root["level"].IsDefined() ? root["level"].as<std::string>() : "");
-        ret.formatter = root["formatter"].as<std::string>();
+        if(root["formatter"].IsDefined())
+            ret.formatter = root["formatter"].as<std::string>();
         
-        if(root["appender"].IsDefined()) {
+        if(root["appenders"].IsDefined()) {
 
-            for(size_t i = 0; i < root["appender"].size(); ++i) {
-                auto node = root["appender"][i];
+            for(size_t i = 0; i < root["appenders"].size(); ++i) {
+                auto node = root["appenders"][i];
                 LogAppenderDefine a;
                 if(!node["type"].IsDefined()) {
                    WYZE_LOG_ERROR(WYZE_LOG_ROOT()) << "log config error: appender type is null, " << node;

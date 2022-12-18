@@ -41,7 +41,7 @@ namespace wyze {
 
     public:
         IOManager(size_t threads = 1, 
-            bool use_caller = false, const std::string& name = "UNKONW");
+            bool use_caller = true, const std::string& name = "UNKONW");
         ~IOManager();
         
         // 0 success, -1 error      该函数只支持单事件的增加

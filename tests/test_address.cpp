@@ -2,7 +2,7 @@
 #include <arpa/inet.h>
 #include <sys/un.h>
 #include <stddef.h>
-
+#include <map>
 
 wyze::Logger::ptr g_logger = WYZE_LOG_ROOT();
 
@@ -81,6 +81,21 @@ void test_lookup()
     }
 }
 
+
+void test_interface()
+{
+    std::multimap<std::string, std::pair<wyze::Address::ptr, uint32_t>> result;
+    wyze::Address::GetInterfaceAddresses(result);
+    for(auto& a : result) {
+        WYZE_LOG_INFO(g_logger) << a.first << ":[" << *a.second.first << ", " << a.second.second << "]";
+    }
+
+    auto its = result.equal_range("ens33");
+    for(; its.first != its.second; ++its.first) {
+        WYZE_LOG_INFO(g_logger) << *its.first->second.first;
+    }
+}
+
 int main(int argc, char** argv)
 {
     // test_addrlen();
@@ -88,7 +103,8 @@ int main(int argc, char** argv)
     // test_countbyte();
     // test_addresses();
     // test_IP();
-    test_lookup();
+    // test_lookup();
+    test_interface();
 
     return 0;
 }

@@ -19,7 +19,7 @@ finish                                                运行该函数结束
 
 
 -------程序挂掉，系统默认不会生成core文件-----------
-
+sudo systemctl disable apport.service
 sudo service apport stop
 
 普通用户没有权限修改系统文件权限

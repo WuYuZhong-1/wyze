@@ -3,7 +3,7 @@ project(wyze)
 
 set(CMAKE_VERBOSE_MAKEFILE ON)
 #set(CMAKE_CXX_FLAGES "$ENV(CXXFLAGS) -rdynamic -O3 -std=c++11 -Wall -Wno-deprecated -Werror -Wno-unused-function")
-set(CMAKE_CXX_FLAGS "$ENV{CXXFLAGS} -rdynamic -O3 -ggdb -std=c++11 -Wall -Wno-deprecated -Werror -Wno-unused-function -Wno-builtin-macro-redefined")
+set(CMAKE_CXX_FLAGS "$ENV{CXXFLAGS} -rdynamic -O0 -ggdb -std=c++11 -Wall -Wno-deprecated -Werror -Wno-unused-function -Wno-builtin-macro-redefined")
 
 link_directories(/usr/local/lib/yaml-cpp)
 
@@ -11,6 +11,7 @@ link_directories(/usr/local/lib/yaml-cpp)
 
 set(LIB_SRC
     wyze/address.cpp
+    wyze/application.cpp
     wyze/bytearray.cpp
     wyze/config.cpp
     wyze/daemon.cpp
@@ -127,6 +128,10 @@ target_link_libraries(test_daemon ${LIBS})
 add_executable(test_env tests/test_env.cpp)
 add_dependencies(test_env wyze)
 target_link_libraries(test_env ${LIBS})
+
+add_executable(test_application tests/test_application.cpp)
+add_dependencies(test_application wyze)
+target_link_libraries(test_application ${LIBS})
 
 add_executable(echo_server examples/echo_server.cpp)
 add_dependencies(echo_server wyze)
