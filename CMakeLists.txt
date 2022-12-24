@@ -10,10 +10,12 @@ link_directories(/usr/local/lib/yaml-cpp)
 #ragel -G2 -C uri.rl -o uri.cpp
 
 set(LIB_SRC
+    wyze/db/mysqlconn.cpp
     wyze/address.cpp
     wyze/application.cpp
     wyze/bytearray.cpp
     wyze/config.cpp
+    wyze/crypto.cpp
     wyze/daemon.cpp
     wyze/env.cpp
     wyze/fdmanager.cpp
@@ -45,6 +47,8 @@ set (LIBS
         yaml-cpp
         pthread
         dl
+        crypto
+        mysqlclient
     )
 
 add_library(wyze SHARED ${LIB_SRC})
@@ -132,6 +136,14 @@ target_link_libraries(test_env ${LIBS})
 add_executable(test_application tests/test_application.cpp)
 add_dependencies(test_application wyze)
 target_link_libraries(test_application ${LIBS})
+
+add_executable(test_crypto tests/test_crypto.cpp)
+add_dependencies(test_crypto wyze)
+target_link_libraries(test_crypto ${LIBS})
+
+add_executable(test_mysql tests/test_mysql.cpp)
+add_dependencies(test_mysql wyze)
+target_link_libraries(test_mysql ${LIBS})
 
 add_executable(echo_server examples/echo_server.cpp)
 add_dependencies(echo_server wyze)

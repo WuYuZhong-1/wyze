@@ -429,7 +429,7 @@ HttpConnectionPool::getConnection()
             raw_ptr = raw_conn;
             break;
         }
-        m_total = invalid_conn.size();
+        m_total -= invalid_conn.size();
     }
 
     for(auto& i : invalid_conn)
@@ -459,6 +459,7 @@ HttpConnectionPool::getConnection()
 
 void HttpConnectionPool::ReleasePtr(HttpConnection* ptr, HttpConnectionPool* pool)
 {
+    //TODO::当该对象销毁时，这里是会崩溃的
     ++ptr->m_request;
     if(!ptr->isConnected() || ((uint32_t)pool->m_total > pool->m_maxSize)
             || (ptr->m_createTimes + pool->m_maxAliveTime) <= GetCurrentMS()

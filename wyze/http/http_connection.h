@@ -101,6 +101,7 @@ private:
     uint64_t m_request;
 };
 
+//TODO::这种连接池是会存在该对象不存在，崩溃问题
 class HttpConnectionPool {
 public:
     using ptr = std::shared_ptr<HttpConnectionPool>;
@@ -153,7 +154,7 @@ private:
 
     MutexType m_mutex;
     std::list<HttpConnection*> m_conns;
-    std::atomic<int32_t> m_total = {0};
+    std::atomic<uint32_t> m_total = {0};
 };
 
 }
