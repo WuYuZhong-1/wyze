@@ -19,8 +19,8 @@ private:
     void saveLeftData(char* data, size_t len, size_t nparse);
 
 private:
-    size_t left_size;
-    char *left_data;
+    size_t m_left_size = 0;
+    char *m_left_data = nullptr;
 };
 }
 }

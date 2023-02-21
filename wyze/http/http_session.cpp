@@ -43,14 +43,14 @@ static _RequestSizeIniter _init;
 
 HttpSession::HttpSession(Socket::ptr sock, bool owner)
     : SockStream(sock, owner)
-    , left_size(0)
-    , left_data(new char[(s_http_request_buffer_size >  (4 *1024)) ?  s_http_request_buffer_size : (4 *1024)])
+    , m_left_size(0)
+    , m_left_data(new char[(s_http_request_buffer_size >  (4 *1024)) ?  s_http_request_buffer_size : (4 *1024)])
 {
 }
 
 HttpSession::~HttpSession()
 {
-    delete[] left_data;
+    delete[] m_left_data;
 }
 
 HttpRequest::ptr HttpSession::recvRequest()
@@ -64,8 +64,9 @@ HttpRequest::ptr HttpSession::recvRequest()
             delete[] ptr;
         });
     char* data = buffer.get();
-    int offset = ((buffer_size < left_size) ? 0 : left_size); //这里的避免程序本亏，但是会有数据丢失
-    memcpy(data, left_data, offset);
+    int offset = ((buffer_size < m_left_size) ? 0 : m_left_size); //这里的避免程序崩溃，但是会有数据丢失
+    if(offset != 0)
+        memcpy(data, m_left_data, offset);
     size_t nparse = 0;
     
     //data 数据地址
@@ -80,7 +81,7 @@ HttpRequest::ptr HttpSession::recvRequest()
             close();
             return nullptr;
         }
-
+ 
         len += offset;  //读到的长度
         nparse = parser->execute(data, len, nparse);    
         if(parser->hasError()){
@@ -105,7 +106,12 @@ HttpRequest::ptr HttpSession::recvRequest()
     int64_t length = parser->getContentLength(); 
     if(length > (int64_t)s_http_request_max_body_size)
         return nullptr;
-    
+    /*
+    WYZE_LOG_DEBUG(g_logger) << "3 length = " << length;
+    WYZE_LOG_DEBUG(g_logger) << "3 nparse = " << nparse;
+    WYZE_LOG_DEBUG(g_logger) << "3 offset = " << offset;
+    */
+
     if(length > 0) {            //有消息体
         std::string body;
         // body.reserve(length);    //申请空间，不创建
@@ -113,17 +119,19 @@ HttpRequest::ptr HttpSession::recvRequest()
 
         if( (length +  nparse) > (uint64_t)offset) {   //需要读取数据
 
-            // body.append(data + nparse, offset);
-            memcpy(&body[0], data + nparse, offset);
-            length = length + nparse - offset;
-            // if(readFixSize(&body[body.size()], length) <= 0) 
-            if(readFixSize(&body[offset - nparse], length) <= 0) 
+            int copy_len = offset - nparse;     //剩下多少数据
+            if(copy_len > 0) {
+                memcpy(&body[0], data + nparse, copy_len);
+                length = length - copy_len;
+            }
+
+            if(readFixSize(&body[copy_len], length) <= 0) 
                 return nullptr;
         }
         else {                  //需要保存数据
-            // body.append(data + nparse, length);
             memcpy(&body[0], data + nparse, length);
-            saveLeftData(data, offset, nparse + length);
+            if((length +  nparse) != (uint64_t)offset)
+                saveLeftData(data, offset, nparse + length);
         }
 
         parser->getData()->setBody(body);
@@ -143,8 +151,8 @@ int HttpSession::sendResponse(HttpResponse::ptr rsp)
 
 void HttpSession::saveLeftData(char* data, size_t len, size_t nparse)
 {
-    left_size = len - nparse;
-    memcpy(left_data, data, left_size);
+    m_left_size = len - nparse;
+    memcpy(m_left_data, data, m_left_size);
 }
 
 }

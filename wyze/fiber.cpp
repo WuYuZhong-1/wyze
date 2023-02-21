@@ -17,7 +17,7 @@ static thread_local Fiber::ptr t_threadFiber = nullptr;     //main 协程对象
 
 
 static ConfigVar<uint64_t>::ptr g_fiber_stack_size = 
-            Config::Lookup<uint64_t>("fiber.stack_size", 1024 * 1024, "fiber stack size");
+            Config::Lookup<uint64_t>("fiber.stack_size", 16 * 1024, "fiber stack size");
 
 class MallocStackAllocator {
 public:
@@ -52,7 +52,7 @@ Fiber::Fiber(std::function<void()> cb, size_t stack_size, bool use_caller)
     , m_useCaller(use_caller)
 {
     ++s_fiber_count;
-    m_stacksize = stack_size ? stack_size : g_fiber_stack_size->getValue();
+    m_stacksize = stack_size > (16 * 1024) ? stack_size : g_fiber_stack_size->getValue();
     m_stack = StackAllocator::Alloc(m_stacksize);
 
     if(getcontext(&m_context)) {

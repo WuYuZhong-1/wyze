@@ -345,6 +345,7 @@ namespace wyze {
                 //获取 该事件由什么 事件类型触发
                 if(ev.events & (EPOLLERR | EPOLLHUP)) {
                     ev.events |= (fd_ctx->events & EPOLLIN) | (fd_ctx->events & EPOLLOUT);        //当发生错误，会触发读写事件
+                    WYZE_LOG_ERROR(g_logger) << "ev.events" << ev.events;
                 }
                 int real_evs = Event::NONE;
                 if(ev.events & EPOLLIN) 

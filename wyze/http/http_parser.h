@@ -1,3 +1,11 @@
+/*
+ * @Author: wyze 631848287@qq.com
+ * @Date: 2022-12-01 15:04:40
+ * @LastEditors: wyze 631848287@qq.com
+ * @LastEditTime: 2023-02-21 09:54:43
+ * @FilePath: /wyze/wyze/http/http_parser.h
+ * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+ */
 #ifndef _WYZE_HTTP_PARSER_H_
 #define _WYZE_HTTP_PARSER_H_
 
@@ -21,6 +29,7 @@ public:
     void setError(int v) { m_error = v;}
 
     HttpRequest::ptr getData() const { return m_data; }
+    HttpRequest::ptr getData() { return m_data; }
     uint64_t getContentLength();
     bool getIsClose();
     http_parser& getParser() { return m_parser; }
@@ -45,6 +54,7 @@ public:
     void setError(int v) { m_error = v;}
 
     HttpResponse::ptr getData() const { return m_data; }
+    HttpResponse::ptr getData() { return m_data; }
     uint64_t getContentLength();
     bool getIsClose();
     httpclient_parser& getParser() { return m_parser; }

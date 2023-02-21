@@ -120,13 +120,13 @@ int HttpRequestParser::hasError()
 
 uint64_t HttpRequestParser::getContentLength()
 {
-    return m_data->getHeaderAs<uint64_t>("content-length", 0);
+    return m_data->getHeaderAs<uint64_t>("Content-length", 0);
 }
 
 bool HttpRequestParser::getIsClose()
 {
-    std::string str = m_data->getHeader("connection");
-    if(strcasecmp(str.c_str(), "close") == 0)
+    std::string str = m_data->getHeader("Connection");
+    if(strncasecmp(str.c_str(), "Close", str.length()) == 0)
         m_data->setClose(true);
     else 
         m_data->setClose(false);
@@ -238,7 +238,7 @@ uint64_t HttpResponseParser::getContentLength()
 bool HttpResponseParser::getIsClose()
 {
     std::string str = m_data->getHeader("connection");
-    if(strcasecmp(str.c_str(), "close") == 0)
+    if(strncasecmp(str.c_str(), "close", str.length()) == 0)
         m_data->setClose(true);
     else 
         m_data->setClose(false);
